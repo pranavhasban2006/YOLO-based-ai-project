@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+backend/.venv/
+backend/data/
+frontend/node_modules/
+frontend/dist/
+# Large binaries: share checkpoints separately
+models/*.pt
+*.log
+*.docx

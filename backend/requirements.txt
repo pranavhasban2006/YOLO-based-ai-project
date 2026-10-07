@@ -1,0 +1,15 @@
+# CPU-only PyTorch: pip install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cpu
+torch
+torchvision
+fastapi>=0.115
+uvicorn[standard]
+python-multipart
+mediapipe
+av
+pillow
+numpy
+
+# tests
+pytest
+httpx
+scikit-image
