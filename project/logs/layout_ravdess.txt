@@ -1,0 +1,48 @@
+# Layout: ravdess
+root: D:\Projects\YOLO\datasets\RAVDESS
+
+total files (excluding .git): 4349
+extensions: .mp4=2880, .wav=1440, .zip=28, .md=1
+
+top-level entries:
+  [dir ] Audio_Speech/  (1441 files below)
+  [dir ] Video_Song/  (3 files below)
+  [dir ] Video_Speech/  (2904 files below)
+  [file] README.md  (662 bytes)
+
+subfolders (depth 2) with file counts and example names:
+  Audio_Speech/Audio_Speech_Actors_01-24/  files=1440  e.g. 03-01-01-01-01-01-01.wav, 03-01-01-01-01-01-02.wav
+  Video_Speech/Video_Speech_Actor_01/  files=120  e.g. 01-01-01-01-01-01-01.mp4, 01-01-01-01-01-02-01.mp4
+  Video_Speech/Video_Speech_Actor_02/  files=120  e.g. 01-01-01-01-01-01-02.mp4, 01-01-01-01-01-02-02.mp4
+  Video_Speech/Video_Speech_Actor_03/  files=120  e.g. 01-01-01-01-01-01-03.mp4, 01-01-01-01-01-02-03.mp4
+  Video_Speech/Video_Speech_Actor_04/  files=120  e.g. 01-01-01-01-01-01-04.mp4, 01-01-01-01-01-02-04.mp4
+  Video_Speech/Video_Speech_Actor_05/  files=120  e.g. 01-01-01-01-01-01-05.mp4, 01-01-01-01-01-02-05.mp4
+  Video_Speech/Video_Speech_Actor_06/  files=120  e.g. 01-01-01-01-01-01-06.mp4, 01-01-01-01-01-02-06.mp4
+  Video_Speech/Video_Speech_Actor_07/  files=120  e.g. 01-01-01-01-01-01-07.mp4, 01-01-01-01-01-02-07.mp4
+  Video_Speech/Video_Speech_Actor_08/  files=120  e.g. 01-01-01-01-01-01-08.mp4, 01-01-01-01-01-02-08.mp4
+  Video_Speech/Video_Speech_Actor_09/  files=120  e.g. 01-01-01-01-01-01-09.mp4, 01-01-01-01-01-02-09.mp4
+  Video_Speech/Video_Speech_Actor_10/  files=120  e.g. 01-01-01-01-01-01-10.mp4, 01-01-01-01-01-02-10.mp4
+  Video_Speech/Video_Speech_Actor_11/  files=120  e.g. 01-01-01-01-01-01-11.mp4, 01-01-01-01-01-02-11.mp4
+  Video_Speech/Video_Speech_Actor_12/  files=120  e.g. 01-01-01-01-01-01-12.mp4, 01-01-01-01-01-02-12.mp4
+  Video_Speech/Video_Speech_Actor_13/  files=120  e.g. 01-01-01-01-01-01-13.mp4, 01-01-01-01-01-02-13.mp4
+  Video_Speech/Video_Speech_Actor_14/  files=120  e.g. 01-01-01-01-01-01-14.mp4, 01-01-01-01-01-02-14.mp4
+  Video_Speech/Video_Speech_Actor_15/  files=120  e.g. 01-01-01-01-01-01-15.mp4, 01-01-01-01-01-02-15.mp4
+  Video_Speech/Video_Speech_Actor_16/  files=120  e.g. 01-01-01-01-01-01-16.mp4, 01-01-01-01-01-02-16.mp4
+  Video_Speech/Video_Speech_Actor_17/  files=120  e.g. 01-01-01-01-01-01-17.mp4, 01-01-01-01-01-02-17.mp4
+  Video_Speech/Video_Speech_Actor_18/  files=120  e.g. 01-01-01-01-01-01-18.mp4, 01-01-01-01-01-02-18.mp4
+  Video_Speech/Video_Speech_Actor_19/  files=120  e.g. 01-01-01-01-01-01-19.mp4, 01-01-01-01-01-02-19.mp4
+  Video_Speech/Video_Speech_Actor_20/  files=120  e.g. 01-01-01-01-01-01-20.mp4, 01-01-01-01-01-02-20.mp4
+  Video_Speech/Video_Speech_Actor_21/  files=120  e.g. 01-01-01-01-01-01-21.mp4, 01-01-01-01-01-02-21.mp4
+  Video_Speech/Video_Speech_Actor_22/  files=120  e.g. 01-01-01-01-01-01-22.mp4, 01-01-01-01-01-02-22.mp4
+  Video_Speech/Video_Speech_Actor_23/  files=120  e.g. 01-01-01-01-01-01-23.mp4, 01-01-01-01-01-02-23.mp4
+  Video_Speech/Video_Speech_Actor_24/  files=120  e.g. 01-01-01-01-01-01-24.mp4, 01-01-01-01-01-02-24.mp4
+
+file-name patterns over 4320 media/data files (top 12, digits -> N):
+    2880  N-N-N-N-N-N-N.mpN
+    1440  N-N-N-N-N-N-N.wav
+
+notes:
+  - Used: datasets/RAVDESS/Video_Speech (2,880 mp4, 1,440 modality 01 + 1,440 modality 02). Speech only.
+  - Excluded: RAVDESS/Video_Song (song, not speech; Phase 0 decision). Its .download.lock is ignored.
+  - Excluded: RAVDESS/Audio_Speech (audio only, no video). Phase 1 keeps video rows only.
+  - Ignored duplicate: datasets/ravdess/ (same counts as RAVDESS/; lowercase copy, not indexed).

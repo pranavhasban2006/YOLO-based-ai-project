@@ -1,0 +1,102 @@
+[
+  {
+    "sample": {
+      "dataset": "fer2013",
+      "kind": "image",
+      "label": "happy",
+      "path": "D:\\Projects\\YOLO\\datasets\\FER-2013\\extracted\\test\\happy\\PrivateTest_47631580.jpg"
+    },
+    "output": {
+      "input": "D:\\Projects\\YOLO\\datasets\\FER-2013\\extracted\\test\\happy\\PrivateTest_47631580.jpg",
+      "kind": "image",
+      "frames_sampled": 1,
+      "frames_in_clip": 1,
+      "face_found_frames": 1,
+      "probabilities": {
+        "angry": 0.0171,
+        "disgust": 0.0173,
+        "fear": 0.0173,
+        "happy": 0.8691,
+        "neutral": 0.007,
+        "sad": 0.0089,
+        "surprise": 0.0633
+      },
+      "top_label": "happy"
+    }
+  },
+  {
+    "sample": {
+      "dataset": "jaffe",
+      "kind": "image",
+      "label": "neutral",
+      "path": "D:\\Projects\\YOLO\\project\\data\\faces\\jaffe\\UY\\UY.NE3.136_f0.jpg"
+    },
+    "output": {
+      "input": "D:\\Projects\\YOLO\\project\\data\\faces\\jaffe\\UY\\UY.NE3.136_f0.jpg",
+      "kind": "image",
+      "frames_sampled": 1,
+      "frames_in_clip": 1,
+      "face_found_frames": 1,
+      "probabilities": {
+        "angry": 0.0281,
+        "disgust": 0.2534,
+        "fear": 0.0672,
+        "happy": 0.0186,
+        "neutral": 0.56,
+        "sad": 0.023,
+        "surprise": 0.0496
+      },
+      "top_label": "neutral"
+    }
+  },
+  {
+    "sample": {
+      "dataset": "crema_d",
+      "kind": "image",
+      "label": "fear",
+      "path": "D:\\Projects\\YOLO\\project\\data\\faces\\crema_d\\1010\\1010_IEO_FEA_HI_f1.jpg"
+    },
+    "output": {
+      "input": "D:\\Projects\\YOLO\\project\\data\\faces\\crema_d\\1010\\1010_IEO_FEA_HI_f1.jpg",
+      "kind": "image",
+      "frames_sampled": 1,
+      "frames_in_clip": 1,
+      "face_found_frames": 1,
+      "probabilities": {
+        "angry": 0.069,
+        "disgust": 0.0045,
+        "fear": 0.8859,
+        "happy": 0.011,
+        "neutral": 0.0057,
+        "sad": 0.0079,
+        "surprise": 0.016
+      },
+      "top_label": "fear"
+    }
+  },
+  {
+    "sample": {
+      "dataset": "ravdess",
+      "kind": "video",
+      "label": "disgust",
+      "path": "D:\\Projects\\YOLO\\datasets\\RAVDESS\\Video_Speech\\Video_Speech_Actor_19\\01-01-07-01-02-02-19.mp4"
+    },
+    "output": {
+      "input": "D:\\Projects\\YOLO\\datasets\\RAVDESS\\Video_Speech\\Video_Speech_Actor_19\\01-01-07-01-02-02-19.mp4",
+      "kind": "video",
+      "frames_sampled": 5,
+      "frames_in_clip": 118,
+      "face_found_frames": 5,
+      "probabilities": {
+        "angry": 0.0348,
+        "disgust": 0.2341,
+        "fear": 0.0189,
+        "happy": 0.4737,
+        "neutral": 0.0123,
+        "sad": 0.1265,
+        "surprise": 0.0998
+      },
+      "top_label": "happy"
+    }
+  }
+]

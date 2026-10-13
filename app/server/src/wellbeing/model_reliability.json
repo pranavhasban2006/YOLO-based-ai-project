@@ -1,0 +1,23 @@
+{
+  "_comment": "Reliability of each trained model = its cross-dataset (leave-one-dataset-out, E3) mean macro-F1, copied from the model reports. Weights in the late fusion are reliability / sum(reliability of the modalities present). A null value means the model does not exist yet; that modality is skipped.",
+  "face": {
+    "value": 0.342,
+    "metric": "E3 leave-one-dataset-out mean macro-F1 (CNN, 4 held-out datasets)",
+    "source": "project/reports/FACE_MODEL_REPORT.md, section 3.2 (E3 table, Mean row)"
+  },
+  "audio": {
+    "value": 0.360,
+    "metric": "E3 leave-one-dataset-out mean macro-F1 (4 held-out corpora)",
+    "source": "project/reports/AUDIO_MODEL_REPORT.md, section 4.2 (E3 table, Mean row)"
+  },
+  "text": {
+    "value": null,
+    "metric": "E3 mean macro-F1",
+    "source": "no text emotion model exists yet (no project/code/infer_text.py and no project/reports/TEXT_MODEL_REPORT.md)"
+  },
+  "eeg": {
+    "value": null,
+    "metric": "reserved",
+    "source": "no EEG model exists yet; the slot is ignored"
+  }
+}

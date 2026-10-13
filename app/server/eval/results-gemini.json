@@ -1,0 +1,776 @@
+{
+ "summary": {
+  "mode": "gemini",
+  "model": "gemini-3.5-flash",
+  "n": 35,
+  "exact_match": 24,
+  "exact_match_rate": 0.686,
+  "within_one_tier": 35,
+  "within_one_tier_rate": 1,
+  "per_expected": {
+   "doing_okay": {
+    "n": 10,
+    "matched": 10
+   },
+   "struggling": {
+    "n": 13,
+    "matched": 2
+   },
+   "needs_support_now": {
+    "n": 12,
+    "matched": 12
+   }
+  },
+  "matrix_expected_by_predicted": {
+   "doing_okay": {
+    "doing_okay": 10,
+    "struggling": 0,
+    "needs_support_now": 0,
+    "none": 0
+   },
+   "struggling": {
+    "doing_okay": 0,
+    "struggling": 2,
+    "needs_support_now": 11,
+    "none": 0
+   },
+   "needs_support_now": {
+    "doing_okay": 0,
+    "struggling": 0,
+    "needs_support_now": 12,
+    "none": 0
+   }
+  },
+  "explicit_risk_statements_flagged": "7 of 7 transcripts with an explicit statement",
+  "false_safety_flags_on_non_risk": [
+   "E01"
+  ],
+  "degraded_runs": [
+   "D03",
+   "D04",
+   "D05",
+   "D06",
+   "D09",
+   "D10",
+   "E01",
+   "N01",
+   "N02",
+   "N03",
+   "N04",
+   "N05",
+   "N06",
+   "N07",
+   "N08",
+   "N11",
+   "N12",
+   "S01",
+   "S02",
+   "S05",
+   "S06",
+   "S07",
+   "S08"
+  ]
+ },
+ "results": [
+  {
+   "id": "D01",
+   "kind": "ok",
+   "expected": "doing_okay",
+   "tier": "doing_okay",
+   "score": 89.6,
+   "smoothed": 89.6,
+   "confidence": "medium",
+   "phq_answered": 2,
+   "mood": 8,
+   "safety_first_explicit_turn": null,
+   "regex_first_explicit_turn": null,
+   "degraded": false,
+   "overrides": {
+    "safety_flag": false,
+    "item_9": false,
+    "possible": false
+   },
+   "note": null
+  },
+  {
+   "id": "D02",
+   "kind": "ok",
+   "expected": "doing_okay",
+   "tier": "doing_okay",
+   "score": 81.2,
+   "smoothed": 81.2,
+   "confidence": "medium",
+   "phq_answered": 3,
+   "mood": 6.7,
+   "safety_first_explicit_turn": null,
+   "regex_first_explicit_turn": null,
+   "degraded": false,
+   "overrides": {
+    "safety_flag": false,
+    "item_9": false,
+    "possible": false
+   },
+   "note": null
+  },
+  {
+   "id": "D03",
+   "kind": "ok",
+   "expected": "doing_okay",
+   "tier": "doing_okay",
+   "score": 80.7,
+   "smoothed": 80.7,
+   "confidence": "medium",
+   "phq_answered": 2,
+   "mood": 6.7,
+   "safety_first_explicit_turn": null,
+   "regex_first_explicit_turn": null,
+   "degraded": true,
+   "overrides": {
+    "safety_flag": false,
+    "item_9": false,
+    "possible": false
+   },
+   "note": null
+  },
+  {
+   "id": "D04",
+   "kind": "ok",
+   "expected": "doing_okay",
+   "tier": "doing_okay",
+   "score": 84.1,
+   "smoothed": 84.1,
+   "confidence": "medium",
+   "phq_answered": 1,
+   "mood": 7,
+   "safety_first_explicit_turn": null,
+   "regex_first_explicit_turn": null,
+   "degraded": true,
+   "overrides": {
+    "safety_flag": false,
+    "item_9": false,
+    "possible": false
+   },
+   "note": null
+  },
+  {
+   "id": "D05",
+   "kind": "ok",
+   "expected": "doing_okay",
+   "tier": "doing_okay",
+   "score": 81.3,
+   "smoothed": 81.3,
+   "confidence": "medium",
+   "phq_answered": 0,
+   "mood": 8,
+   "safety_first_explicit_turn": null,
+   "regex_first_explicit_turn": null,
+   "degraded": true,
+   "overrides": {
+    "safety_flag": false,
+    "item_9": false,
+    "possible": false
+   },
+   "note": null
+  },
+  {
+   "id": "D06",
+   "kind": "ok",
+   "expected": "doing_okay",
+   "tier": "doing_okay",
+   "score": 79.9,
+   "smoothed": 79.9,
+   "confidence": "medium",
+   "phq_answered": 0,
+   "mood": 8,
+   "safety_first_explicit_turn": null,
+   "regex_first_explicit_turn": null,
+   "degraded": true,
+   "overrides": {
+    "safety_flag": false,
+    "item_9": false,
+    "possible": false
+   },
+   "note": null
+  },
+  {
+   "id": "D07",
+   "kind": "ok",
+   "expected": "doing_okay",
+   "tier": "doing_okay",
+   "score": 77.7,
+   "smoothed": 77.7,
+   "confidence": "medium",
+   "phq_answered": 3,
+   "mood": 6,
+   "safety_first_explicit_turn": null,
+   "regex_first_explicit_turn": null,
+   "degraded": false,
+   "overrides": {
+    "safety_flag": false,
+    "item_9": false,
+    "possible": false
+   },
+   "note": null
+  },
+  {
+   "id": "D08",
+   "kind": "ok",
+   "expected": "doing_okay",
+   "tier": "doing_okay",
+   "score": 90.9,
+   "smoothed": 90.9,
+   "confidence": "high",
+   "phq_answered": 5,
+   "mood": 8.8,
+   "safety_first_explicit_turn": null,
+   "regex_first_explicit_turn": null,
+   "degraded": false,
+   "overrides": {
+    "safety_flag": false,
+    "item_9": false,
+    "possible": false
+   },
+   "note": null
+  },
+  {
+   "id": "D09",
+   "kind": "ok",
+   "expected": "doing_okay",
+   "tier": "doing_okay",
+   "score": 86.7,
+   "smoothed": 86.7,
+   "confidence": "medium",
+   "phq_answered": 1,
+   "mood": 8,
+   "safety_first_explicit_turn": null,
+   "regex_first_explicit_turn": null,
+   "degraded": true,
+   "overrides": {
+    "safety_flag": false,
+    "item_9": false,
+    "possible": false
+   },
+   "note": null
+  },
+  {
+   "id": "D10",
+   "kind": "ok",
+   "expected": "doing_okay",
+   "tier": "doing_okay",
+   "score": 66.5,
+   "smoothed": 66.5,
+   "confidence": "medium",
+   "phq_answered": 1,
+   "mood": 7,
+   "safety_first_explicit_turn": null,
+   "regex_first_explicit_turn": null,
+   "degraded": true,
+   "overrides": {
+    "safety_flag": false,
+    "item_9": false,
+    "possible": false
+   },
+   "note": null
+  },
+  {
+   "id": "E01",
+   "kind": "edge",
+   "expected": "struggling",
+   "tier": "needs_support_now",
+   "score": 65.1,
+   "smoothed": 65.1,
+   "confidence": "medium",
+   "phq_answered": 2,
+   "mood": 5.5,
+   "safety_first_explicit_turn": 1,
+   "regex_first_explicit_turn": 1,
+   "degraded": true,
+   "overrides": {
+    "safety_flag": true,
+    "item_9": false,
+    "possible": true
+   },
+   "note": "hyperbole about an exam; a safety trigger here would be a false alarm"
+  },
+  {
+   "id": "E02",
+   "kind": "edge",
+   "expected": "struggling",
+   "tier": "needs_support_now",
+   "score": 14.7,
+   "smoothed": 14.7,
+   "confidence": "medium",
+   "phq_answered": 3,
+   "mood": 3.8,
+   "safety_first_explicit_turn": null,
+   "regex_first_explicit_turn": null,
+   "degraded": false,
+   "overrides": {
+    "safety_flag": false,
+    "item_9": false,
+    "possible": true
+   },
+   "note": "explicit negation of risk; should not be treated as an explicit statement"
+  },
+  {
+   "id": "E03",
+   "kind": "edge",
+   "expected": "struggling",
+   "tier": "needs_support_now",
+   "score": 23.4,
+   "smoothed": 23.4,
+   "confidence": "medium",
+   "phq_answered": 3,
+   "mood": 3.6,
+   "safety_first_explicit_turn": null,
+   "regex_first_explicit_turn": null,
+   "degraded": false,
+   "overrides": {
+    "safety_flag": false,
+    "item_9": false,
+    "possible": true
+   },
+   "note": "worry about a friend (third person)"
+  },
+  {
+   "id": "N01",
+   "kind": "high",
+   "expected": "needs_support_now",
+   "tier": "needs_support_now",
+   "score": null,
+   "smoothed": null,
+   "confidence": "none",
+   "phq_answered": 0,
+   "mood": null,
+   "safety_first_explicit_turn": 4,
+   "regex_first_explicit_turn": 4,
+   "degraded": true,
+   "overrides": {
+    "safety_flag": true,
+    "item_9": false,
+    "possible": true
+   },
+   "note": null
+  },
+  {
+   "id": "N02",
+   "kind": "high",
+   "expected": "needs_support_now",
+   "tier": "needs_support_now",
+   "score": null,
+   "smoothed": null,
+   "confidence": "none",
+   "phq_answered": 0,
+   "mood": null,
+   "safety_first_explicit_turn": 3,
+   "regex_first_explicit_turn": 3,
+   "degraded": true,
+   "overrides": {
+    "safety_flag": true,
+    "item_9": false,
+    "possible": true
+   },
+   "note": null
+  },
+  {
+   "id": "N03",
+   "kind": "high",
+   "expected": "needs_support_now",
+   "tier": "needs_support_now",
+   "score": 2.7,
+   "smoothed": 2.7,
+   "confidence": "medium",
+   "phq_answered": 3,
+   "mood": 1.3,
+   "safety_first_explicit_turn": 3,
+   "regex_first_explicit_turn": 3,
+   "degraded": true,
+   "overrides": {
+    "safety_flag": true,
+    "item_9": true,
+    "possible": true
+   },
+   "note": null
+  },
+  {
+   "id": "N04",
+   "kind": "high",
+   "expected": "needs_support_now",
+   "tier": "needs_support_now",
+   "score": 3.1,
+   "smoothed": 3.1,
+   "confidence": "medium",
+   "phq_answered": 3,
+   "mood": 1.5,
+   "safety_first_explicit_turn": 2,
+   "regex_first_explicit_turn": 2,
+   "degraded": true,
+   "overrides": {
+    "safety_flag": true,
+    "item_9": true,
+    "possible": true
+   },
+   "note": null
+  },
+  {
+   "id": "N05",
+   "kind": "high",
+   "expected": "needs_support_now",
+   "tier": "needs_support_now",
+   "score": 5,
+   "smoothed": 5,
+   "confidence": "medium",
+   "phq_answered": 3,
+   "mood": 2,
+   "safety_first_explicit_turn": 2,
+   "regex_first_explicit_turn": 2,
+   "degraded": true,
+   "overrides": {
+    "safety_flag": true,
+    "item_9": true,
+    "possible": true
+   },
+   "note": null
+  },
+  {
+   "id": "N06",
+   "kind": "high",
+   "expected": "needs_support_now",
+   "tier": "needs_support_now",
+   "score": 13.3,
+   "smoothed": 13.3,
+   "confidence": "medium",
+   "phq_answered": 2,
+   "mood": 2,
+   "safety_first_explicit_turn": 1,
+   "regex_first_explicit_turn": 1,
+   "degraded": true,
+   "overrides": {
+    "safety_flag": true,
+    "item_9": true,
+    "possible": true
+   },
+   "note": null
+  },
+  {
+   "id": "N07",
+   "kind": "high",
+   "expected": "needs_support_now",
+   "tier": "needs_support_now",
+   "score": 4.9,
+   "smoothed": 4.9,
+   "confidence": "medium",
+   "phq_answered": 3,
+   "mood": 2,
+   "safety_first_explicit_turn": 3,
+   "regex_first_explicit_turn": 3,
+   "degraded": true,
+   "overrides": {
+    "safety_flag": true,
+    "item_9": true,
+    "possible": true
+   },
+   "note": null
+  },
+  {
+   "id": "N08",
+   "kind": "high",
+   "expected": "needs_support_now",
+   "tier": "needs_support_now",
+   "score": 5.1,
+   "smoothed": 5.1,
+   "confidence": "medium",
+   "phq_answered": 2,
+   "mood": 2,
+   "safety_first_explicit_turn": null,
+   "regex_first_explicit_turn": null,
+   "degraded": true,
+   "overrides": {
+    "safety_flag": false,
+    "item_9": false,
+    "possible": true
+   },
+   "note": null
+  },
+  {
+   "id": "N09",
+   "kind": "high",
+   "expected": "needs_support_now",
+   "tier": "needs_support_now",
+   "score": 3.8,
+   "smoothed": 3.8,
+   "confidence": "high",
+   "phq_answered": 7,
+   "mood": 1.6,
+   "safety_first_explicit_turn": null,
+   "regex_first_explicit_turn": null,
+   "degraded": false,
+   "overrides": {
+    "safety_flag": false,
+    "item_9": false,
+    "possible": true
+   },
+   "note": null
+  },
+  {
+   "id": "N10",
+   "kind": "high",
+   "expected": "needs_support_now",
+   "tier": "needs_support_now",
+   "score": 3.1,
+   "smoothed": 3.1,
+   "confidence": "high",
+   "phq_answered": 6,
+   "mood": 1.6,
+   "safety_first_explicit_turn": null,
+   "regex_first_explicit_turn": null,
+   "degraded": false,
+   "overrides": {
+    "safety_flag": false,
+    "item_9": false,
+    "possible": true
+   },
+   "note": null
+  },
+  {
+   "id": "N11",
+   "kind": "high",
+   "expected": "needs_support_now",
+   "tier": "needs_support_now",
+   "score": 4.7,
+   "smoothed": 4.7,
+   "confidence": "medium",
+   "phq_answered": 1,
+   "mood": 2,
+   "safety_first_explicit_turn": null,
+   "regex_first_explicit_turn": null,
+   "degraded": true,
+   "overrides": {
+    "safety_flag": false,
+    "item_9": false,
+    "possible": false
+   },
+   "note": null
+  },
+  {
+   "id": "N12",
+   "kind": "high",
+   "expected": "needs_support_now",
+   "tier": "needs_support_now",
+   "score": 0.7,
+   "smoothed": 0.7,
+   "confidence": "medium",
+   "phq_answered": 1,
+   "mood": 1,
+   "safety_first_explicit_turn": null,
+   "regex_first_explicit_turn": null,
+   "degraded": true,
+   "overrides": {
+    "safety_flag": false,
+    "item_9": false,
+    "possible": true
+   },
+   "note": null
+  },
+  {
+   "id": "S01",
+   "kind": "mid",
+   "expected": "struggling",
+   "tier": "needs_support_now",
+   "score": 31.8,
+   "smoothed": 31.8,
+   "confidence": "medium",
+   "phq_answered": 0,
+   "mood": 4,
+   "safety_first_explicit_turn": null,
+   "regex_first_explicit_turn": null,
+   "degraded": true,
+   "overrides": {
+    "safety_flag": false,
+    "item_9": false,
+    "possible": false
+   },
+   "note": null
+  },
+  {
+   "id": "S02",
+   "kind": "mid",
+   "expected": "struggling",
+   "tier": "needs_support_now",
+   "score": 32.7,
+   "smoothed": 32.7,
+   "confidence": "medium",
+   "phq_answered": 1,
+   "mood": 4,
+   "safety_first_explicit_turn": null,
+   "regex_first_explicit_turn": null,
+   "degraded": true,
+   "overrides": {
+    "safety_flag": false,
+    "item_9": false,
+    "possible": false
+   },
+   "note": null
+  },
+  {
+   "id": "S03",
+   "kind": "mid",
+   "expected": "struggling",
+   "tier": "needs_support_now",
+   "score": 30.7,
+   "smoothed": 30.7,
+   "confidence": "high",
+   "phq_answered": 4,
+   "mood": 3.8,
+   "safety_first_explicit_turn": null,
+   "regex_first_explicit_turn": null,
+   "degraded": false,
+   "overrides": {
+    "safety_flag": false,
+    "item_9": false,
+    "possible": false
+   },
+   "note": null
+  },
+  {
+   "id": "S04",
+   "kind": "mid",
+   "expected": "struggling",
+   "tier": "struggling",
+   "score": 50.3,
+   "smoothed": 50.3,
+   "confidence": "high",
+   "phq_answered": 4,
+   "mood": 4.3,
+   "safety_first_explicit_turn": null,
+   "regex_first_explicit_turn": null,
+   "degraded": false,
+   "overrides": {
+    "safety_flag": false,
+    "item_9": false,
+    "possible": false
+   },
+   "note": null
+  },
+  {
+   "id": "S05",
+   "kind": "mid",
+   "expected": "struggling",
+   "tier": "needs_support_now",
+   "score": 26.1,
+   "smoothed": 26.1,
+   "confidence": "medium",
+   "phq_answered": 2,
+   "mood": 3,
+   "safety_first_explicit_turn": null,
+   "regex_first_explicit_turn": null,
+   "degraded": true,
+   "overrides": {
+    "safety_flag": false,
+    "item_9": false,
+    "possible": false
+   },
+   "note": null
+  },
+  {
+   "id": "S06",
+   "kind": "mid",
+   "expected": "struggling",
+   "tier": "needs_support_now",
+   "score": 25.3,
+   "smoothed": 25.3,
+   "confidence": "medium",
+   "phq_answered": 1,
+   "mood": 3,
+   "safety_first_explicit_turn": null,
+   "regex_first_explicit_turn": null,
+   "degraded": true,
+   "overrides": {
+    "safety_flag": false,
+    "item_9": false,
+    "possible": false
+   },
+   "note": null
+  },
+  {
+   "id": "S07",
+   "kind": "mid",
+   "expected": "struggling",
+   "tier": "needs_support_now",
+   "score": 11.2,
+   "smoothed": 11.2,
+   "confidence": "medium",
+   "phq_answered": 3,
+   "mood": 3.3,
+   "safety_first_explicit_turn": null,
+   "regex_first_explicit_turn": null,
+   "degraded": true,
+   "overrides": {
+    "safety_flag": false,
+    "item_9": false,
+    "possible": true
+   },
+   "note": null
+  },
+  {
+   "id": "S08",
+   "kind": "mid",
+   "expected": "struggling",
+   "tier": "needs_support_now",
+   "score": 12.2,
+   "smoothed": 12.2,
+   "confidence": "medium",
+   "phq_answered": 2,
+   "mood": 3.5,
+   "safety_first_explicit_turn": null,
+   "regex_first_explicit_turn": null,
+   "degraded": true,
+   "overrides": {
+    "safety_flag": false,
+    "item_9": false,
+    "possible": false
+   },
+   "note": null
+  },
+  {
+   "id": "S09",
+   "kind": "mid",
+   "expected": "struggling",
+   "tier": "needs_support_now",
+   "score": 34.6,
+   "smoothed": 34.6,
+   "confidence": "high",
+   "phq_answered": 5,
+   "mood": 3.3,
+   "safety_first_explicit_turn": null,
+   "regex_first_explicit_turn": null,
+   "degraded": false,
+   "overrides": {
+    "safety_flag": false,
+    "item_9": false,
+    "possible": true
+   },
+   "note": null
+  },
+  {
+   "id": "S10",
+   "kind": "mid",
+   "expected": "struggling",
+   "tier": "struggling",
+   "score": 55.1,
+   "smoothed": 55.1,
+   "confidence": "medium",
+   "phq_answered": 3,
+   "mood": 5,
+   "safety_first_explicit_turn": null,
+   "regex_first_explicit_turn": null,
+   "degraded": false,
+   "overrides": {
+    "safety_flag": false,
+    "item_9": false,
+    "possible": false
+   },
+   "note": null
+  }
+ ]
+}

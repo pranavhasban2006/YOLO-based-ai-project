@@ -1,0 +1,254 @@
+{
+ "ravdess": {
+  "folders": [
+   "RAVDESS"
+  ],
+  "files": 4349,
+  "audio_files": 4320,
+  "bytes": 29302020343,
+  "partial": 0,
+  "zero_byte": 0,
+  "zips": [
+   {
+    "zip": "RAVDESS/Audio_Speech/Audio_Speech_Actors_01-24.zip",
+    "bytes": 208468073,
+    "extract_dir_exists": true
+   },
+   {
+    "zip": "RAVDESS/Video_Song/Video_Song_Actor_01.zip",
+    "bytes": 502513588,
+    "extract_dir_exists": false
+   },
+   {
+    "zip": "RAVDESS/Video_Song/Video_Song_Actor_02.zip",
+    "bytes": 553420328,
+    "extract_dir_exists": false
+   },
+   {
+    "zip": "RAVDESS/Video_Song/Video_Song_Actor_03.zip",
+    "bytes": 508655610,
+    "extract_dir_exists": false
+   },
+   {
+    "zip": "RAVDESS/Video_Speech/Video_Speech_Actor_01.zip",
+    "bytes": 552968353,
+    "extract_dir_exists": true
+   },
+   {
+    "zip": "RAVDESS/Video_Speech/Video_Speech_Actor_02.zip",
+    "bytes": 570673024,
+    "extract_dir_exists": true
+   },
+   {
+    "zip": "RAVDESS/Video_Speech/Video_Speech_Actor_03.zip",
+    "bytes": 567824665,
+    "extract_dir_exists": true
+   },
+   {
+    "zip": "RAVDESS/Video_Speech/Video_Speech_Actor_04.zip",
+    "bytes": 546560009,
+    "extract_dir_exists": true
+   },
+   {
+    "zip": "RAVDESS/Video_Speech/Video_Speech_Actor_05.zip",
+    "bytes": 562966425,
+    "extract_dir_exists": true
+   },
+   {
+    "zip": "RAVDESS/Video_Speech/Video_Speech_Actor_06.zip",
+    "bytes": 568517859,
+    "extract_dir_exists": true
+   },
+   {
+    "zip": "RAVDESS/Video_Speech/Video_Speech_Actor_07.zip",
+    "bytes": 565652404,
+    "extract_dir_exists": true
+   },
+   {
+    "zip": "RAVDESS/Video_Speech/Video_Speech_Actor_08.zip",
+    "bytes": 562573079,
+    "extract_dir_exists": true
+   },
+   {
+    "zip": "RAVDESS/Video_Speech/Video_Speech_Actor_09.zip",
+    "bytes": 523489249,
+    "extract_dir_exists": true
+   },
+   {
+    "zip": "RAVDESS/Video_Speech/Video_Speech_Actor_10.zip",
+    "bytes": 565580163,
+    "extract_dir_exists": true
+   },
+   {
+    "zip": "RAVDESS/Video_Speech/Video_Speech_Actor_11.zip",
+    "bytes": 518634370,
+    "extract_dir_exists": true
+   },
+   {
+    "zip": "RAVDESS/Video_Speech/Video_Speech_Actor_12.zip",
+    "bytes": 557928718,
+    "extract_dir_exists": true
+   },
+   {
+    "zip": "RAVDESS/Video_Speech/Video_Speech_Actor_13.zip",
+    "bytes": 501877549,
+    "extract_dir_exists": true
+   },
+   {
+    "zip": "RAVDESS/Video_Speech/Video_Speech_Actor_14.zip",
+    "bytes": 552484059,
+    "extract_dir_exists": true
+   },
+   {
+    "zip": "RAVDESS/Video_Speech/Video_Speech_Actor_15.zip",
+    "bytes": 525205576,
+    "extract_dir_exists": true
+   },
+   {
+    "zip": "RAVDESS/Video_Speech/Video_Speech_Actor_16.zip",
+    "bytes": 562416513,
+    "extract_dir_exists": true
+   },
+   {
+    "zip": "RAVDESS/Video_Speech/Video_Speech_Actor_17.zip",
+    "bytes": 551688845,
+    "extract_dir_exists": true
+   },
+   {
+    "zip": "RAVDESS/Video_Speech/Video_Speech_Actor_18.zip",
+    "bytes": 565655520,
+    "extract_dir_exists": true
+   },
+   {
+    "zip": "RAVDESS/Video_Speech/Video_Speech_Actor_19.zip",
+    "bytes": 581121687,
+    "extract_dir_exists": true
+   },
+   {
+    "zip": "RAVDESS/Video_Speech/Video_Speech_Actor_20.zip",
+    "bytes": 561349264,
+    "extract_dir_exists": true
+   },
+   {
+    "zip": "RAVDESS/Video_Speech/Video_Speech_Actor_21.zip",
+    "bytes": 590292896,
+    "extract_dir_exists": true
+   },
+   {
+    "zip": "RAVDESS/Video_Speech/Video_Speech_Actor_22.zip",
+    "bytes": 560907466,
+    "extract_dir_exists": true
+   },
+   {
+    "zip": "RAVDESS/Video_Speech/Video_Speech_Actor_23.zip",
+    "bytes": 545177865,
+    "extract_dir_exists": true
+   },
+   {
+    "zip": "RAVDESS/Video_Speech/Video_Speech_Actor_24.zip",
+    "bytes": 595799165,
+    "extract_dir_exists": true
+   }
+  ]
+ },
+ "crema_d": {
+  "folders": [
+   "crema_d"
+  ],
+  "files": 44813,
+  "audio_files": 7442,
+  "bytes": 7436701302,
+  "partial": 0,
+  "zero_byte": 131,
+  "zips": []
+ },
+ "tess": {
+  "folders": [
+   "tess"
+  ],
+  "files": 2801,
+  "audio_files": 2800,
+  "bytes": 281330424,
+  "partial": 0,
+  "zero_byte": 0,
+  "zips": []
+ },
+ "savee": {
+  "folders": [
+   "savee"
+  ],
+  "files": 482,
+  "audio_files": 480,
+  "bytes": 114826150,
+  "partial": 0,
+  "zero_byte": 0,
+  "zips": []
+ },
+ "meld": {
+  "folders": [
+   "meld"
+  ],
+  "files": 15928,
+  "audio_files": 15908,
+  "bytes": 32664055142,
+  "partial": 0,
+  "zero_byte": 2,
+  "zips": []
+ },
+ "esd": {
+  "folders": [
+   "esd"
+  ],
+  "files": 17525,
+  "audio_files": 17500,
+  "bytes": 3996521092,
+  "partial": 0,
+  "zero_byte": 1,
+  "zips": [
+   {
+    "zip": "esd/ESD.zip",
+    "bytes": 2446419486,
+    "extract_dir_exists": false
+   }
+  ]
+ },
+ "emodb": {
+  "folders": [
+   "emodb"
+  ],
+  "files": 2105,
+  "audio_files": 535,
+  "bytes": 89342632,
+  "partial": 0,
+  "zero_byte": 1,
+  "zips": [
+   {
+    "zip": "emodb/raw/download.zip",
+    "bytes": 40567066,
+    "extract_dir_exists": false
+   }
+  ]
+ },
+ "_top_level": [
+  "FER-2013",
+  "RAVDESS",
+  "audio_download_report.md",
+  "crema_clone.log",
+  "crema_d",
+  "crema_lfs.log",
+  "eeg_ds003478",
+  "eeg_ds003478.log",
+  "emodb",
+  "esd",
+  "face_model_phases.md",
+  "fer2013",
+  "ferplus",
+  "goemotions",
+  "jaffe",
+  "manifest.json",
+  "manifest.json.bak",
+  "meld",
+  "savee",
+  "tess"
+ ]
+}

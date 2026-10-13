@@ -1,0 +1,12 @@
+Dataset: crema_d
+Folder: crema_d/AudioWAV
+Wav files: 7442
+Example file names (first 5 sorted):
+  1001_DFA_ANG_XX.wav
+  1001_DFA_DIS_XX.wav
+  1001_DFA_FEA_XX.wav
+  1001_DFA_HAP_XX.wav
+  1001_DFA_NEU_XX.wav
+Distinct folders holding wavs: 1 (first 3: ['.'])
+Parse rule: ActorID_Sentence_Emotion_Level; speaker = ActorID; ANG DIS FEA HAP NEU SAD; no surprise
+Excluded during parse or read: {'silent': 1}

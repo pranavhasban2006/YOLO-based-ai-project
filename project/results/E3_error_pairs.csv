@@ -1,0 +1,13 @@
+held_out,rank,true,predicted,count,row_rate,likely_reason,reason_note
+fer2013,1,neutral,disgust,7113,0.6042,acted vs spontaneous,"fer2013 is spontaneous, 48 px, web-sourced; every training set (JAFFE, RAVDESS, CREMA-D) is acted."
+fer2013,2,happy,disgust,5264,0.5722,acted vs spontaneous,Same domain gap: spontaneous faces do not look like the posed training smiles.
+fer2013,3,sad,disgust,2927,0.6933,acted vs spontaneous,Same domain gap; disgust receives 60% of all fer2013 predictions (see log).
+jaffe,1,angry,neutral,22,0.7333,acted vs spontaneous,"JAFFE is posed; low-intensity posed anger reads as neutral. Only 30 angry images, so the rate is noisy."
+jaffe,2,disgust,sad,17,0.5862,label noise,"Posed disgust and sad are close in JAFFE; 29 images in the class, so the ambiguity is per-image."
+jaffe,3,fear,sad,14,0.4375,label noise,Posed fear and sad are close in JAFFE; 32 images in the class.
+ravdess,1,angry,neutral,733,0.3818,acted vs spontaneous,Acted anger at normal intensity is low-arousal and reads as neutral.
+ravdess,2,sad,disgust,635,0.3307,label noise,Acted negative-valence clips overlap; the sad and disgust labels are not cleanly separated.
+ravdess,3,neutral,happy,632,0.2194,label noise,"Documented label-definition mismatch: RAVDESS calm is merged into neutral (Phase 1 decision), so 'neutral' is not one emotion."
+crema_d,1,sad,neutral,2258,0.3556,label noise,"Low-intensity sad against neutral is a soft boundary, the usual place for label disagreement in acted sets."
+crema_d,2,angry,neutral,1856,0.2921,acted vs spontaneous,Acted anger at low intensity reads as neutral.
+crema_d,3,fear,neutral,1589,0.25,acted vs spontaneous,Acted fear at low intensity reads as neutral.

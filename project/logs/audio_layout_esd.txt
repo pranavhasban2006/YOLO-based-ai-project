@@ -1,0 +1,12 @@
+Dataset: esd
+Folder: esd/English
+Wav files: 17500
+Example file names (first 5 sorted):
+  0011_000351.wav
+  0011_000352.wav
+  0011_000353.wav
+  0011_000354.wav
+  0011_000355.wav
+Distinct folders holding wavs: 50 (first 3: ['0011\\Angry', '0011\\Happy', '0011\\Neutral'])
+Parse rule: <speaker>_<nnnnnn>; utterance blocks of 350: neutral, angry, happy, sad, surprise; speaker = 4-digit id; no fear/disgust
+Excluded during parse or read: {}

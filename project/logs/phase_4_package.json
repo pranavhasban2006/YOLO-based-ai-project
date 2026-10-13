@@ -1,0 +1,11 @@
+{
+  "zip_files": 85318,
+  "zip_gb": 0.822,
+  "upload_gb_total": 0.836,
+  "dropped_missing_sources": 0,
+  "verify_missing_after_extract": 0,
+  "splits_rows": 85318,
+  "faces_index_rows": 85318,
+  "fer2013_images_in_zip": 33500,
+  "fer2013_rows_dropped_no_ferplus_label": 2387
+}

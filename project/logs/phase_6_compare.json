@@ -1,0 +1,184 @@
+{
+  "skipped_e3": [],
+  "e3_done": [
+    "fer2013",
+    "jaffe",
+    "ravdess",
+    "crema_d"
+  ],
+  "warnings": [],
+  "fer2013_pred_disgust_share": 0.6037313432835821,
+  "fer2013_accuracy": 0.07217910447761194,
+  "e3_summary": [
+    {
+      "held_out": "fer2013",
+      "status": "done",
+      "in_dataset_E2_macro_f1": 0.7097892084892591,
+      "in_dataset_E2_accuracy": 0.8100267777447189,
+      "E3_macro_f1": 0.08802450806607338,
+      "E3_accuracy": 0.07217910447761194,
+      "macro_f1_drop": 0.6217647004231857,
+      "accuracy_drop": 0.7378476732671069,
+      "E3_macro_f1_6_shared": 0.08637087815712774,
+      "E3_n_test": 33500
+    },
+    {
+      "held_out": "jaffe",
+      "status": "done",
+      "in_dataset_E2_macro_f1": 0.631650492364778,
+      "in_dataset_E2_accuracy": 0.6590909090909091,
+      "E3_macro_f1": 0.45410124932852636,
+      "E3_accuracy": 0.4835680751173709,
+      "macro_f1_drop": 0.17754924303625164,
+      "accuracy_drop": 0.17552283397353818,
+      "E3_macro_f1_6_shared": 0.41696427806276787,
+      "E3_n_test": 213
+    },
+    {
+      "held_out": "ravdess",
+      "status": "done",
+      "in_dataset_E2_macro_f1": 0.5727935703926467,
+      "in_dataset_E2_accuracy": 0.5704166666666667,
+      "E3_macro_f1": 0.41152119557259603,
+      "E3_accuracy": 0.4675694444444444,
+      "macro_f1_drop": 0.16127237482005063,
+      "accuracy_drop": 0.10284722222222226,
+      "E3_macro_f1_6_shared": 0.47173367726490884,
+      "E3_n_test": 14400
+    },
+    {
+      "held_out": "crema_d",
+      "status": "done",
+      "in_dataset_E2_macro_f1": 0.5431533678661423,
+      "in_dataset_E2_accuracy": 0.5422066549912434,
+      "E3_macro_f1": 0.41557871286376485,
+      "E3_accuracy": 0.4203467275903776,
+      "macro_f1_drop": 0.12757465500237747,
+      "accuracy_drop": 0.12185992740086582,
+      "E3_macro_f1_6_shared": 0.41557871286376485,
+      "E3_n_test": 37205
+    }
+  ],
+  "error_pairs": [
+    {
+      "held_out": "fer2013",
+      "rank": 1,
+      "true": "neutral",
+      "predicted": "disgust",
+      "count": 7113,
+      "row_rate": 0.6042,
+      "likely_reason": "acted vs spontaneous",
+      "reason_note": "fer2013 is spontaneous, 48 px, web-sourced; every training set (JAFFE, RAVDESS, CREMA-D) is acted."
+    },
+    {
+      "held_out": "fer2013",
+      "rank": 2,
+      "true": "happy",
+      "predicted": "disgust",
+      "count": 5264,
+      "row_rate": 0.5722,
+      "likely_reason": "acted vs spontaneous",
+      "reason_note": "Same domain gap: spontaneous faces do not look like the posed training smiles."
+    },
+    {
+      "held_out": "fer2013",
+      "rank": 3,
+      "true": "sad",
+      "predicted": "disgust",
+      "count": 2927,
+      "row_rate": 0.6933,
+      "likely_reason": "acted vs spontaneous",
+      "reason_note": "Same domain gap; disgust receives 60% of all fer2013 predictions (see log)."
+    },
+    {
+      "held_out": "jaffe",
+      "rank": 1,
+      "true": "angry",
+      "predicted": "neutral",
+      "count": 22,
+      "row_rate": 0.7333,
+      "likely_reason": "acted vs spontaneous",
+      "reason_note": "JAFFE is posed; low-intensity posed anger reads as neutral. Only 30 angry images, so the rate is noisy."
+    },
+    {
+      "held_out": "jaffe",
+      "rank": 2,
+      "true": "disgust",
+      "predicted": "sad",
+      "count": 17,
+      "row_rate": 0.5862,
+      "likely_reason": "label noise",
+      "reason_note": "Posed disgust and sad are close in JAFFE; 29 images in the class, so the ambiguity is per-image."
+    },
+    {
+      "held_out": "jaffe",
+      "rank": 3,
+      "true": "fear",
+      "predicted": "sad",
+      "count": 14,
+      "row_rate": 0.4375,
+      "likely_reason": "label noise",
+      "reason_note": "Posed fear and sad are close in JAFFE; 32 images in the class."
+    },
+    {
+      "held_out": "ravdess",
+      "rank": 1,
+      "true": "angry",
+      "predicted": "neutral",
+      "count": 733,
+      "row_rate": 0.3818,
+      "likely_reason": "acted vs spontaneous",
+      "reason_note": "Acted anger at normal intensity is low-arousal and reads as neutral."
+    },
+    {
+      "held_out": "ravdess",
+      "rank": 2,
+      "true": "sad",
+      "predicted": "disgust",
+      "count": 635,
+      "row_rate": 0.3307,
+      "likely_reason": "label noise",
+      "reason_note": "Acted negative-valence clips overlap; the sad and disgust labels are not cleanly separated."
+    },
+    {
+      "held_out": "ravdess",
+      "rank": 3,
+      "true": "neutral",
+      "predicted": "happy",
+      "count": 632,
+      "row_rate": 0.2194,
+      "likely_reason": "label noise",
+      "reason_note": "Documented label-definition mismatch: RAVDESS calm is merged into neutral (Phase 1 decision), so 'neutral' is not one emotion."
+    },
+    {
+      "held_out": "crema_d",
+      "rank": 1,
+      "true": "sad",
+      "predicted": "neutral",
+      "count": 2258,
+      "row_rate": 0.3556,
+      "likely_reason": "label noise",
+      "reason_note": "Low-intensity sad against neutral is a soft boundary, the usual place for label disagreement in acted sets."
+    },
+    {
+      "held_out": "crema_d",
+      "rank": 2,
+      "true": "angry",
+      "predicted": "neutral",
+      "count": 1856,
+      "row_rate": 0.2921,
+      "likely_reason": "acted vs spontaneous",
+      "reason_note": "Acted anger at low intensity reads as neutral."
+    },
+    {
+      "held_out": "crema_d",
+      "rank": 3,
+      "true": "fear",
+      "predicted": "neutral",
+      "count": 1589,
+      "row_rate": 0.25,
+      "likely_reason": "acted vs spontaneous",
+      "reason_note": "Acted fear at low intensity reads as neutral."
+    }
+  ]
+}

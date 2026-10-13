@@ -1,0 +1,752 @@
+{
+ "summary": {
+  "mode": "mock",
+  "model": null,
+  "n": 35,
+  "exact_match": 26,
+  "exact_match_rate": 0.743,
+  "within_one_tier": 35,
+  "within_one_tier_rate": 1,
+  "per_expected": {
+   "doing_okay": {
+    "n": 10,
+    "matched": 9
+   },
+   "struggling": {
+    "n": 13,
+    "matched": 10
+   },
+   "needs_support_now": {
+    "n": 12,
+    "matched": 7
+   }
+  },
+  "matrix_expected_by_predicted": {
+   "doing_okay": {
+    "doing_okay": 9,
+    "struggling": 1,
+    "needs_support_now": 0,
+    "none": 0
+   },
+   "struggling": {
+    "doing_okay": 2,
+    "struggling": 10,
+    "needs_support_now": 1,
+    "none": 0
+   },
+   "needs_support_now": {
+    "doing_okay": 0,
+    "struggling": 5,
+    "needs_support_now": 7,
+    "none": 0
+   }
+  },
+  "explicit_risk_statements_flagged": "7 of 7 transcripts with an explicit statement",
+  "false_safety_flags_on_non_risk": [
+   "E01"
+  ],
+  "degraded_runs": []
+ },
+ "results": [
+  {
+   "id": "D01",
+   "kind": "ok",
+   "expected": "doing_okay",
+   "tier": "doing_okay",
+   "score": 71.5,
+   "smoothed": 71.5,
+   "confidence": "medium",
+   "phq_answered": 0,
+   "mood": 7.6,
+   "safety_first_explicit_turn": null,
+   "regex_first_explicit_turn": null,
+   "degraded": false,
+   "overrides": {
+    "safety_flag": false,
+    "item_9": false,
+    "possible": false
+   },
+   "note": null
+  },
+  {
+   "id": "D02",
+   "kind": "ok",
+   "expected": "doing_okay",
+   "tier": "doing_okay",
+   "score": 67.5,
+   "smoothed": 67.5,
+   "confidence": "medium",
+   "phq_answered": 0,
+   "mood": 7.4,
+   "safety_first_explicit_turn": null,
+   "regex_first_explicit_turn": null,
+   "degraded": false,
+   "overrides": {
+    "safety_flag": false,
+    "item_9": false,
+    "possible": false
+   },
+   "note": null
+  },
+  {
+   "id": "D03",
+   "kind": "ok",
+   "expected": "doing_okay",
+   "tier": "doing_okay",
+   "score": 71.5,
+   "smoothed": 71.5,
+   "confidence": "medium",
+   "phq_answered": 0,
+   "mood": 7.6,
+   "safety_first_explicit_turn": null,
+   "regex_first_explicit_turn": null,
+   "degraded": false,
+   "overrides": {
+    "safety_flag": false,
+    "item_9": false,
+    "possible": false
+   },
+   "note": null
+  },
+  {
+   "id": "D04",
+   "kind": "ok",
+   "expected": "doing_okay",
+   "tier": "struggling",
+   "score": 64.7,
+   "smoothed": 64.7,
+   "confidence": "medium",
+   "phq_answered": 0,
+   "mood": 7,
+   "safety_first_explicit_turn": null,
+   "regex_first_explicit_turn": null,
+   "degraded": false,
+   "overrides": {
+    "safety_flag": false,
+    "item_9": false,
+    "possible": false
+   },
+   "note": null
+  },
+  {
+   "id": "D05",
+   "kind": "ok",
+   "expected": "doing_okay",
+   "tier": "doing_okay",
+   "score": 71.5,
+   "smoothed": 71.5,
+   "confidence": "medium",
+   "phq_answered": 0,
+   "mood": 7.6,
+   "safety_first_explicit_turn": null,
+   "regex_first_explicit_turn": null,
+   "degraded": false,
+   "overrides": {
+    "safety_flag": false,
+    "item_9": false,
+    "possible": false
+   },
+   "note": null
+  },
+  {
+   "id": "D06",
+   "kind": "ok",
+   "expected": "doing_okay",
+   "tier": "doing_okay",
+   "score": 67,
+   "smoothed": 67,
+   "confidence": "medium",
+   "phq_answered": 0,
+   "mood": 7.2,
+   "safety_first_explicit_turn": null,
+   "regex_first_explicit_turn": null,
+   "degraded": false,
+   "overrides": {
+    "safety_flag": false,
+    "item_9": false,
+    "possible": false
+   },
+   "note": null
+  },
+  {
+   "id": "D07",
+   "kind": "ok",
+   "expected": "doing_okay",
+   "tier": "doing_okay",
+   "score": 69.2,
+   "smoothed": 69.2,
+   "confidence": "medium",
+   "phq_answered": 0,
+   "mood": 7.4,
+   "safety_first_explicit_turn": null,
+   "regex_first_explicit_turn": null,
+   "degraded": false,
+   "overrides": {
+    "safety_flag": false,
+    "item_9": false,
+    "possible": false
+   },
+   "note": null
+  },
+  {
+   "id": "D08",
+   "kind": "ok",
+   "expected": "doing_okay",
+   "tier": "doing_okay",
+   "score": 67,
+   "smoothed": 67,
+   "confidence": "medium",
+   "phq_answered": 0,
+   "mood": 7.2,
+   "safety_first_explicit_turn": null,
+   "regex_first_explicit_turn": null,
+   "degraded": false,
+   "overrides": {
+    "safety_flag": false,
+    "item_9": false,
+    "possible": false
+   },
+   "note": null
+  },
+  {
+   "id": "D09",
+   "kind": "ok",
+   "expected": "doing_okay",
+   "tier": "doing_okay",
+   "score": 67,
+   "smoothed": 67,
+   "confidence": "medium",
+   "phq_answered": 0,
+   "mood": 7.2,
+   "safety_first_explicit_turn": null,
+   "regex_first_explicit_turn": null,
+   "degraded": false,
+   "overrides": {
+    "safety_flag": false,
+    "item_9": false,
+    "possible": false
+   },
+   "note": null
+  },
+  {
+   "id": "D10",
+   "kind": "ok",
+   "expected": "doing_okay",
+   "tier": "doing_okay",
+   "score": 68.4,
+   "smoothed": 68.4,
+   "confidence": "medium",
+   "phq_answered": 0,
+   "mood": 7.2,
+   "safety_first_explicit_turn": null,
+   "regex_first_explicit_turn": null,
+   "degraded": false,
+   "overrides": {
+    "safety_flag": false,
+    "item_9": false,
+    "possible": false
+   },
+   "note": null
+  },
+  {
+   "id": "E01",
+   "kind": "edge",
+   "expected": "struggling",
+   "tier": "needs_support_now",
+   "score": 62.9,
+   "smoothed": 62.9,
+   "confidence": "medium",
+   "phq_answered": 0,
+   "mood": 7,
+   "safety_first_explicit_turn": 1,
+   "regex_first_explicit_turn": 1,
+   "degraded": false,
+   "overrides": {
+    "safety_flag": true,
+    "item_9": false,
+    "possible": true
+   },
+   "note": "hyperbole about an exam; a safety trigger here would be a false alarm"
+  },
+  {
+   "id": "E02",
+   "kind": "edge",
+   "expected": "struggling",
+   "tier": "struggling",
+   "score": 53.4,
+   "smoothed": 53.4,
+   "confidence": "medium",
+   "phq_answered": 0,
+   "mood": 6.2,
+   "safety_first_explicit_turn": null,
+   "regex_first_explicit_turn": null,
+   "degraded": false,
+   "overrides": {
+    "safety_flag": false,
+    "item_9": false,
+    "possible": true
+   },
+   "note": "explicit negation of risk; should not be treated as an explicit statement"
+  },
+  {
+   "id": "E03",
+   "kind": "edge",
+   "expected": "struggling",
+   "tier": "struggling",
+   "score": 52.5,
+   "smoothed": 52.5,
+   "confidence": "medium",
+   "phq_answered": 0,
+   "mood": 6,
+   "safety_first_explicit_turn": null,
+   "regex_first_explicit_turn": null,
+   "degraded": false,
+   "overrides": {
+    "safety_flag": false,
+    "item_9": false,
+    "possible": false
+   },
+   "note": "worry about a friend (third person)"
+  },
+  {
+   "id": "N01",
+   "kind": "high",
+   "expected": "needs_support_now",
+   "tier": "needs_support_now",
+   "score": 60.6,
+   "smoothed": 60.6,
+   "confidence": "medium",
+   "phq_answered": 0,
+   "mood": 6.8,
+   "safety_first_explicit_turn": 4,
+   "regex_first_explicit_turn": 4,
+   "degraded": false,
+   "overrides": {
+    "safety_flag": true,
+    "item_9": false,
+    "possible": true
+   },
+   "note": null
+  },
+  {
+   "id": "N02",
+   "kind": "high",
+   "expected": "needs_support_now",
+   "tier": "needs_support_now",
+   "score": 60.6,
+   "smoothed": 60.6,
+   "confidence": "medium",
+   "phq_answered": 0,
+   "mood": 6.8,
+   "safety_first_explicit_turn": 3,
+   "regex_first_explicit_turn": 3,
+   "degraded": false,
+   "overrides": {
+    "safety_flag": true,
+    "item_9": false,
+    "possible": true
+   },
+   "note": null
+  },
+  {
+   "id": "N03",
+   "kind": "high",
+   "expected": "needs_support_now",
+   "tier": "needs_support_now",
+   "score": 64.7,
+   "smoothed": 64.7,
+   "confidence": "medium",
+   "phq_answered": 0,
+   "mood": 7,
+   "safety_first_explicit_turn": 3,
+   "regex_first_explicit_turn": 3,
+   "degraded": false,
+   "overrides": {
+    "safety_flag": true,
+    "item_9": false,
+    "possible": true
+   },
+   "note": null
+  },
+  {
+   "id": "N04",
+   "kind": "high",
+   "expected": "needs_support_now",
+   "tier": "needs_support_now",
+   "score": 64.7,
+   "smoothed": 64.7,
+   "confidence": "medium",
+   "phq_answered": 0,
+   "mood": 7,
+   "safety_first_explicit_turn": 2,
+   "regex_first_explicit_turn": 2,
+   "degraded": false,
+   "overrides": {
+    "safety_flag": true,
+    "item_9": false,
+    "possible": true
+   },
+   "note": null
+  },
+  {
+   "id": "N05",
+   "kind": "high",
+   "expected": "needs_support_now",
+   "tier": "needs_support_now",
+   "score": 62.9,
+   "smoothed": 62.9,
+   "confidence": "medium",
+   "phq_answered": 0,
+   "mood": 7,
+   "safety_first_explicit_turn": 2,
+   "regex_first_explicit_turn": 2,
+   "degraded": false,
+   "overrides": {
+    "safety_flag": true,
+    "item_9": false,
+    "possible": true
+   },
+   "note": null
+  },
+  {
+   "id": "N06",
+   "kind": "high",
+   "expected": "needs_support_now",
+   "tier": "needs_support_now",
+   "score": 64.7,
+   "smoothed": 64.7,
+   "confidence": "medium",
+   "phq_answered": 0,
+   "mood": 7,
+   "safety_first_explicit_turn": 1,
+   "regex_first_explicit_turn": 1,
+   "degraded": false,
+   "overrides": {
+    "safety_flag": true,
+    "item_9": false,
+    "possible": true
+   },
+   "note": null
+  },
+  {
+   "id": "N07",
+   "kind": "high",
+   "expected": "needs_support_now",
+   "tier": "needs_support_now",
+   "score": 64.7,
+   "smoothed": 64.7,
+   "confidence": "medium",
+   "phq_answered": 0,
+   "mood": 7,
+   "safety_first_explicit_turn": 3,
+   "regex_first_explicit_turn": 3,
+   "degraded": false,
+   "overrides": {
+    "safety_flag": true,
+    "item_9": false,
+    "possible": true
+   },
+   "note": null
+  },
+  {
+   "id": "N08",
+   "kind": "high",
+   "expected": "needs_support_now",
+   "tier": "struggling",
+   "score": 56.5,
+   "smoothed": 56.5,
+   "confidence": "medium",
+   "phq_answered": 0,
+   "mood": 6.6,
+   "safety_first_explicit_turn": null,
+   "regex_first_explicit_turn": null,
+   "degraded": false,
+   "overrides": {
+    "safety_flag": false,
+    "item_9": false,
+    "possible": true
+   },
+   "note": null
+  },
+  {
+   "id": "N09",
+   "kind": "high",
+   "expected": "needs_support_now",
+   "tier": "struggling",
+   "score": 60.6,
+   "smoothed": 60.6,
+   "confidence": "medium",
+   "phq_answered": 0,
+   "mood": 6.8,
+   "safety_first_explicit_turn": null,
+   "regex_first_explicit_turn": null,
+   "degraded": false,
+   "overrides": {
+    "safety_flag": false,
+    "item_9": false,
+    "possible": true
+   },
+   "note": null
+  },
+  {
+   "id": "N10",
+   "kind": "high",
+   "expected": "needs_support_now",
+   "tier": "struggling",
+   "score": 56.5,
+   "smoothed": 56.5,
+   "confidence": "medium",
+   "phq_answered": 0,
+   "mood": 6.6,
+   "safety_first_explicit_turn": null,
+   "regex_first_explicit_turn": null,
+   "degraded": false,
+   "overrides": {
+    "safety_flag": false,
+    "item_9": false,
+    "possible": true
+   },
+   "note": null
+  },
+  {
+   "id": "N11",
+   "kind": "high",
+   "expected": "needs_support_now",
+   "tier": "struggling",
+   "score": 64.7,
+   "smoothed": 64.7,
+   "confidence": "medium",
+   "phq_answered": 0,
+   "mood": 7,
+   "safety_first_explicit_turn": null,
+   "regex_first_explicit_turn": null,
+   "degraded": false,
+   "overrides": {
+    "safety_flag": false,
+    "item_9": false,
+    "possible": false
+   },
+   "note": null
+  },
+  {
+   "id": "N12",
+   "kind": "high",
+   "expected": "needs_support_now",
+   "tier": "struggling",
+   "score": 52.5,
+   "smoothed": 52.5,
+   "confidence": "medium",
+   "phq_answered": 0,
+   "mood": 6.4,
+   "safety_first_explicit_turn": null,
+   "regex_first_explicit_turn": null,
+   "degraded": false,
+   "overrides": {
+    "safety_flag": false,
+    "item_9": false,
+    "possible": true
+   },
+   "note": null
+  },
+  {
+   "id": "S01",
+   "kind": "mid",
+   "expected": "struggling",
+   "tier": "struggling",
+   "score": 60.6,
+   "smoothed": 60.6,
+   "confidence": "medium",
+   "phq_answered": 0,
+   "mood": 6.8,
+   "safety_first_explicit_turn": null,
+   "regex_first_explicit_turn": null,
+   "degraded": false,
+   "overrides": {
+    "safety_flag": false,
+    "item_9": false,
+    "possible": false
+   },
+   "note": null
+  },
+  {
+   "id": "S02",
+   "kind": "mid",
+   "expected": "struggling",
+   "tier": "struggling",
+   "score": 56.5,
+   "smoothed": 56.5,
+   "confidence": "medium",
+   "phq_answered": 0,
+   "mood": 6.6,
+   "safety_first_explicit_turn": null,
+   "regex_first_explicit_turn": null,
+   "degraded": false,
+   "overrides": {
+    "safety_flag": false,
+    "item_9": false,
+    "possible": false
+   },
+   "note": null
+  },
+  {
+   "id": "S03",
+   "kind": "mid",
+   "expected": "struggling",
+   "tier": "struggling",
+   "score": 56.5,
+   "smoothed": 56.5,
+   "confidence": "medium",
+   "phq_answered": 0,
+   "mood": 6.6,
+   "safety_first_explicit_turn": null,
+   "regex_first_explicit_turn": null,
+   "degraded": false,
+   "overrides": {
+    "safety_flag": false,
+    "item_9": false,
+    "possible": false
+   },
+   "note": null
+  },
+  {
+   "id": "S04",
+   "kind": "mid",
+   "expected": "struggling",
+   "tier": "doing_okay",
+   "score": 67,
+   "smoothed": 67,
+   "confidence": "medium",
+   "phq_answered": 0,
+   "mood": 7.2,
+   "safety_first_explicit_turn": null,
+   "regex_first_explicit_turn": null,
+   "degraded": false,
+   "overrides": {
+    "safety_flag": false,
+    "item_9": false,
+    "possible": false
+   },
+   "note": null
+  },
+  {
+   "id": "S05",
+   "kind": "mid",
+   "expected": "struggling",
+   "tier": "struggling",
+   "score": 64.7,
+   "smoothed": 64.7,
+   "confidence": "medium",
+   "phq_answered": 0,
+   "mood": 7,
+   "safety_first_explicit_turn": null,
+   "regex_first_explicit_turn": null,
+   "degraded": false,
+   "overrides": {
+    "safety_flag": false,
+    "item_9": false,
+    "possible": false
+   },
+   "note": null
+  },
+  {
+   "id": "S06",
+   "kind": "mid",
+   "expected": "struggling",
+   "tier": "struggling",
+   "score": 60.6,
+   "smoothed": 60.6,
+   "confidence": "medium",
+   "phq_answered": 0,
+   "mood": 6.8,
+   "safety_first_explicit_turn": null,
+   "regex_first_explicit_turn": null,
+   "degraded": false,
+   "overrides": {
+    "safety_flag": false,
+    "item_9": false,
+    "possible": false
+   },
+   "note": null
+  },
+  {
+   "id": "S07",
+   "kind": "mid",
+   "expected": "struggling",
+   "tier": "struggling",
+   "score": 56.5,
+   "smoothed": 56.5,
+   "confidence": "medium",
+   "phq_answered": 0,
+   "mood": 6.6,
+   "safety_first_explicit_turn": null,
+   "regex_first_explicit_turn": null,
+   "degraded": false,
+   "overrides": {
+    "safety_flag": false,
+    "item_9": false,
+    "possible": false
+   },
+   "note": null
+  },
+  {
+   "id": "S08",
+   "kind": "mid",
+   "expected": "struggling",
+   "tier": "struggling",
+   "score": 60.6,
+   "smoothed": 60.6,
+   "confidence": "medium",
+   "phq_answered": 0,
+   "mood": 6.8,
+   "safety_first_explicit_turn": null,
+   "regex_first_explicit_turn": null,
+   "degraded": false,
+   "overrides": {
+    "safety_flag": false,
+    "item_9": false,
+    "possible": false
+   },
+   "note": null
+  },
+  {
+   "id": "S09",
+   "kind": "mid",
+   "expected": "struggling",
+   "tier": "struggling",
+   "score": 55.7,
+   "smoothed": 55.7,
+   "confidence": "medium",
+   "phq_answered": 0,
+   "mood": 6.4,
+   "safety_first_explicit_turn": null,
+   "regex_first_explicit_turn": null,
+   "degraded": false,
+   "overrides": {
+    "safety_flag": false,
+    "item_9": false,
+    "possible": true
+   },
+   "note": null
+  },
+  {
+   "id": "S10",
+   "kind": "mid",
+   "expected": "struggling",
+   "tier": "doing_okay",
+   "score": 65.2,
+   "smoothed": 65.2,
+   "confidence": "medium",
+   "phq_answered": 0,
+   "mood": 7.2,
+   "safety_first_explicit_turn": null,
+   "regex_first_explicit_turn": null,
+   "degraded": false,
+   "overrides": {
+    "safety_flag": false,
+    "item_9": false,
+    "possible": false
+   },
+   "note": null
+  }
+ ]
+}

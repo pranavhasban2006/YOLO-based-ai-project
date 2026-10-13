@@ -1,0 +1,12 @@
+Dataset: ravdess
+Folder: RAVDESS/Audio_Speech
+Wav files: 1440
+Example file names (first 5 sorted):
+  03-01-01-01-01-01-01.wav
+  03-01-01-01-01-02-01.wav
+  03-01-01-01-02-01-01.wav
+  03-01-01-01-02-02-01.wav
+  03-01-02-01-01-01-01.wav
+Distinct folders holding wavs: 24 (first 3: ['Audio_Speech_Actors_01-24\\Actor_01', 'Audio_Speech_Actors_01-24\\Actor_02', 'Audio_Speech_Actors_01-24\\Actor_03'])
+Parse rule: modality-channel-emotion-intensity-statement-repetition-actor; channel 01 only; emotion 01..08 -> neutral(01,02), happy, sad, angry, fear, disgust, surprise; speaker = actor (field 7)
+Excluded during parse or read: {}

@@ -1,0 +1,12 @@
+Dataset: tess
+Folder: tess
+Wav files: 2800
+Example file names (first 5 sorted):
+  OA_bite_neutral.wav
+  OAF_back_angry.wav
+  OAF_back_disgust.wav
+  OAF_back_fear.wav
+  OAF_back_happy.wav
+Distinct folders holding wavs: 1 (first 3: ['.'])
+Parse rule: OAF/YAF_<word>_<emotion>; speaker = prefix; emotion = last token, ps -> surprise
+Excluded during parse or read: {}

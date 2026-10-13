@@ -1,0 +1,23 @@
+# FER+ join checks
+
+original fer2013.csv rows: 35887; fer2013new.csv rows: 35887
+Usage column identical row by row: True
+FER+ rows kept (label_ferplus set): 33500 of 35887
+drop reasons: ok=33500, tie for top vote=1776, majority is unknown=222, majority is contempt=212, majority is NF=177
+
+Training: images=28709 original rows=28709
+PublicTest: images=3589 original rows=3589
+PrivateTest: images=3589 original rows=3589
+
+images matched: 35887
+folder label == original emotion: 35835 of 35887
+distinct original rows matched: 34608 of 35887
+images whose pixels appear on more than one original row: 3369
+match_dist quantiles (0,50,90,99,100): [0.0, 1.744, 1.8653, 1.9329, 2.0121]
+second_dist median (non-duplicate images): 42.38
+decode errors: 0
+mismatched folder/original labels by folder: {'fear': 16, 'surprise': 11, 'angry': 10, 'sad': 9, 'neutral': 5, 'happy': 1}
+mismatched rows that are pixel duplicates: 52 of 52
+
+FER-2013 images with label_ferplus set: 33500 of 35887
+of those, FER+ label == folder label: 22013

@@ -1,0 +1,16 @@
+{
+  "phase_done": 5,
+  "datasets_available": {
+    "ravdess": "COMPLETE",
+    "crema_d": "COMPLETE",
+    "tess": "COMPLETE",
+    "savee": "COMPLETE",
+    "meld": "COMPLETE",
+    "esd": "COMPLETE",
+    "emodb": "COMPLETE"
+  },
+  "index_clips": 43821,
+  "audio_16k_clips": 23174,
+  "waiting_for": null,
+  "v2_clips": 23174
+}

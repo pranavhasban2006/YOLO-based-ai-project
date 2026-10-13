@@ -1,0 +1,72 @@
+{
+  "run": "E3_cnn_holdout_fer2013",
+  "arch": "cnn",
+  "train_datasets": [
+    "crema_d",
+    "jaffe",
+    "ravdess"
+  ],
+  "epochs_run": 16,
+  "best_epoch": 10,
+  "best_val_macro_f1": 0.5080015284246598,
+  "tests": {
+    "fer2013": {
+      "n": 33500,
+      "accuracy": 0.07217910447761194,
+      "macro_f1": 0.08802450806607338,
+      "classes_scored": [
+        "angry",
+        "disgust",
+        "fear",
+        "happy",
+        "neutral",
+        "sad",
+        "surprise"
+      ],
+      "per_class": {
+        "angry": {
+          "precision": 0.07436918990703852,
+          "recall": 0.12958677685950412,
+          "f1": 0.09450337512054002,
+          "support": 3025
+        },
+        "disgust": {
+          "precision": 0.009592088998763905,
+          "recall": 0.8508771929824561,
+          "f1": 0.01897032220212194,
+          "support": 228
+        },
+        "fear": {
+          "precision": 0.05155807365439093,
+          "recall": 0.22386223862238622,
+          "f1": 0.0838130324660373,
+          "support": 813
+        },
+        "happy": {
+          "precision": 0.6851239669421487,
+          "recall": 0.09011849114034134,
+          "f1": 0.1592852339321741,
+          "support": 9199
+        },
+        "neutral": {
+          "precision": 0.30833333333333335,
+          "recall": 0.01257113734816954,
+          "f1": 0.024157349220599037,
+          "support": 11773
+        },
+        "sad": {
+          "precision": 0.21683673469387754,
+          "recall": 0.10066319279962103,
+          "f1": 0.13749595600129408,
+          "support": 4222
+        },
+        "surprise": {
+          "precision": 0.30097087378640774,
+          "recall": 0.05849056603773585,
+          "f1": 0.09794628751974724,
+          "support": 4240
+        }
+      }
+    }
+  }
+}

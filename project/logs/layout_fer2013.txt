@@ -1,0 +1,37 @@
+# Layout: fer2013
+root: D:\Projects\YOLO\datasets\FER-2013\extracted
+
+total files (excluding .git): 35887
+extensions: .jpg=35887
+
+top-level entries:
+  [dir ] test/  (7178 files below)
+  [dir ] train/  (28709 files below)
+
+subfolders (depth 2) with file counts and example names:
+  test/angry/  files=958  e.g. PrivateTest_10131363.jpg, PrivateTest_10304478.jpg
+  test/disgust/  files=111  e.g. PrivateTest_11895083.jpg, PrivateTest_19671520.jpg
+  test/fear/  files=1024  e.g. PrivateTest_10153550.jpg, PrivateTest_10254684.jpg
+  test/happy/  files=1774  e.g. PrivateTest_10077120.jpg, PrivateTest_10470092.jpg
+  test/neutral/  files=1233  e.g. PrivateTest_10086748.jpg, PrivateTest_10767287.jpg
+  test/sad/  files=1247  e.g. PrivateTest_10247676.jpg, PrivateTest_10455506.jpg
+  test/surprise/  files=831  e.g. PrivateTest_10072988.jpg, PrivateTest_10089743.jpg
+  train/angry/  files=3995  e.g. Training_10118481.jpg, Training_10120469.jpg
+  train/disgust/  files=436  e.g. Training_10371709.jpg, Training_10598340.jpg
+  train/fear/  files=4097  e.g. Training_10018621.jpg, Training_10031494.jpg
+  train/happy/  files=7215  e.g. Training_10019449.jpg, Training_10046809.jpg
+  train/neutral/  files=4965  e.g. Training_10002154.jpg, Training_10031781.jpg
+  train/sad/  files=4830  e.g. Training_10022789.jpg, Training_10031481.jpg
+  train/surprise/  files=3171  e.g. Training_10013223.jpg, Training_1002457.jpg
+
+file-name patterns over 35887 media/data files (top 12, digits -> N):
+   28709  Training_N.jpg
+    3589  PrivateTest_N.jpg
+    3589  PublicTest_N.jpg
+
+notes:
+  - Used: datasets/FER-2013/extracted (complete copy, 28,709 train + 7,178 test).
+  - Ignored: datasets/fer2013/ (partial, train 3,028 of 28,709). Not indexed.
+  - Test folder merges PublicTest_ and PrivateTest_ files; the prefix gives the split.
+  - Image names are Training_<id>.jpg, PublicTest_<id>.jpg, PrivateTest_<id>.jpg. The <id> is not a row index.
+  - Pixel source for the FER+ join: datasets image video/challenges-...zip -> fer2013.tar.gz -> fer2013.csv

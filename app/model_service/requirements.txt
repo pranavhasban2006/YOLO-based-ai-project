@@ -1,0 +1,10 @@
+# Model service. Install into the same venv the training code uses (project/.venv), which already has
+# torch, torchvision, opencv and mediapipe (see project/requirements.txt). Then add these:
+#   project\.venv\Scripts\python.exe -m pip install -r app\model_service\requirements.txt
+fastapi>=0.115
+uvicorn[standard]>=0.30
+python-multipart>=0.0.9
+pytest>=8
+httpx>=0.27
+websockets>=12
+faster-whisper>=1.0   # speech to text for the voice interview (model base.en is downloaded once, about 150 MB)

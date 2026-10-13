@@ -1,0 +1,19 @@
+# Install: project\.venv\Scripts\python.exe -m pip install -r project\requirements.txt
+# Python 3.13 on Windows. torch comes from the CUDA 12.8 wheel index (driver 581.42 supports it).
+--extra-index-url https://download.pytorch.org/whl/cu128
+torch==2.11.0+cu128
+torchvision==0.26.0+cu128
+numpy==2.5.3
+pandas==3.0.6
+scikit-learn==1.9.1
+opencv-contrib-python==5.0.0.93
+pillow==12.3.0
+tqdm==4.70.1
+matplotlib==3.11.2
+seaborn==0.13.2
+mediapipe==1.1.0
+pyarrow==26.0.0
+# Speech pipeline (audio phases 0-2). torchaudio must match the installed torch build.
+soundfile==0.14.0
+librosa==1.0.0
+torchaudio==2.11.0+cu128

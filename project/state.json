@@ -1,0 +1,11 @@
+{
+  "phase_done": 7,
+  "datasets_available": {
+    "fer2013": "available",
+    "ferplus": "available",
+    "jaffe": "available",
+    "ravdess": "available",
+    "crema_d": "available"
+  },
+  "waiting_for": "colab_results"
+}

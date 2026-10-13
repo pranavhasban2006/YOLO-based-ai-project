@@ -1,0 +1,414 @@
+{
+  "checkpoints": {
+    "E2_cnn": {
+      "arch_from_folder": "cnn",
+      "best": [
+        true,
+        "ok, 4693583 values, output (1, 7)"
+      ],
+      "last": [
+        true,
+        "ok, 4693583 values, output (1, 7)"
+      ]
+    },
+    "E2_resnet18": {
+      "arch_from_folder": "resnet18",
+      "best": [
+        true,
+        "ok, 11189723 values, output (1, 7)"
+      ],
+      "last": [
+        true,
+        "ok, 11189723 values, output (1, 7)"
+      ]
+    },
+    "E3_cnn_holdout_crema_d": {
+      "arch_from_folder": "cnn",
+      "best": [
+        true,
+        "ok, 4693583 values, output (1, 7)"
+      ],
+      "last": [
+        true,
+        "ok, 4693583 values, output (1, 7)"
+      ]
+    },
+    "E3_cnn_holdout_fer2013": {
+      "arch_from_folder": "cnn",
+      "best": [
+        true,
+        "ok, 4693583 values, output (1, 7)"
+      ],
+      "last": [
+        true,
+        "ok, 4693583 values, output (1, 7)"
+      ]
+    },
+    "E3_cnn_holdout_jaffe": {
+      "arch_from_folder": "cnn",
+      "best": [
+        true,
+        "ok, 4693583 values, output (1, 7)"
+      ],
+      "last": [
+        true,
+        "ok, 4693583 values, output (1, 7)"
+      ]
+    },
+    "E3_cnn_holdout_ravdess": {
+      "arch_from_folder": "cnn",
+      "best": [
+        true,
+        "ok, 4693583 values, output (1, 7)"
+      ],
+      "last": [
+        true,
+        "ok, 4693583 values, output (1, 7)"
+      ]
+    },
+    "best_model.pt": {
+      "arch_from_choice": "cnn",
+      "best": [
+        true,
+        "ok, 4693583 values, output (1, 7)"
+      ],
+      "same_bytes_as_E2_winner": true
+    }
+  },
+  "files": {
+    "E2_cnn/metrics": {
+      "arch_in_file": "cnn",
+      "arch_match": true,
+      "tests": [
+        "crema_d",
+        "fer2013",
+        "jaffe",
+        "ravdess"
+      ]
+    },
+    "E2_resnet18/metrics": {
+      "arch_in_file": "resnet18",
+      "arch_match": true,
+      "tests": [
+        "crema_d",
+        "fer2013",
+        "jaffe",
+        "ravdess"
+      ]
+    },
+    "E3_cnn_holdout_crema_d/metrics": {
+      "arch_in_file": "cnn",
+      "arch_match": true,
+      "tests": [
+        "crema_d"
+      ]
+    },
+    "E3_cnn_holdout_fer2013/metrics": {
+      "arch_in_file": "cnn",
+      "arch_match": true,
+      "tests": [
+        "fer2013"
+      ]
+    },
+    "E3_cnn_holdout_jaffe/metrics": {
+      "arch_in_file": "cnn",
+      "arch_match": true,
+      "tests": [
+        "jaffe"
+      ]
+    },
+    "E3_cnn_holdout_ravdess/metrics": {
+      "arch_in_file": "cnn",
+      "arch_match": true,
+      "tests": [
+        "ravdess"
+      ]
+    },
+    "compare_E2.csv": {
+      "rows": 10,
+      "columns": [
+        "model",
+        "dataset",
+        "accuracy",
+        "macro_f1",
+        "n_test"
+      ]
+    },
+    "E3_summary.csv": {
+      "rows": 4,
+      "columns": [
+        "held_out",
+        "status",
+        "accuracy",
+        "macro_f1",
+        "in_dataset_E2_macro_f1"
+      ]
+    }
+  },
+  "copies": [
+    {
+      "src": "colab_results\\E2_cnn\\metrics.json",
+      "dst": "results\\E2_cnn\\metrics.json",
+      "action": "copied"
+    },
+    {
+      "src": "colab_results\\E2_cnn\\history.csv",
+      "dst": "results\\E2_cnn\\history.csv",
+      "action": "copied"
+    },
+    {
+      "src": "colab_results\\E2_cnn\\done.json",
+      "dst": "results\\E2_cnn\\done.json",
+      "action": "copied"
+    },
+    {
+      "src": "colab_results\\E2_cnn\\confusion_crema_d.png",
+      "dst": "results\\E2_cnn\\confusion_crema_d.png",
+      "action": "copied"
+    },
+    {
+      "src": "colab_results\\E2_cnn\\confusion_fer2013.png",
+      "dst": "results\\E2_cnn\\confusion_fer2013.png",
+      "action": "copied"
+    },
+    {
+      "src": "colab_results\\E2_cnn\\confusion_jaffe.png",
+      "dst": "results\\E2_cnn\\confusion_jaffe.png",
+      "action": "copied"
+    },
+    {
+      "src": "colab_results\\E2_cnn\\confusion_ravdess.png",
+      "dst": "results\\E2_cnn\\confusion_ravdess.png",
+      "action": "copied"
+    },
+    {
+      "src": "colab_results\\E2_cnn\\best.pt",
+      "dst": "models\\E2_cnn\\best.pt",
+      "action": "copied"
+    },
+    {
+      "src": "colab_results\\E2_cnn\\last.pt",
+      "dst": "models\\E2_cnn\\last.pt",
+      "action": "copied"
+    },
+    {
+      "src": "colab_results\\E2_resnet18\\metrics.json",
+      "dst": "results\\E2_resnet18\\metrics.json",
+      "action": "copied"
+    },
+    {
+      "src": "colab_results\\E2_resnet18\\history.csv",
+      "dst": "results\\E2_resnet18\\history.csv",
+      "action": "copied"
+    },
+    {
+      "src": "colab_results\\E2_resnet18\\done.json",
+      "dst": "results\\E2_resnet18\\done.json",
+      "action": "copied"
+    },
+    {
+      "src": "colab_results\\E2_resnet18\\confusion_crema_d.png",
+      "dst": "results\\E2_resnet18\\confusion_crema_d.png",
+      "action": "copied"
+    },
+    {
+      "src": "colab_results\\E2_resnet18\\confusion_fer2013.png",
+      "dst": "results\\E2_resnet18\\confusion_fer2013.png",
+      "action": "copied"
+    },
+    {
+      "src": "colab_results\\E2_resnet18\\confusion_jaffe.png",
+      "dst": "results\\E2_resnet18\\confusion_jaffe.png",
+      "action": "copied"
+    },
+    {
+      "src": "colab_results\\E2_resnet18\\confusion_ravdess.png",
+      "dst": "results\\E2_resnet18\\confusion_ravdess.png",
+      "action": "copied"
+    },
+    {
+      "src": "colab_results\\E2_resnet18\\best.pt",
+      "dst": "models\\E2_resnet18\\best.pt",
+      "action": "copied"
+    },
+    {
+      "src": "colab_results\\E2_resnet18\\last.pt",
+      "dst": "models\\E2_resnet18\\last.pt",
+      "action": "copied"
+    },
+    {
+      "src": "colab_results\\E3_cnn_holdout_crema_d\\metrics.json",
+      "dst": "results\\E3_cnn_holdout_crema_d\\metrics.json",
+      "action": "copied"
+    },
+    {
+      "src": "colab_results\\E3_cnn_holdout_crema_d\\history.csv",
+      "dst": "results\\E3_cnn_holdout_crema_d\\history.csv",
+      "action": "copied"
+    },
+    {
+      "src": "colab_results\\E3_cnn_holdout_crema_d\\done.json",
+      "dst": "results\\E3_cnn_holdout_crema_d\\done.json",
+      "action": "copied"
+    },
+    {
+      "src": "colab_results\\E3_cnn_holdout_crema_d\\confusion_crema_d.png",
+      "dst": "results\\E3_cnn_holdout_crema_d\\confusion_crema_d.png",
+      "action": "copied"
+    },
+    {
+      "src": "colab_results\\E3_cnn_holdout_crema_d\\best.pt",
+      "dst": "models\\E3_cnn_holdout_crema_d\\best.pt",
+      "action": "copied"
+    },
+    {
+      "src": "colab_results\\E3_cnn_holdout_crema_d\\last.pt",
+      "dst": "models\\E3_cnn_holdout_crema_d\\last.pt",
+      "action": "copied"
+    },
+    {
+      "src": "colab_results\\E3_cnn_holdout_fer2013\\metrics.json",
+      "dst": "results\\E3_cnn_holdout_fer2013\\metrics.json",
+      "action": "copied"
+    },
+    {
+      "src": "colab_results\\E3_cnn_holdout_fer2013\\history.csv",
+      "dst": "results\\E3_cnn_holdout_fer2013\\history.csv",
+      "action": "copied"
+    },
+    {
+      "src": "colab_results\\E3_cnn_holdout_fer2013\\done.json",
+      "dst": "results\\E3_cnn_holdout_fer2013\\done.json",
+      "action": "copied"
+    },
+    {
+      "src": "colab_results\\E3_cnn_holdout_fer2013\\confusion_fer2013.png",
+      "dst": "results\\E3_cnn_holdout_fer2013\\confusion_fer2013.png",
+      "action": "copied"
+    },
+    {
+      "src": "colab_results\\E3_cnn_holdout_fer2013\\best.pt",
+      "dst": "models\\E3_cnn_holdout_fer2013\\best.pt",
+      "action": "copied"
+    },
+    {
+      "src": "colab_results\\E3_cnn_holdout_fer2013\\last.pt",
+      "dst": "models\\E3_cnn_holdout_fer2013\\last.pt",
+      "action": "copied"
+    },
+    {
+      "src": "colab_results\\E3_cnn_holdout_jaffe\\metrics.json",
+      "dst": "results\\E3_cnn_holdout_jaffe\\metrics.json",
+      "action": "copied"
+    },
+    {
+      "src": "colab_results\\E3_cnn_holdout_jaffe\\history.csv",
+      "dst": "results\\E3_cnn_holdout_jaffe\\history.csv",
+      "action": "copied"
+    },
+    {
+      "src": "colab_results\\E3_cnn_holdout_jaffe\\done.json",
+      "dst": "results\\E3_cnn_holdout_jaffe\\done.json",
+      "action": "copied"
+    },
+    {
+      "src": "colab_results\\E3_cnn_holdout_jaffe\\confusion_jaffe.png",
+      "dst": "results\\E3_cnn_holdout_jaffe\\confusion_jaffe.png",
+      "action": "copied"
+    },
+    {
+      "src": "colab_results\\E3_cnn_holdout_jaffe\\best.pt",
+      "dst": "models\\E3_cnn_holdout_jaffe\\best.pt",
+      "action": "copied"
+    },
+    {
+      "src": "colab_results\\E3_cnn_holdout_jaffe\\last.pt",
+      "dst": "models\\E3_cnn_holdout_jaffe\\last.pt",
+      "action": "copied"
+    },
+    {
+      "src": "colab_results\\E3_cnn_holdout_ravdess\\metrics.json",
+      "dst": "results\\E3_cnn_holdout_ravdess\\metrics.json",
+      "action": "copied"
+    },
+    {
+      "src": "colab_results\\E3_cnn_holdout_ravdess\\history.csv",
+      "dst": "results\\E3_cnn_holdout_ravdess\\history.csv",
+      "action": "copied"
+    },
+    {
+      "src": "colab_results\\E3_cnn_holdout_ravdess\\done.json",
+      "dst": "results\\E3_cnn_holdout_ravdess\\done.json",
+      "action": "copied"
+    },
+    {
+      "src": "colab_results\\E3_cnn_holdout_ravdess\\confusion_ravdess.png",
+      "dst": "results\\E3_cnn_holdout_ravdess\\confusion_ravdess.png",
+      "action": "copied"
+    },
+    {
+      "src": "colab_results\\E3_cnn_holdout_ravdess\\best.pt",
+      "dst": "models\\E3_cnn_holdout_ravdess\\best.pt",
+      "action": "copied"
+    },
+    {
+      "src": "colab_results\\E3_cnn_holdout_ravdess\\last.pt",
+      "dst": "models\\E3_cnn_holdout_ravdess\\last.pt",
+      "action": "copied"
+    },
+    {
+      "src": "colab_results\\compare_E2.csv",
+      "dst": "results\\compare_E2.csv",
+      "action": "copied"
+    },
+    {
+      "src": "colab_results\\E3_summary.csv",
+      "dst": "results\\E3_summary.csv",
+      "action": "copied"
+    },
+    {
+      "src": "colab_results\\E3_summary.png",
+      "dst": "results\\E3_summary.png",
+      "action": "copied"
+    },
+    {
+      "src": "colab_results\\choice.json",
+      "dst": "results\\choice.json",
+      "action": "copied"
+    },
+    {
+      "src": "colab_results\\classes.json",
+      "dst": "results\\classes.json",
+      "action": "copied"
+    },
+    {
+      "src": "colab_results\\best_model.pt",
+      "dst": "models\\best_model.pt",
+      "action": "copied"
+    }
+  ],
+  "blocking": [],
+  "unparseable": [],
+  "stop_reason": null,
+  "classes": {
+    "found": [
+      "angry",
+      "disgust",
+      "fear",
+      "happy",
+      "neutral",
+      "sad",
+      "surprise"
+    ],
+    "expected": [
+      "angry",
+      "disgust",
+      "fear",
+      "happy",
+      "neutral",
+      "sad",
+      "surprise"
+    ],
+    "match": true
+  }
+}

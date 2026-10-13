@@ -1,0 +1,33 @@
+{
+  "_comment": "UNVALIDATED DEFAULTS. These weights and thresholds were chosen by the developers, not fitted to or checked against clinical data. Do not treat the tiers as a screening result.",
+
+  "scoreUsesQuestionnaire": false,
+  "_scoreUsesQuestionnaire": "false (default): the score is a late fusion of the trained emotion models only (face, audio, text, EEG slot). The Gemini mood and PHQ-style values are still computed and shown, but not scored. true: the questionnaire-style score below is used instead.",
+
+  "valence": {
+    "happy": 1.0, "surprise": 0.25, "neutral": 0.0,
+    "sad": -1.0, "fear": -1.0, "angry": -1.0, "disgust": -1.0
+  },
+  "_valence": "Heuristic mapping from a 7-class emotion distribution to a wellbeing value: valence = sum(coef x p), in [-1, 1], then (valence + 1) x 50. It is not a clinical measure.",
+
+  "fusion": {
+    "reliability_file": "model_reliability.json",
+    "low_confidence_below": 0.4,
+    "use_prosody": false,
+    "prosody_weight": 0
+  },
+
+  "tiers": { "doing_okay_min": 65, "struggling_min": 40 },
+  "tiers_models": { "doing_okay_min": 45, "struggling_min": 30 },
+  "_tiers_models": "Because valence maps neutral to 50, the questionnaire thresholds (65 / 40) would put every neutral-looking person in the middle tier, so the model-fusion score uses lower cut-offs. Also an unvalidated default.",
+
+  "questionnaire": {
+    "weights": { "phq": 0.35, "mood": 0.25, "text_emotion": 0.10, "face": 0.15, "voice": 0.15 },
+    "phq": { "min_answered_items": 4, "max_item_value": 3 },
+    "prosody": { "max_penalty": 15, "slower_rate_below": -0.15, "pause_ratio_above": 0.25, "pause_mean_above": 0.25, "pitch_std_below": -0.25, "energy_db_below": -3 }
+  },
+
+  "overrides": { "self_harm_item_min": 2 },
+  "confidence": { "high_min_user_turns": 4 },
+  "trend": { "ema_alpha": 0.5, "slope_window_days": 7, "ema_last_sessions": 10 }
+}

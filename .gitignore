@@ -7,5 +7,29 @@ frontend/node_modules/
 frontend/dist/
 # Large binaries: share checkpoints separately
 models/*.pt
+datasets/
 *.log
 *.docx
+.venv/
+venv/
+node_modules/
+.cache/
+dist/
+build/
+_quarantine/
+datasets image video/
+project/data/
+project/models/
+project/colab_results*/
+project/colab_upload*/
+project/*.zip
+*.zip
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.y4m
+*.npy
+*.npz
+*.exe
+.env

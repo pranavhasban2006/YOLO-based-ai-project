@@ -1,0 +1,29 @@
+# Layout: jaffe
+root: D:\Projects\YOLO\datasets\jaffe\extracted
+
+total files (excluding .git): 214
+extensions: .tiff=213, .txt=1
+
+top-level entries:
+  [dir ] jaffe/  (213 files below)
+  [file] README_FIRST.txt  (18459 bytes)
+
+subfolders (depth 2) with file counts and example names:
+
+file-name patterns over 213 media/data files (top 12, digits -> N):
+       4  KA.FEN.N.tiff
+       4  KA.HAN.N.tiff
+       4  KL.DIN.N.tiff
+       4  KM.HAN.N.tiff
+       4  KM.SAN.N.tiff
+       4  YM.FEN.N.tiff
+       3  KA.ANN.N.tiff
+       3  KA.DIN.N.tiff
+       3  KA.NEN.N.tiff
+       3  KA.SAN.N.tiff
+       3  KA.SUN.N.tiff
+       3  KL.ANN.N.tiff
+
+notes:
+  - Used: datasets/jaffe/extracted/jaffe/*.tiff (213 images). README files are not indexed.
+  - Duplicate zip jaffe/jaffe.zip is not indexed.

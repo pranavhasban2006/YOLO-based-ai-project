@@ -1,0 +1,12 @@
+Dataset: emodb
+Folder: emodb/wav
+Wav files: 535
+Example file names (first 5 sorted):
+  03a01Fa.wav
+  03a01Nc.wav
+  03a01Wa.wav
+  03a02Fc.wav
+  03a02Nc.wav
+Distinct folders holding wavs: 1 (first 3: ['.'])
+Parse rule: 2-digit speaker, 3-char text code, emotion letter, version; W A E F T N map; L (boredom) excluded
+Excluded during parse or read: {'boredom_excluded': 81}

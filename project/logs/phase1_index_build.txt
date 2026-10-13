@@ -1,0 +1,27 @@
+# Phase 1 index build
+
+fer2013: 35887 images from fer2013_match.csv
+jaffe: 213 images parsed; unparsed names: none
+ravdess: 2880 video files parsed; skipped: none
+crema_d: 7442 video files parsed; unparsed names: none
+index rows: 46422 -> index.csv (csv; pyarrow not installed)
+dataset  kind 
+crema_d  video     7442
+fer2013  image    35887
+jaffe    image      213
+ravdess  video     2880
+
+unreadable files (flagged, not removed): 0 -> unreadable_files.csv
+
+stats -> dataset_stats.csv
+chart fer2013: imbalance 16.55; missing=none
+chart fer2013 test: imbalance 15.98; missing=none
+chart fer2013 private: imbalance 15.98; missing=none
+chart fer2013 ferplus: imbalance 51.64; missing=none
+chart jaffe: imbalance 1.10; missing=none
+chart ravdess: imbalance 1.50; missing=none
+chart crema_d: imbalance 1.17; missing=['surprise']
+
+samples: fer2013 8 per class -> reports\samples\fer2013; contact sheet contact_fer2013.png
+samples: jaffe 8 per class -> reports\samples\jaffe; contact sheet contact_jaffe.png
+state.json: phase_done = 1

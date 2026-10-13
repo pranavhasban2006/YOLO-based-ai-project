@@ -1,0 +1,19 @@
+{
+  "name": "face-emotion-app",
+  "private": true,
+  "version": "0.2.0",
+  "description": "Live face emotion detection: Python model service, Express server, React client",
+  "scripts": {
+    "install:all": "npm install && npm install --prefix server && npm install --prefix client",
+    "dev": "concurrently -k -n model,server,client -c magenta,cyan,green \"node scripts/run-model.mjs\" \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "dev:model": "node scripts/run-model.mjs",
+    "build": "npm run build --prefix client",
+    "test": "npm test --prefix server && node scripts/run-model.mjs --test",
+    "stream-test": "node scripts/stream-test.mjs",
+    "ui-shots": "npm run ui-shots --prefix client",
+    "voice-e2e": "npm run voice-e2e --prefix client"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}

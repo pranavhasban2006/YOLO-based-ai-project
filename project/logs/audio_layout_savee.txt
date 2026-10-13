@@ -1,0 +1,12 @@
+Dataset: savee
+Folder: savee/wav
+Wav files: 480
+Example file names (first 5 sorted):
+  DC_a01.wav
+  DC_a02.wav
+  DC_a03.wav
+  DC_a04.wav
+  DC_a05.wav
+Distinct folders holding wavs: 1 (first 3: ['.'])
+Parse rule: <speaker>_<code><nn>; codes a d f h n sa su; speaker = DC JE JK KL
+Excluded during parse or read: {}

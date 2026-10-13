@@ -1,0 +1,45 @@
+# Layout: crema_d
+root: D:\Projects\YOLO\datasets\crema_d
+
+total files (excluding .git): 22342
+extensions: .mp3=7442, .wav=7442, .flv=7442, .csv=7, .r=4, .md=2, (none)=1, .txt=1, .yml=1
+
+top-level entries:
+  [dir ] AudioMP3/  (7442 files below)
+  [dir ] AudioWAV/  (7442 files below)
+  [dir ] docs/  (2 files below)
+  [dir ] processedResults/  (2 files below)
+  [dir ] VideoFlash/  (7442 files below)
+  [file] .gitattributes  (172 bytes)
+  [file] finishedEmoResponses.csv  (18741150 bytes)
+  [file] finishedResponses.csv  (22348253 bytes)
+  [file] finishedResponsesWithRepeatWithPractice.csv  (26084841 bytes)
+  [file] LICENSE.txt  (317 bytes)
+  [file] processFinishedResponses.R  (2797 bytes)
+  [file] README.md  (469 bytes)
+  [file] readTabulatedVotes.R  (910 bytes)
+  [file] SentenceFilenames.csv  (177529 bytes)
+  [file] summarizeVotes.r  (5796 bytes)
+  [file] tabulateVotesV2.r  (11913 bytes)
+  [file] VideoDemographics.csv  (4125 bytes)
+
+subfolders (depth 2) with file counts and example names:
+
+file-name patterns over 22333 media/data files (top 12, digits -> N):
+      91  N_DFA_ANG_XX.mpN
+      91  N_DFA_DIS_XX.mpN
+      91  N_DFA_FEA_XX.mpN
+      91  N_DFA_HAP_XX.mpN
+      91  N_DFA_NEU_XX.mpN
+      91  N_DFA_SAD_XX.mpN
+      91  N_IEO_ANG_HI.mpN
+      91  N_IEO_ANG_LO.mpN
+      91  N_IEO_ANG_MD.mpN
+      91  N_IEO_DIS_HI.mpN
+      91  N_IEO_DIS_LO.mpN
+      91  N_IEO_DIS_MD.mpN
+
+notes:
+  - Used: datasets/crema_d/VideoFlash/*.flv (7,442 clips). Video only.
+  - AudioWAV and AudioMP3 are audio only and are not indexed.
+  - Git metadata under crema_d/.git is ignored.

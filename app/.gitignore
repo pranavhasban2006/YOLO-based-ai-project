@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.env
+.cache/
+scripts/out/
+model_service/__pycache__/
+model_service/.pytest_cache/
+server/data/

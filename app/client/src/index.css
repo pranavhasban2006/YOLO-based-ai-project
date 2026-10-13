@@ -1,0 +1,142 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Calm palette: teal (primary), soft violet (secondary), coral (alerts). Light and dark values. */
+:root {
+  --bg: #f1f6f7;
+  --bg-grad-a: #d9f0ee;
+  --bg-grad-b: #e6e3fb;
+  --surface: rgba(255, 255, 255, 0.78);
+  --surface-solid: #ffffff;
+  --line: rgba(18, 48, 58, 0.12);
+  --ink: #12303a;
+  --muted: #4f6a75;
+  --accent: #0b7f78;
+  --accent-ink: #ffffff;
+  --accent-soft: rgba(11, 127, 120, 0.12);
+  --violet: #6b5bd6;
+  --violet-soft: rgba(107, 91, 214, 0.12);
+  --coral: #cf4a43;
+  --coral-soft: rgba(242, 113, 107, 0.16);
+  --amber: #9a6208;
+  --shadow: 0 10px 30px -12px rgba(18, 48, 58, 0.25);
+  color-scheme: light;
+}
+.dark {
+  --bg: #0b1418;
+  --bg-grad-a: #0f2a2c;
+  --bg-grad-b: #1a1740;
+  --surface: rgba(21, 36, 43, 0.72);
+  --surface-solid: #15242b;
+  --line: rgba(190, 225, 232, 0.14);
+  --ink: #e6f1f3;
+  --muted: #9db4bc;
+  --accent: #2dd4bf;
+  --accent-ink: #04201d;
+  --accent-soft: rgba(45, 212, 191, 0.14);
+  --violet: #a89cff;
+  --violet-soft: rgba(168, 156, 255, 0.16);
+  --coral: #ff8a82;
+  --coral-soft: rgba(255, 138, 130, 0.16);
+  --amber: #f0b45a;
+  --shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.6);
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-solid: var(--surface-solid);
+  --color-line: var(--line);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --color-accent-soft: var(--accent-soft);
+  --color-violet: var(--violet);
+  --color-violet-soft: var(--violet-soft);
+  --color-coral: var(--coral);
+  --color-coral-soft: var(--coral-soft);
+  --color-amber: var(--amber);
+  --font-sans: "Inter", ui-sans-serif, system-ui, "Segoe UI", Roboto, sans-serif;
+}
+
+html {
+  background: var(--bg);
+}
+body {
+  min-height: 100vh;
+  color: var(--ink);
+  font-family: var(--font-sans);
+  background:
+    radial-gradient(60rem 36rem at 8% -10%, var(--bg-grad-a), transparent 60%),
+    radial-gradient(52rem 34rem at 100% 0%, var(--bg-grad-b), transparent 55%),
+    var(--bg);
+  background-attachment: fixed;
+}
+
+/* Visible keyboard focus everywhere */
+:where(a, button, input, textarea, select, [role="button"], [tabindex]):focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 0.5rem;
+}
+
+@utility glass {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+@utility card {
+  @apply glass rounded-3xl p-5 sm:p-6;
+}
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition disabled:cursor-not-allowed disabled:opacity-60;
+}
+@utility btn-primary {
+  @apply btn bg-accent text-accent-ink hover:brightness-110 active:scale-[0.98];
+}
+@utility btn-soft {
+  @apply btn border border-line bg-solid text-ink hover:bg-accent-soft;
+}
+@utility btn-danger {
+  @apply btn bg-coral text-white hover:brightness-110;
+}
+@utility chip {
+  @apply inline-flex items-center rounded-full border border-line bg-solid px-3.5 py-1.5 text-sm text-ink transition hover:border-accent hover:bg-accent-soft;
+}
+@utility field {
+  @apply w-full rounded-2xl border border-line bg-solid px-4 py-3 text-ink placeholder:text-muted;
+}
+@utility eyebrow {
+  @apply text-xs font-semibold uppercase tracking-wider text-muted;
+}
+.skeleton {
+  background: linear-gradient(90deg, var(--line) 25%, var(--accent-soft) 50%, var(--line) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s linear infinite;
+  border-radius: 0.75rem;
+}
+@keyframes shimmer {
+  to {
+    background-position: -200% 0;
+  }
+}
+@keyframes typing {
+  0%, 80%, 100% { transform: translateY(0); opacity: 0.4; }
+  40% { transform: translateY(-4px); opacity: 1; }
+}
+.dot { animation: typing 1.2s infinite ease-in-out; }
+.dot:nth-child(2) { animation-delay: 0.15s; }
+.dot:nth-child(3) { animation-delay: 0.3s; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

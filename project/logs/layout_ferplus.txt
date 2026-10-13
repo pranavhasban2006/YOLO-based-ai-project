@@ -1,0 +1,29 @@
+# Layout: ferplus
+root: D:\Projects\YOLO\datasets\ferplus
+
+total files (excluding .git): 14
+extensions: .py=6, .csv=4, .md=3, .png=1
+
+top-level entries:
+  [dir ] data/  (3 files below)
+  [dir ] src/  (6 files below)
+  [file] FER+vsFER.png  (108408 bytes)
+  [file] fer2013new.csv  (1638650 bytes)
+  [file] LICENSE.md  (1114 bytes)
+  [file] README.md  (322 bytes)
+  [file] SECURITY.md  (2798 bytes)
+
+subfolders (depth 2) with file counts and example names:
+  data/FER2013Test/  files=1  e.g. label.csv
+  data/FER2013Train/  files=1  e.g. label.csv
+  data/FER2013Valid/  files=1  e.g. label.csv
+
+file-name patterns over 5 media/data files (top 12, digits -> N):
+       3  label.csv
+       1  FER+vsFER.png
+       1  ferNnew.csv
+
+notes:
+  - Used: fer2013new.csv (35,887 rows, same row order as the original fer2013.csv).
+  - data/FER2013{Train,Valid,Test}/label.csv are the FER+ label files from the repo; they hold no pixels.
+  - No images in this folder. FER+ is a relabelling of the FER-2013 images, not a separate image set.

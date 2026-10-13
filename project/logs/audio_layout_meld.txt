@@ -1,0 +1,12 @@
+Dataset: meld
+Folder: ../project/data/meld_wav
+Wav files: 13706
+Example file names (first 5 sorted):
+  dev_dia0_utt0.wav
+  dev_dia0_utt1.wav
+  dev_dia100_utt0.wav
+  dev_dia101_utt0.wav
+  dev_dia102_utt0.wav
+Distinct folders holding wavs: 1 (first 3: ['.'])
+Parse rule: <split>_dia<D>_utt<U> extracted from mp4; label and speaker from the csv (joy->happy, anger->angry, sadness->sad); official train/dev/test split in the file name
+Excluded during parse or read: {}

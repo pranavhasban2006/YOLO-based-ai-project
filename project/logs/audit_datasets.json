@@ -1,0 +1,412 @@
+{
+  "fer2013": {
+    "dataset": "fer2013",
+    "exists": true,
+    "status": "COMPLETE",
+    "reasons": [],
+    "folders": [
+      "FER-2013"
+    ],
+    "whole_tree": {
+      "FER-2013": {
+        "files": 35889,
+        "bytes": 119762765,
+        "partial_files": 0,
+        "zero_byte_files": 0,
+        "lfs_pointer_files": 0
+      },
+      "fer2013": {
+        "files": 10206,
+        "bytes": 16112467,
+        "partial_files": 0,
+        "zero_byte_files": 0,
+        "lfs_pointer_files": 0
+      }
+    },
+    "partial_files": [],
+    "zero_byte_files": [],
+    "lfs_pointer_files": [],
+    "zips": [
+      {
+        "path": "FER-2013\\archive (1).zip",
+        "bytes": 63252113,
+        "ok": true,
+        "summary": "No errors detected in compressed data of D:\\Projects\\YOLO\\datasets\\FER-2013\\archive (1).zip."
+      }
+    ],
+    "zips_extracted": {
+      "FER-2013\\archive (1).zip": true
+    },
+    "use_subset": [
+      "FER-2013/extracted"
+    ],
+    "use_subset_files": 35887,
+    "expected": {
+      "extracted/train": {
+        "found": true,
+        "files": 28709,
+        "expected": 28709
+      },
+      "extracted/test": {
+        "found": true,
+        "files": 7178,
+        "expected": 7178
+      }
+    }
+  },
+  "ferplus": {
+    "dataset": "ferplus",
+    "exists": true,
+    "status": "COMPLETE",
+    "reasons": [],
+    "folders": [
+      "ferplus"
+    ],
+    "whole_tree": {
+      "ferplus": {
+        "files": 14,
+        "bytes": 3688428,
+        "partial_files": 0,
+        "zero_byte_files": 0,
+        "lfs_pointer_files": 0
+      }
+    },
+    "partial_files": [],
+    "zero_byte_files": [],
+    "lfs_pointer_files": [],
+    "zips": [],
+    "zips_extracted": {},
+    "use_subset": [
+      "ferplus"
+    ],
+    "use_subset_files": 14,
+    "expected": {
+      "fer2013new.csv": {
+        "found": true,
+        "files": null,
+        "expected": null
+      }
+    }
+  },
+  "jaffe": {
+    "dataset": "jaffe",
+    "exists": true,
+    "status": "COMPLETE",
+    "reasons": [],
+    "folders": [
+      "jaffe"
+    ],
+    "whole_tree": {
+      "jaffe": {
+        "files": 217,
+        "bytes": 26366778,
+        "partial_files": 0,
+        "zero_byte_files": 0,
+        "lfs_pointer_files": 0
+      }
+    },
+    "partial_files": [],
+    "zero_byte_files": [],
+    "lfs_pointer_files": [],
+    "zips": [
+      {
+        "path": "jaffe\\jaffe.zip",
+        "bytes": 12290558,
+        "ok": true,
+        "summary": "No errors detected in compressed data of D:\\Projects\\YOLO\\datasets\\jaffe\\jaffe.zip."
+      }
+    ],
+    "zips_extracted": {
+      "jaffe\\jaffe.zip": true
+    },
+    "use_subset": [
+      "jaffe/extracted"
+    ],
+    "use_subset_files": 214,
+    "expected": {
+      "extracted": {
+        "found": true,
+        "files": 214,
+        "expected": null
+      }
+    }
+  },
+  "ravdess": {
+    "dataset": "ravdess",
+    "exists": true,
+    "status": "COMPLETE",
+    "reasons": [],
+    "folders": [
+      "RAVDESS"
+    ],
+    "whole_tree": {
+      "RAVDESS": {
+        "files": 4349,
+        "bytes": 29302020343,
+        "partial_files": 0,
+        "zero_byte_files": 0,
+        "lfs_pointer_files": 0
+      }
+    },
+    "partial_files": [],
+    "zero_byte_files": [],
+    "lfs_pointer_files": [],
+    "zips": [
+      {
+        "path": "RAVDESS\\Audio_Speech\\Audio_Speech_Actors_01-24.zip",
+        "bytes": 208468073,
+        "ok": true,
+        "summary": "No errors detected in compressed data of D:\\Projects\\YOLO\\datasets\\RAVDESS\\Audio_Speech\\Audio_Speech_Actors_01-24.zip."
+      },
+      {
+        "path": "RAVDESS\\Video_Song\\Video_Song_Actor_01.zip",
+        "bytes": 502513588,
+        "ok": true,
+        "summary": "No errors detected in compressed data of D:\\Projects\\YOLO\\datasets\\RAVDESS\\Video_Song\\Video_Song_Actor_01.zip."
+      },
+      {
+        "path": "RAVDESS\\Video_Song\\Video_Song_Actor_02.zip",
+        "bytes": 553420328,
+        "ok": true,
+        "summary": "No errors detected in compressed data of D:\\Projects\\YOLO\\datasets\\RAVDESS\\Video_Song\\Video_Song_Actor_02.zip."
+      },
+      {
+        "path": "RAVDESS\\Video_Song\\Video_Song_Actor_03.zip",
+        "bytes": 508655610,
+        "ok": true,
+        "summary": "No errors detected in compressed data of D:\\Projects\\YOLO\\datasets\\RAVDESS\\Video_Song\\Video_Song_Actor_03.zip."
+      },
+      {
+        "path": "RAVDESS\\Video_Speech\\Video_Speech_Actor_01.zip",
+        "bytes": 552968353,
+        "ok": true,
+        "summary": "No errors detected in compressed data of D:\\Projects\\YOLO\\datasets\\RAVDESS\\Video_Speech\\Video_Speech_Actor_01.zip."
+      },
+      {
+        "path": "RAVDESS\\Video_Speech\\Video_Speech_Actor_02.zip",
+        "bytes": 570673024,
+        "ok": true,
+        "summary": "No errors detected in compressed data of D:\\Projects\\YOLO\\datasets\\RAVDESS\\Video_Speech\\Video_Speech_Actor_02.zip."
+      },
+      {
+        "path": "RAVDESS\\Video_Speech\\Video_Speech_Actor_03.zip",
+        "bytes": 567824665,
+        "ok": true,
+        "summary": "No errors detected in compressed data of D:\\Projects\\YOLO\\datasets\\RAVDESS\\Video_Speech\\Video_Speech_Actor_03.zip."
+      },
+      {
+        "path": "RAVDESS\\Video_Speech\\Video_Speech_Actor_04.zip",
+        "bytes": 546560009,
+        "ok": true,
+        "summary": "No errors detected in compressed data of D:\\Projects\\YOLO\\datasets\\RAVDESS\\Video_Speech\\Video_Speech_Actor_04.zip."
+      },
+      {
+        "path": "RAVDESS\\Video_Speech\\Video_Speech_Actor_05.zip",
+        "bytes": 562966425,
+        "ok": true,
+        "summary": "No errors detected in compressed data of D:\\Projects\\YOLO\\datasets\\RAVDESS\\Video_Speech\\Video_Speech_Actor_05.zip."
+      },
+      {
+        "path": "RAVDESS\\Video_Speech\\Video_Speech_Actor_06.zip",
+        "bytes": 568517859,
+        "ok": true,
+        "summary": "No errors detected in compressed data of D:\\Projects\\YOLO\\datasets\\RAVDESS\\Video_Speech\\Video_Speech_Actor_06.zip."
+      },
+      {
+        "path": "RAVDESS\\Video_Speech\\Video_Speech_Actor_07.zip",
+        "bytes": 565652404,
+        "ok": true,
+        "summary": "No errors detected in compressed data of D:\\Projects\\YOLO\\datasets\\RAVDESS\\Video_Speech\\Video_Speech_Actor_07.zip."
+      },
+      {
+        "path": "RAVDESS\\Video_Speech\\Video_Speech_Actor_08.zip",
+        "bytes": 562573079,
+        "ok": true,
+        "summary": "No errors detected in compressed data of D:\\Projects\\YOLO\\datasets\\RAVDESS\\Video_Speech\\Video_Speech_Actor_08.zip."
+      },
+      {
+        "path": "RAVDESS\\Video_Speech\\Video_Speech_Actor_09.zip",
+        "bytes": 523489249,
+        "ok": true,
+        "summary": "No errors detected in compressed data of D:\\Projects\\YOLO\\datasets\\RAVDESS\\Video_Speech\\Video_Speech_Actor_09.zip."
+      },
+      {
+        "path": "RAVDESS\\Video_Speech\\Video_Speech_Actor_10.zip",
+        "bytes": 565580163,
+        "ok": true,
+        "summary": "No errors detected in compressed data of D:\\Projects\\YOLO\\datasets\\RAVDESS\\Video_Speech\\Video_Speech_Actor_10.zip."
+      },
+      {
+        "path": "RAVDESS\\Video_Speech\\Video_Speech_Actor_11.zip",
+        "bytes": 518634370,
+        "ok": true,
+        "summary": "No errors detected in compressed data of D:\\Projects\\YOLO\\datasets\\RAVDESS\\Video_Speech\\Video_Speech_Actor_11.zip."
+      },
+      {
+        "path": "RAVDESS\\Video_Speech\\Video_Speech_Actor_12.zip",
+        "bytes": 557928718,
+        "ok": true,
+        "summary": "No errors detected in compressed data of D:\\Projects\\YOLO\\datasets\\RAVDESS\\Video_Speech\\Video_Speech_Actor_12.zip."
+      },
+      {
+        "path": "RAVDESS\\Video_Speech\\Video_Speech_Actor_13.zip",
+        "bytes": 501877549,
+        "ok": true,
+        "summary": "No errors detected in compressed data of D:\\Projects\\YOLO\\datasets\\RAVDESS\\Video_Speech\\Video_Speech_Actor_13.zip."
+      },
+      {
+        "path": "RAVDESS\\Video_Speech\\Video_Speech_Actor_14.zip",
+        "bytes": 552484059,
+        "ok": true,
+        "summary": "No errors detected in compressed data of D:\\Projects\\YOLO\\datasets\\RAVDESS\\Video_Speech\\Video_Speech_Actor_14.zip."
+      },
+      {
+        "path": "RAVDESS\\Video_Speech\\Video_Speech_Actor_15.zip",
+        "bytes": 525205576,
+        "ok": true,
+        "summary": "No errors detected in compressed data of D:\\Projects\\YOLO\\datasets\\RAVDESS\\Video_Speech\\Video_Speech_Actor_15.zip."
+      },
+      {
+        "path": "RAVDESS\\Video_Speech\\Video_Speech_Actor_16.zip",
+        "bytes": 562416513,
+        "ok": true,
+        "summary": "No errors detected in compressed data of D:\\Projects\\YOLO\\datasets\\RAVDESS\\Video_Speech\\Video_Speech_Actor_16.zip."
+      },
+      {
+        "path": "RAVDESS\\Video_Speech\\Video_Speech_Actor_17.zip",
+        "bytes": 551688845,
+        "ok": true,
+        "summary": "No errors detected in compressed data of D:\\Projects\\YOLO\\datasets\\RAVDESS\\Video_Speech\\Video_Speech_Actor_17.zip."
+      },
+      {
+        "path": "RAVDESS\\Video_Speech\\Video_Speech_Actor_18.zip",
+        "bytes": 565655520,
+        "ok": true,
+        "summary": "No errors detected in compressed data of D:\\Projects\\YOLO\\datasets\\RAVDESS\\Video_Speech\\Video_Speech_Actor_18.zip."
+      },
+      {
+        "path": "RAVDESS\\Video_Speech\\Video_Speech_Actor_19.zip",
+        "bytes": 581121687,
+        "ok": true,
+        "summary": "No errors detected in compressed data of D:\\Projects\\YOLO\\datasets\\RAVDESS\\Video_Speech\\Video_Speech_Actor_19.zip."
+      },
+      {
+        "path": "RAVDESS\\Video_Speech\\Video_Speech_Actor_20.zip",
+        "bytes": 561349264,
+        "ok": true,
+        "summary": "No errors detected in compressed data of D:\\Projects\\YOLO\\datasets\\RAVDESS\\Video_Speech\\Video_Speech_Actor_20.zip."
+      },
+      {
+        "path": "RAVDESS\\Video_Speech\\Video_Speech_Actor_21.zip",
+        "bytes": 590292896,
+        "ok": true,
+        "summary": "No errors detected in compressed data of D:\\Projects\\YOLO\\datasets\\RAVDESS\\Video_Speech\\Video_Speech_Actor_21.zip."
+      },
+      {
+        "path": "RAVDESS\\Video_Speech\\Video_Speech_Actor_22.zip",
+        "bytes": 560907466,
+        "ok": true,
+        "summary": "No errors detected in compressed data of D:\\Projects\\YOLO\\datasets\\RAVDESS\\Video_Speech\\Video_Speech_Actor_22.zip."
+      },
+      {
+        "path": "RAVDESS\\Video_Speech\\Video_Speech_Actor_23.zip",
+        "bytes": 545177865,
+        "ok": true,
+        "summary": "No errors detected in compressed data of D:\\Projects\\YOLO\\datasets\\RAVDESS\\Video_Speech\\Video_Speech_Actor_23.zip."
+      },
+      {
+        "path": "RAVDESS\\Video_Speech\\Video_Speech_Actor_24.zip",
+        "bytes": 595799165,
+        "ok": true,
+        "summary": "No errors detected in compressed data of D:\\Projects\\YOLO\\datasets\\RAVDESS\\Video_Speech\\Video_Speech_Actor_24.zip."
+      }
+    ],
+    "zips_extracted": {
+      "RAVDESS\\Audio_Speech\\Audio_Speech_Actors_01-24.zip": true,
+      "RAVDESS\\Video_Song\\Video_Song_Actor_01.zip": false,
+      "RAVDESS\\Video_Song\\Video_Song_Actor_02.zip": false,
+      "RAVDESS\\Video_Song\\Video_Song_Actor_03.zip": false,
+      "RAVDESS\\Video_Speech\\Video_Speech_Actor_01.zip": true,
+      "RAVDESS\\Video_Speech\\Video_Speech_Actor_02.zip": true,
+      "RAVDESS\\Video_Speech\\Video_Speech_Actor_03.zip": true,
+      "RAVDESS\\Video_Speech\\Video_Speech_Actor_04.zip": true,
+      "RAVDESS\\Video_Speech\\Video_Speech_Actor_05.zip": true,
+      "RAVDESS\\Video_Speech\\Video_Speech_Actor_06.zip": true,
+      "RAVDESS\\Video_Speech\\Video_Speech_Actor_07.zip": true,
+      "RAVDESS\\Video_Speech\\Video_Speech_Actor_08.zip": true,
+      "RAVDESS\\Video_Speech\\Video_Speech_Actor_09.zip": true,
+      "RAVDESS\\Video_Speech\\Video_Speech_Actor_10.zip": true,
+      "RAVDESS\\Video_Speech\\Video_Speech_Actor_11.zip": true,
+      "RAVDESS\\Video_Speech\\Video_Speech_Actor_12.zip": true,
+      "RAVDESS\\Video_Speech\\Video_Speech_Actor_13.zip": true,
+      "RAVDESS\\Video_Speech\\Video_Speech_Actor_14.zip": true,
+      "RAVDESS\\Video_Speech\\Video_Speech_Actor_15.zip": true,
+      "RAVDESS\\Video_Speech\\Video_Speech_Actor_16.zip": true,
+      "RAVDESS\\Video_Speech\\Video_Speech_Actor_17.zip": true,
+      "RAVDESS\\Video_Speech\\Video_Speech_Actor_18.zip": true,
+      "RAVDESS\\Video_Speech\\Video_Speech_Actor_19.zip": true,
+      "RAVDESS\\Video_Speech\\Video_Speech_Actor_20.zip": true,
+      "RAVDESS\\Video_Speech\\Video_Speech_Actor_21.zip": true,
+      "RAVDESS\\Video_Speech\\Video_Speech_Actor_22.zip": true,
+      "RAVDESS\\Video_Speech\\Video_Speech_Actor_23.zip": true,
+      "RAVDESS\\Video_Speech\\Video_Speech_Actor_24.zip": true
+    },
+    "use_subset": [
+      "RAVDESS/Audio_Speech",
+      "RAVDESS/Video_Speech"
+    ],
+    "use_subset_files": 4345,
+    "expected": {
+      "Audio_Speech": {
+        "found": true,
+        "files": 1441,
+        "expected": null
+      },
+      "Video_Speech": {
+        "found": true,
+        "files": 2904,
+        "expected": null
+      }
+    }
+  },
+  "crema_d": {
+    "dataset": "crema_d",
+    "exists": true,
+    "status": "COMPLETE",
+    "reasons": [],
+    "folders": [
+      "crema_d"
+    ],
+    "whole_tree": {
+      "crema_d": {
+        "files": 22342,
+        "bytes": 3745912106,
+        "partial_files": 0,
+        "zero_byte_files": 0,
+        "lfs_pointer_files": 0
+      }
+    },
+    "partial_files": [],
+    "zero_byte_files": [],
+    "lfs_pointer_files": [],
+    "zips": [],
+    "zips_extracted": {},
+    "use_subset": [
+      "crema_d/AudioWAV",
+      "crema_d/AudioMP3"
+    ],
+    "use_subset_files": 14884,
+    "expected": {
+      "AudioWAV": {
+        "found": true,
+        "files": 7442,
+        "expected": 7442
+      },
+      "AudioMP3": {
+        "found": true,
+        "files": 7442,
+        "expected": 7442
+      }
+    }
+  }
+}
