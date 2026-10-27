@@ -1,0 +1,67 @@
+{
+  "model": "ae_mlp",
+  "dataset": "WESAD chest, 60 s windows, subject-independent split",
+  "split": {
+    "test": [
+      "S2",
+      "S9",
+      "S16"
+    ],
+    "val": [
+      "S5",
+      "S13"
+    ]
+  },
+  "epochs": 30,
+  "test_size": 1206,
+  "accuracy": 0.7056,
+  "macro_f1": 0.6496,
+  "per_class": {
+    "baseline": {
+      "precision": 0.8219,
+      "recall": 0.8231,
+      "f1": 0.8225,
+      "support": 667
+    },
+    "stress": {
+      "precision": 0.6412,
+      "recall": 0.4759,
+      "f1": 0.5463,
+      "support": 353
+    },
+    "amusement": {
+      "precision": 0.4855,
+      "recall": 0.7204,
+      "f1": 0.5801,
+      "support": 186
+    }
+  },
+  "confusion_matrix": {
+    "labels": [
+      "baseline",
+      "stress",
+      "amusement"
+    ],
+    "rows_true_cols_pred": [
+      [
+        549,
+        50,
+        68
+      ],
+      [
+        111,
+        168,
+        74
+      ],
+      [
+        8,
+        44,
+        134
+      ]
+    ]
+  },
+  "inference_time": {
+    "cpu_ms_per_window": 3.45,
+    "cuda_ms_per_window": 1.59
+  }
+}

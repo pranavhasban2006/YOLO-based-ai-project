@@ -1,0 +1,138 @@
+{
+  "model": "wav2vec2_bilstm_attn",
+  "input": "frozen facebook/wav2vec2-base features",
+  "dataset": "RAVDESS+TESS+SAVEE",
+  "sources_in_test": {
+    "ravdess": 188,
+    "savee": 72,
+    "tess": 840
+  },
+  "epochs": 30,
+  "test_size": 1100,
+  "accuracy": 0.9109,
+  "macro_f1": 0.9108,
+  "per_class": {
+    "angry": {
+      "precision": 0.9387,
+      "recall": 0.9684,
+      "f1": 0.9533,
+      "support": 158
+    },
+    "disgust": {
+      "precision": 0.8773,
+      "recall": 0.9051,
+      "f1": 0.891,
+      "support": 158
+    },
+    "fear": {
+      "precision": 0.9125,
+      "recall": 0.9241,
+      "f1": 0.9182,
+      "support": 158
+    },
+    "happy": {
+      "precision": 0.8947,
+      "recall": 0.8608,
+      "f1": 0.8774,
+      "support": 158
+    },
+    "neutral": {
+      "precision": 0.9167,
+      "recall": 0.9408,
+      "f1": 0.9286,
+      "support": 152
+    },
+    "sad": {
+      "precision": 0.8924,
+      "recall": 0.8924,
+      "f1": 0.8924,
+      "support": 158
+    },
+    "surprise": {
+      "precision": 0.9459,
+      "recall": 0.8861,
+      "f1": 0.915,
+      "support": 158
+    }
+  },
+  "confusion_matrix": {
+    "labels": [
+      "angry",
+      "disgust",
+      "fear",
+      "happy",
+      "neutral",
+      "sad",
+      "surprise"
+    ],
+    "rows_true_cols_pred": [
+      [
+        153,
+        4,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        143,
+        3,
+        2,
+        2,
+        7,
+        0
+      ],
+      [
+        3,
+        1,
+        146,
+        4,
+        0,
+        1,
+        3
+      ],
+      [
+        3,
+        1,
+        7,
+        136,
+        3,
+        4,
+        4
+      ],
+      [
+        1,
+        2,
+        0,
+        2,
+        143,
+        4,
+        0
+      ],
+      [
+        1,
+        6,
+        0,
+        2,
+        7,
+        141,
+        1
+      ],
+      [
+        1,
+        6,
+        4,
+        5,
+        1,
+        1,
+        140
+      ]
+    ]
+  },
+  "inference_time": {
+    "cpu_ms_per_clip": 2.82,
+    "cuda_ms_per_clip": 1.12
+  }
+}

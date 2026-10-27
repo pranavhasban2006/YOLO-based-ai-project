@@ -1,0 +1,237 @@
+{
+  "modality": "speech",
+  "dataset": "RAVDESS+TESS+SAVEE",
+  "hybrid": "ast_mlp",
+  "A1": "AST",
+  "A2": "MLP classifier",
+  "split": "70/15/15 stratified (train/val/test)",
+  "test_size": 1100,
+  "classes": [
+    "angry",
+    "disgust",
+    "fear",
+    "happy",
+    "neutral",
+    "sad",
+    "surprise"
+  ],
+  "stage1_A1_alone": {
+    "accuracy": 0.8955,
+    "macro_f1": 0.8957,
+    "correct": 985,
+    "wrong": 115
+  },
+  "stage2_A1_then_A2": {
+    "accuracy": 0.9045,
+    "macro_f1": 0.9042,
+    "correct": 995,
+    "wrong": 105
+  },
+  "A1_wrong_fixed_by_A2": 35,
+  "A1_right_broken_by_A2": 25,
+  "wrong_in_both": 80,
+  "net_gain_samples": 10,
+  "accuracy_gain_points": 0.9,
+  "confusion_A1": [
+    [
+      141,
+      5,
+      1,
+      5,
+      2,
+      1,
+      3
+    ],
+    [
+      0,
+      146,
+      0,
+      2,
+      2,
+      6,
+      2
+    ],
+    [
+      0,
+      3,
+      143,
+      8,
+      1,
+      1,
+      2
+    ],
+    [
+      3,
+      1,
+      8,
+      134,
+      2,
+      2,
+      8
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      149,
+      2,
+      0
+    ],
+    [
+      0,
+      2,
+      3,
+      7,
+      10,
+      135,
+      1
+    ],
+    [
+      1,
+      8,
+      3,
+      8,
+      0,
+      1,
+      137
+    ]
+  ],
+  "confusion_A1_then_A2": [
+    [
+      152,
+      1,
+      0,
+      2,
+      1,
+      0,
+      2
+    ],
+    [
+      3,
+      141,
+      0,
+      1,
+      3,
+      5,
+      5
+    ],
+    [
+      1,
+      0,
+      143,
+      7,
+      1,
+      3,
+      3
+    ],
+    [
+      8,
+      0,
+      5,
+      134,
+      2,
+      1,
+      8
+    ],
+    [
+      1,
+      1,
+      0,
+      0,
+      150,
+      0,
+      0
+    ],
+    [
+      1,
+      1,
+      5,
+      4,
+      15,
+      131,
+      1
+    ],
+    [
+      1,
+      3,
+      4,
+      5,
+      1,
+      0,
+      144
+    ]
+  ],
+  "note": "rebuilt from the Colab _preds.npz (the Drive download did not include this JSON)",
+  "wrong_only_to_A2": {
+    "accuracy": 0.9273,
+    "macro_f1": 0.9271,
+    "fed_to_A2": 115,
+    "fixed_by_A2": 35,
+    "confusion": [
+      [
+        152,
+        1,
+        0,
+        2,
+        1,
+        0,
+        2
+      ],
+      [
+        2,
+        149,
+        0,
+        0,
+        3,
+        3,
+        1
+      ],
+      [
+        1,
+        0,
+        147,
+        5,
+        1,
+        2,
+        2
+      ],
+      [
+        3,
+        0,
+        5,
+        140,
+        2,
+        1,
+        7
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        151,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        5,
+        4,
+        10,
+        136,
+        1
+      ],
+      [
+        1,
+        3,
+        3,
+        5,
+        1,
+        0,
+        145
+      ]
+    ]
+  }
+}

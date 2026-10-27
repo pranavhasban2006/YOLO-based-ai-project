@@ -1,0 +1,191 @@
+{
+  "modality": "text",
+  "dataset": "emotion",
+  "hybrid": "bert_cnn_bilstm",
+  "A1": "BERT",
+  "A2": "CNN + BiLSTM",
+  "split": "official train/validation/test",
+  "test_size": 2000,
+  "classes": [
+    "sadness",
+    "joy",
+    "love",
+    "anger",
+    "fear",
+    "surprise"
+  ],
+  "stage1_A1_alone": {
+    "accuracy": 0.9295,
+    "macro_f1": 0.8874,
+    "correct": 1859,
+    "wrong": 141
+  },
+  "stage2_A1_then_A2": {
+    "accuracy": 0.924,
+    "macro_f1": 0.8827,
+    "correct": 1848,
+    "wrong": 152
+  },
+  "A1_wrong_fixed_by_A2": 22,
+  "A1_right_broken_by_A2": 33,
+  "wrong_in_both": 119,
+  "net_gain_samples": -11,
+  "accuracy_gain_points": -0.55,
+  "confusion_A1": [
+    [
+      560,
+      2,
+      0,
+      12,
+      7,
+      0
+    ],
+    [
+      2,
+      642,
+      40,
+      4,
+      0,
+      7
+    ],
+    [
+      0,
+      8,
+      150,
+      1,
+      0,
+      0
+    ],
+    [
+      12,
+      2,
+      0,
+      254,
+      7,
+      0
+    ],
+    [
+      5,
+      0,
+      0,
+      6,
+      208,
+      5
+    ],
+    [
+      3,
+      1,
+      0,
+      0,
+      17,
+      45
+    ]
+  ],
+  "confusion_A1_then_A2": [
+    [
+      554,
+      3,
+      0,
+      18,
+      6,
+      0
+    ],
+    [
+      2,
+      646,
+      36,
+      4,
+      0,
+      7
+    ],
+    [
+      0,
+      16,
+      142,
+      1,
+      0,
+      0
+    ],
+    [
+      8,
+      2,
+      0,
+      260,
+      5,
+      0
+    ],
+    [
+      5,
+      0,
+      0,
+      8,
+      191,
+      20
+    ],
+    [
+      3,
+      1,
+      0,
+      1,
+      6,
+      55
+    ]
+  ],
+  "note": "rebuilt from the Colab _preds.npz (the Drive download did not include this JSON)",
+  "wrong_only_to_A2": {
+    "accuracy": 0.9405,
+    "macro_f1": 0.913,
+    "fed_to_A2": 141,
+    "fixed_by_A2": 22,
+    "confusion": [
+      [
+        561,
+        2,
+        0,
+        12,
+        6,
+        0
+      ],
+      [
+        2,
+        646,
+        36,
+        4,
+        0,
+        7
+      ],
+      [
+        0,
+        8,
+        150,
+        1,
+        0,
+        0
+      ],
+      [
+        8,
+        2,
+        0,
+        260,
+        5,
+        0
+      ],
+      [
+        4,
+        0,
+        0,
+        6,
+        209,
+        5
+      ],
+      [
+        3,
+        1,
+        0,
+        1,
+        6,
+        55
+      ]
+    ]
+  }
+}

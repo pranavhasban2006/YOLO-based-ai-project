@@ -1,0 +1,1019 @@
+{
+  "model": "transformer_bilstm",
+  "rows": 6124,
+  "subjects": 15,
+  "grouped_splits": "by subject",
+  "class_counts": [
+    3354,
+    1826,
+    944
+  ],
+  "holdout_80_20_no_smote": {
+    "accuracy": 0.7473598700243704,
+    "macro_f1": 0.7146224537784626,
+    "macro_precision": 0.7251118141158504,
+    "macro_recall": 0.7462721972347159,
+    "per_class": {
+      "precision": [
+        0.9067961165048544,
+        0.9185393258426966,
+        0.35
+      ],
+      "recall": [
+        0.7001499250374813,
+        0.872,
+        0.6666666666666666
+      ],
+      "f1": [
+        0.7901861252115059,
+        0.8946648426812586,
+        0.45901639344262296
+      ],
+      "support": [
+        667,
+        375,
+        189
+      ]
+    },
+    "confusion_matrix": [
+      [
+        467,
+        13,
+        187
+      ],
+      [
+        1,
+        327,
+        47
+      ],
+      [
+        47,
+        16,
+        126
+      ]
+    ],
+    "train_acc": 0.9944258639910813,
+    "val_acc": 0.5,
+    "train_val_gap": 0.49442586399108135,
+    "fit": "overfitting",
+    "epochs_until_early_stop": 7,
+    "train_size_after_smote": 4485,
+    "test_subjects": [
+      "S11",
+      "S17",
+      "S3"
+    ],
+    "ms_per_window": 0.42777124288848245
+  },
+  "holdout_80_20_smote": {
+    "accuracy": 0.7424857839155159,
+    "macro_f1": 0.6604596028473447,
+    "macro_precision": 0.6535658935222864,
+    "macro_recall": 0.6799906713310012,
+    "per_class": {
+      "precision": [
+        0.8747731397459165,
+        0.7901498929336188,
+        0.29577464788732394
+      ],
+      "recall": [
+        0.7226386806596702,
+        0.984,
+        0.3333333333333333
+      ],
+      "f1": [
+        0.7914614121510674,
+        0.8764845605700713,
+        0.31343283582089554
+      ],
+      "support": [
+        667,
+        375,
+        189
+      ]
+    },
+    "confusion_matrix": [
+      [
+        482,
+        35,
+        150
+      ],
+      [
+        6,
+        369,
+        0
+      ],
+      [
+        63,
+        63,
+        63
+      ]
+    ],
+    "train_acc": 1.0,
+    "val_acc": 0.571078431372549,
+    "train_val_gap": 0.428921568627451,
+    "fit": "overfitting",
+    "epochs_until_early_stop": 12,
+    "train_size_after_smote": 7395,
+    "test_subjects": [
+      "S11",
+      "S17",
+      "S3"
+    ],
+    "ms_per_window": 0.46524077993957585
+  },
+  "holdout_70_30_no_smote": {
+    "accuracy": 0.7843811394891945,
+    "macro_f1": 0.6937330691904414,
+    "macro_precision": 0.7041879920353217,
+    "macro_recall": 0.6884330302588798,
+    "per_class": {
+      "precision": [
+        0.8731665228645384,
+        0.8875968992248062,
+        0.3518005540166205
+      ],
+      "recall": [
+        0.9100719424460432,
+        0.7520525451559934,
+        0.4031746031746032
+      ],
+      "f1": [
+        0.8912373403786878,
+        0.8142222222222222,
+        0.3757396449704142
+      ],
+      "support": [
+        1112,
+        609,
+        315
+      ]
+    },
+    "confusion_matrix": [
+      [
+        1012,
+        17,
+        83
+      ],
+      [
+        0,
+        458,
+        151
+      ],
+      [
+        147,
+        41,
+        127
+      ]
+    ],
+    "train_acc": 1.0,
+    "val_acc": 1.0,
+    "train_val_gap": 0.0,
+    "fit": "good fit",
+    "epochs_until_early_stop": 8,
+    "train_size_after_smote": 3682,
+    "test_subjects": [
+      "S11",
+      "S17",
+      "S3",
+      "S4",
+      "S9"
+    ],
+    "ms_per_window": 0.4292767681776087
+  },
+  "holdout_70_30_smote": {
+    "accuracy": 0.7819253438113949,
+    "macro_f1": 0.651637581815162,
+    "macro_precision": 0.6465698032569803,
+    "macro_recall": 0.6670354685053272,
+    "per_class": {
+      "precision": [
+        0.8733826247689463,
+        0.8002717391304348,
+        0.26605504587155965
+      ],
+      "recall": [
+        0.8498201438848921,
+        0.9671592775041051,
+        0.18412698412698414
+      ],
+      "f1": [
+        0.8614402917046491,
+        0.8758364312267658,
+        0.2176360225140713
+      ],
+      "support": [
+        1112,
+        609,
+        315
+      ]
+    },
+    "confusion_matrix": [
+      [
+        945,
+        20,
+        147
+      ],
+      [
+        7,
+        589,
+        13
+      ],
+      [
+        130,
+        127,
+        58
+      ]
+    ],
+    "train_acc": 0.9921238457360131,
+    "val_acc": 1.0,
+    "train_val_gap": -0.007876154263986912,
+    "fit": "good fit",
+    "epochs_until_early_stop": 9,
+    "train_size_after_smote": 6048,
+    "test_subjects": [
+      "S11",
+      "S17",
+      "S3",
+      "S4",
+      "S9"
+    ],
+    "ms_per_window": 0.4264188113655302
+  },
+  "cv10_no_smote": {
+    "accuracy_mean": 0.8296416006312851,
+    "accuracy_std": 0.1279322880079666,
+    "macro_f1_mean": 0.7318542001944489,
+    "macro_f1_std": 0.1698959201689851,
+    "pooled": {
+      "accuracy": 0.8239712606139777,
+      "macro_f1": 0.7619831136900729,
+      "macro_precision": 0.754144457128708,
+      "macro_recall": 0.7734930200167578,
+      "per_class": {
+        "precision": [
+          0.9241245136186771,
+          0.8645294725956567,
+          0.47377938517179025
+        ],
+        "recall": [
+          0.8497316636851521,
+          0.9156626506024096,
+          0.5550847457627118
+        ],
+        "f1": [
+          0.8853681267474371,
+          0.8893617021276595,
+          0.511219512195122
+        ],
+        "support": [
+          3354,
+          1826,
+          944
+        ]
+      },
+      "confusion_matrix": [
+        [
+          2850,
+          61,
+          443
+        ],
+        [
+          15,
+          1672,
+          139
+        ],
+        [
+          219,
+          201,
+          524
+        ]
+      ]
+    },
+    "folds": [
+      {
+        "accuracy": 0.8507109004739336,
+        "macro_f1": 0.6257309941520468,
+        "macro_precision": 0.59375,
+        "macro_recall": 0.6666666666666666,
+        "confusion_matrix": [
+          [
+            225,
+            0,
+            0
+          ],
+          [
+            0,
+            134,
+            0
+          ],
+          [
+            63,
+            0,
+            0
+          ]
+        ],
+        "train_acc": 0.991880664652568,
+        "val_acc": 0.7758620689655172,
+        "train_val_gap": 0.21601859568705073,
+        "fit": "overfitting",
+        "epochs_until_early_stop": 6,
+        "train_size_after_smote": 5296,
+        "test_subjects": [
+          "S10"
+        ],
+        "ms_per_window": 0.45343080559807225
+      },
+      {
+        "accuracy": 0.8574821852731591,
+        "macro_f1": 0.6366399431407258,
+        "macro_precision": 0.8948613849901403,
+        "macro_recall": 0.6825396825396824,
+        "confusion_matrix": [
+          [
+            225,
+            0,
+            0
+          ],
+          [
+            0,
+            133,
+            0
+          ],
+          [
+            8,
+            52,
+            3
+          ]
+        ],
+        "train_acc": 0.9656409288276383,
+        "val_acc": 1.0,
+        "train_val_gap": -0.0343590711723617,
+        "fit": "good fit",
+        "epochs_until_early_stop": 7,
+        "train_size_after_smote": 5297,
+        "test_subjects": [
+          "S17"
+        ],
+        "ms_per_window": 0.44022446538093823
+      },
+      {
+        "accuracy": 0.7941888619854721,
+        "macro_f1": 0.5844370500859051,
+        "macro_precision": 0.5738271604938272,
+        "macro_recall": 0.6107804232804233,
+        "confusion_matrix": [
+          [
+            222,
+            2,
+            0
+          ],
+          [
+            15,
+            106,
+            5
+          ],
+          [
+            63,
+            0,
+            0
+          ]
+        ],
+        "train_acc": 0.9975494816211121,
+        "val_acc": 0.6551724137931034,
+        "train_val_gap": 0.3423770678280087,
+        "fit": "overfitting",
+        "epochs_until_early_stop": 8,
+        "train_size_after_smote": 5305,
+        "test_subjects": [
+          "S15"
+        ],
+        "ms_per_window": 0.4285004843459363
+      },
+      {
+        "accuracy": 0.7305825242718447,
+        "macro_f1": 0.5357697857697857,
+        "macro_precision": 0.5257270693512305,
+        "macro_recall": 0.5497013142174433,
+        "confusion_matrix": [
+          [
+            215,
+            0,
+            10
+          ],
+          [
+            0,
+            86,
+            38
+          ],
+          [
+            0,
+            63,
+            0
+          ]
+        ],
+        "train_acc": 0.9517527327553713,
+        "val_acc": 1.0,
+        "train_val_gap": -0.04824726724462869,
+        "fit": "good fit",
+        "epochs_until_early_stop": 6,
+        "train_size_after_smote": 5306,
+        "test_subjects": [
+          "S14"
+        ],
+        "ms_per_window": 0.4580235439330086
+      },
+      {
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "macro_precision": 1.0,
+        "macro_recall": 1.0,
+        "confusion_matrix": [
+          [
+            225,
+            0,
+            0
+          ],
+          [
+            0,
+            125,
+            0
+          ],
+          [
+            0,
+            0,
+            62
+          ]
+        ],
+        "train_acc": 0.9638145495665285,
+        "val_acc": 0.9113300492610837,
+        "train_val_gap": 0.052484500305444715,
+        "fit": "good fit",
+        "epochs_until_early_stop": 6,
+        "train_size_after_smote": 5306,
+        "test_subjects": [
+          "S11"
+        ],
+        "ms_per_window": 0.4329048546406359
+      },
+      {
+        "accuracy": 0.9425717852684145,
+        "macro_f1": 0.9333780218144688,
+        "macro_precision": 0.9172967733000971,
+        "macro_recall": 0.9542233972933292,
+        "confusion_matrix": [
+          [
+            407,
+            21,
+            14
+          ],
+          [
+            0,
+            225,
+            8
+          ],
+          [
+            0,
+            3,
+            123
+          ]
+        ],
+        "train_acc": 0.999796541200407,
+        "val_acc": 0.6642156862745098,
+        "train_val_gap": 0.3355808549258972,
+        "fit": "overfitting",
+        "epochs_until_early_stop": 13,
+        "train_size_after_smote": 4915,
+        "test_subjects": [
+          "S13",
+          "S2"
+        ],
+        "ms_per_window": 0.42567777778190585
+      },
+      {
+        "accuracy": 0.7116336633663366,
+        "macro_f1": 0.6897808539973532,
+        "macro_precision": 0.7152416356877324,
+        "macro_recall": 0.7542519571931336,
+        "confusion_matrix": [
+          [
+            254,
+            24,
+            164
+          ],
+          [
+            0,
+            228,
+            12
+          ],
+          [
+            0,
+            33,
+            93
+          ]
+        ],
+        "train_acc": 0.9525264873675632,
+        "val_acc": 0.47549019607843135,
+        "train_val_gap": 0.47703629128913183,
+        "fit": "overfitting",
+        "epochs_until_early_stop": 5,
+        "train_size_after_smote": 4908,
+        "test_subjects": [
+          "S16",
+          "S3"
+        ],
+        "ms_per_window": 0.4640134900928208
+      },
+      {
+        "accuracy": 0.8564356435643564,
+        "macro_f1": 0.775752294331455,
+        "macro_precision": 0.8066052590143284,
+        "macro_recall": 0.7578347578347578,
+        "confusion_matrix": [
+          [
+            448,
+            0,
+            0
+          ],
+          [
+            0,
+            181,
+            53
+          ],
+          [
+            63,
+            0,
+            63
+          ]
+        ],
+        "train_acc": 1.0,
+        "val_acc": 0.6764705882352942,
+        "train_val_gap": 0.32352941176470584,
+        "fit": "overfitting",
+        "epochs_until_early_stop": 10,
+        "train_size_after_smote": 4908,
+        "test_subjects": [
+          "S4",
+          "S5"
+        ],
+        "ms_per_window": 0.434662499966441
+      },
+      {
+        "accuracy": 0.5651105651105651,
+        "macro_f1": 0.5572962233135249,
+        "macro_precision": 0.6247257814016696,
+        "macro_recall": 0.601984126984127,
+        "confusion_matrix": [
+          [
+            180,
+            14,
+            254
+          ],
+          [
+            0,
+            217,
+            23
+          ],
+          [
+            22,
+            41,
+            63
+          ]
+        ],
+        "train_acc": 0.9577809504385071,
+        "val_acc": 0.9336609336609336,
+        "train_val_gap": 0.024120016777573472,
+        "fit": "good fit",
+        "epochs_until_early_stop": 5,
+        "train_size_after_smote": 4903,
+        "test_subjects": [
+          "S7",
+          "S8"
+        ],
+        "ms_per_window": 0.4300547911584176
+      },
+      {
+        "accuracy": 0.9876998769987699,
+        "macro_f1": 0.979756835339224,
+        "macro_precision": 0.9849800192917183,
+        "macro_recall": 0.9754497354497355,
+        "confusion_matrix": [
+          [
+            449,
+            0,
+            1
+          ],
+          [
+            0,
+            237,
+            0
+          ],
+          [
+            0,
+            9,
+            117
+          ]
+        ],
+        "train_acc": 0.9904179408766565,
+        "val_acc": 0.9901477832512315,
+        "train_val_gap": 0.00027015762542492716,
+        "fit": "good fit",
+        "epochs_until_early_stop": 7,
+        "train_size_after_smote": 4905,
+        "test_subjects": [
+          "S6",
+          "S9"
+        ],
+        "ms_per_window": 0.4284889298361734
+      }
+    ]
+  },
+  "cv10_smote": {
+    "accuracy_mean": 0.817372015140163,
+    "accuracy_std": 0.12755488713299076,
+    "macro_f1_mean": 0.7067031189867912,
+    "macro_f1_std": 0.1577819077730961,
+    "pooled": {
+      "accuracy": 0.7934356629653821,
+      "macro_f1": 0.7041098295445555,
+      "macro_precision": 0.7032431232516366,
+      "macro_recall": 0.7083542427817636,
+      "per_class": {
+        "precision": [
+          0.9051026757934039,
+          0.7624336069531628,
+          0.44219308700834326
+        ],
+        "recall": [
+          0.8673225998807395,
+          0.8647316538882804,
+          0.3930084745762712
+        ],
+        "f1": [
+          0.8858099878197321,
+          0.8103669489350782,
+          0.41615255187885586
+        ],
+        "support": [
+          3354,
+          1826,
+          944
+        ]
+      },
+      "confusion_matrix": [
+        [
+          2909,
+          139,
+          306
+        ],
+        [
+          85,
+          1579,
+          162
+        ],
+        [
+          220,
+          353,
+          371
+        ]
+      ]
+    },
+    "folds": [
+      {
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "macro_precision": 1.0,
+        "macro_recall": 1.0,
+        "confusion_matrix": [
+          [
+            225,
+            0,
+            0
+          ],
+          [
+            0,
+            134,
+            0
+          ],
+          [
+            0,
+            0,
+            63
+          ]
+        ],
+        "train_acc": 0.9658232628398792,
+        "val_acc": 0.9901477832512315,
+        "train_val_gap": -0.024324520411352357,
+        "fit": "good fit",
+        "epochs_until_early_stop": 6,
+        "train_size_after_smote": 8709,
+        "test_subjects": [
+          "S10"
+        ],
+        "ms_per_window": 0.4481533175374059
+      },
+      {
+        "accuracy": 0.850356294536817,
+        "macro_f1": 0.6090440356744704,
+        "macro_precision": 0.561185920151193,
+        "macro_recall": 0.6666666666666666,
+        "confusion_matrix": [
+          [
+            225,
+            0,
+            0
+          ],
+          [
+            0,
+            133,
+            0
+          ],
+          [
+            30,
+            33,
+            0
+          ]
+        ],
+        "train_acc": 1.0,
+        "val_acc": 0.9827586206896551,
+        "train_val_gap": 0.017241379310344862,
+        "fit": "good fit",
+        "epochs_until_early_stop": 14,
+        "train_size_after_smote": 8709,
+        "test_subjects": [
+          "S17"
+        ],
+        "ms_per_window": 0.4597304039358243
+      },
+      {
+        "accuracy": 0.7675544794188862,
+        "macro_f1": 0.5753424657534246,
+        "macro_precision": 0.5934959349593496,
+        "macro_recall": 0.5793650793650794,
+        "confusion_matrix": [
+          [
+            224,
+            0,
+            0
+          ],
+          [
+            0,
+            93,
+            33
+          ],
+          [
+            63,
+            0,
+            0
+          ]
+        ],
+        "train_acc": 0.9947219604147031,
+        "val_acc": 0.6502463054187192,
+        "train_val_gap": 0.34447565499598387,
+        "fit": "overfitting",
+        "epochs_until_early_stop": 6,
+        "train_size_after_smote": 8712,
+        "test_subjects": [
+          "S15"
+        ],
+        "ms_per_window": 0.4567169493005654
+      },
+      {
+        "accuracy": 0.8398058252427184,
+        "macro_f1": 0.6293693693693694,
+        "macro_precision": 0.6761363636363636,
+        "macro_recall": 0.6690134835296125,
+        "confusion_matrix": [
+          [
+            225,
+            0,
+            0
+          ],
+          [
+            0,
+            117,
+            7
+          ],
+          [
+            0,
+            59,
+            4
+          ]
+        ],
+        "train_acc": 0.9918959668300038,
+        "val_acc": 0.9458128078817734,
+        "train_val_gap": 0.04608315894823045,
+        "fit": "good fit",
+        "epochs_until_early_stop": 7,
+        "train_size_after_smote": 8709,
+        "test_subjects": [
+          "S14"
+        ],
+        "ms_per_window": 0.4801720873005146
+      },
+      {
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "macro_precision": 1.0,
+        "macro_recall": 1.0,
+        "confusion_matrix": [
+          [
+            225,
+            0,
+            0
+          ],
+          [
+            0,
+            125,
+            0
+          ],
+          [
+            0,
+            0,
+            62
+          ]
+        ],
+        "train_acc": 0.9704108556351301,
+        "val_acc": 0.6674876847290641,
+        "train_val_gap": 0.302923170906066,
+        "fit": "overfitting",
+        "epochs_until_early_stop": 8,
+        "train_size_after_smote": 8709,
+        "test_subjects": [
+          "S11"
+        ],
+        "ms_per_window": 0.4849058253243023
+      },
+      {
+        "accuracy": 0.7915106117353309,
+        "macro_f1": 0.7116823065415477,
+        "macro_precision": 0.7268743743910617,
+        "macro_recall": 0.7284229931288754,
+        "confusion_matrix": [
+          [
+            352,
+            50,
+            40
+          ],
+          [
+            0,
+            233,
+            0
+          ],
+          [
+            23,
+            54,
+            49
+          ]
+        ],
+        "train_acc": 0.9955239064089522,
+        "val_acc": 0.7083333333333334,
+        "train_val_gap": 0.2871905730756188,
+        "fit": "overfitting",
+        "epochs_until_early_stop": 8,
+        "train_size_after_smote": 8070,
+        "test_subjects": [
+          "S13",
+          "S2"
+        ],
+        "ms_per_window": 0.492268039922831
+      },
+      {
+        "accuracy": 0.8279702970297029,
+        "macro_f1": 0.6587596985324872,
+        "macro_precision": 0.7540487459351556,
+        "macro_recall": 0.6839249802485097,
+        "confusion_matrix": [
+          [
+            422,
+            20,
+            0
+          ],
+          [
+            0,
+            229,
+            11
+          ],
+          [
+            0,
+            108,
+            18
+          ]
+        ],
+        "train_acc": 0.9464140179299103,
+        "val_acc": 0.6813725490196079,
+        "train_val_gap": 0.26504146891030245,
+        "fit": "overfitting",
+        "epochs_until_early_stop": 7,
+        "train_size_after_smote": 8070,
+        "test_subjects": [
+          "S16",
+          "S3"
+        ],
+        "ms_per_window": 0.4751190593890329
+      },
+      {
+        "accuracy": 0.7982673267326733,
+        "macro_f1": 0.6995178660259445,
+        "macro_precision": 0.7544051320839286,
+        "macro_recall": 0.6908831908831908,
+        "confusion_matrix": [
+          [
+            448,
+            0,
+            0
+          ],
+          [
+            0,
+            134,
+            100
+          ],
+          [
+            63,
+            0,
+            63
+          ]
+        ],
+        "train_acc": 0.9949062754686226,
+        "val_acc": 0.6813725490196079,
+        "train_val_gap": 0.3135337264490148,
+        "fit": "overfitting",
+        "epochs_until_early_stop": 6,
+        "train_size_after_smote": 8052,
+        "test_subjects": [
+          "S4",
+          "S5"
+        ],
+        "ms_per_window": 0.45856695546132353
+      },
+      {
+        "accuracy": 0.5184275184275184,
+        "macro_f1": 0.5042338164311704,
+        "macro_precision": 0.5546239894431299,
+        "macro_recall": 0.5885416666666666,
+        "confusion_matrix": [
+          [
+            119,
+            69,
+            260
+          ],
+          [
+            0,
+            240,
+            0
+          ],
+          [
+            41,
+            22,
+            63
+          ]
+        ],
+        "train_acc": 0.9702223128696716,
+        "val_acc": 0.914004914004914,
+        "train_val_gap": 0.05621739886475763,
+        "fit": "good fit",
+        "epochs_until_early_stop": 5,
+        "train_size_after_smote": 8043,
+        "test_subjects": [
+          "S7",
+          "S8"
+        ],
+        "ms_per_window": 0.46014987705710186
+      },
+      {
+        "accuracy": 0.7798277982779828,
+        "macro_f1": 0.6790816315394967,
+        "macro_precision": 0.7428442346497878,
+        "macro_recall": 0.6568307548054383,
+        "confusion_matrix": [
+          [
+            444,
+            0,
+            6
+          ],
+          [
+            85,
+            141,
+            11
+          ],
+          [
+            0,
+            77,
+            49
+          ]
+        ],
+        "train_acc": 0.9963302752293578,
+        "val_acc": 0.8325123152709359,
+        "train_val_gap": 0.16381795995842185,
+        "fit": "overfitting",
+        "epochs_until_early_stop": 7,
+        "train_size_after_smote": 8034,
+        "test_subjects": [
+          "S6",
+          "S9"
+        ],
+        "ms_per_window": 0.4694114390790444
+      }
+    ]
+  }
+}

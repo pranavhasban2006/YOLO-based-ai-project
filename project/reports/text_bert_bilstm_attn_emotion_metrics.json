@@ -1,0 +1,111 @@
+{
+  "model": "bert_bilstm_attn",
+  "encoder": "bert-base-uncased",
+  "dataset": "emotion",
+  "epochs": 4,
+  "test_size": 2000,
+  "accuracy": 0.926,
+  "macro_f1": 0.8864,
+  "per_class": {
+    "sadness": {
+      "precision": 0.9619,
+      "recall": 0.957,
+      "f1": 0.9594,
+      "support": 581
+    },
+    "joy": {
+      "precision": 0.9671,
+      "recall": 0.9295,
+      "f1": 0.9479,
+      "support": 695
+    },
+    "love": {
+      "precision": 0.8045,
+      "recall": 0.9057,
+      "f1": 0.8521,
+      "support": 159
+    },
+    "anger": {
+      "precision": 0.911,
+      "recall": 0.9309,
+      "f1": 0.9209,
+      "support": 275
+    },
+    "fear": {
+      "precision": 0.9037,
+      "recall": 0.8795,
+      "f1": 0.8914,
+      "support": 224
+    },
+    "surprise": {
+      "precision": 0.6974,
+      "recall": 0.803,
+      "f1": 0.7465,
+      "support": 66
+    }
+  },
+  "confusion_matrix": {
+    "labels": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "rows_true_cols_pred": [
+      [
+        556,
+        5,
+        0,
+        15,
+        5,
+        0
+      ],
+      [
+        4,
+        646,
+        35,
+        4,
+        0,
+        6
+      ],
+      [
+        0,
+        14,
+        144,
+        1,
+        0,
+        0
+      ],
+      [
+        11,
+        1,
+        0,
+        256,
+        7,
+        0
+      ],
+      [
+        4,
+        1,
+        0,
+        5,
+        197,
+        17
+      ],
+      [
+        3,
+        1,
+        0,
+        0,
+        9,
+        53
+      ]
+    ]
+  },
+  "inference_time": {
+    "cpu_ms_per_text": 68.62,
+    "cuda_ms_per_text": 23.5
+  }
+}

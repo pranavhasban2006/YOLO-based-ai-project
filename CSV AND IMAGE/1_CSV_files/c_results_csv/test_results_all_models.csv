@@ -1,0 +1,28 @@
+model,dataset,test_size,accuracy,macro_precision,macro_recall,macro_f1,cpu_ms,gpu_ms
+audio_ast_mlp,RAVDESS+TESS+SAVEE,1100,0.9182,0.9184,0.9184,0.9182,0.08,0.31
+audio_cnn_bilstm_attn,RAVDESS+TESS+SAVEE,1100,0.9418,0.9421,0.942,0.9418,4.74,2.49
+audio_cnn_gru,RAVDESS+TESS+SAVEE,1100,0.94,0.9402,0.9402,0.94,4.88,2.1
+audio_hubert_transformer,RAVDESS+TESS+SAVEE,1100,0.9509,0.9513,0.9511,0.9511,4.14,1.22
+audio_wav2vec2_bilstm_attn,RAVDESS+TESS+SAVEE,1100,0.9109,0.9112,0.9111,0.9108,2.82,1.12
+face_cnn_bilstm,FER-2013,7178,0.6928,0.6667,0.6842,0.6727,21.3,6.31
+face_cnn,FER-2013,7178,0.6734,0.6224,0.6747,0.6372,33.53,5.29
+face_densenet_se,FER-2013,7178,0.7076,0.6857,0.7008,0.6915,54.5,21.94
+face_effnet_cbam,FER-2013,7178,0.706,0.676,0.6942,0.6838,40.7,17.97
+face_mobilenet_attn,FER-2013,7178,0.6786,0.6427,0.6805,0.6521,13.59,9.7
+face_resnet18,FER-2013,7178,0.6907,0.6351,0.6863,0.6482,16.2,3.05
+face_resnet50_vit,FER-2013,7178,0.6949,0.6815,0.6896,0.6845,42.56,9.39
+text_bert_bilstm_attn_emotion,emotion,2000,0.926,0.8743,0.9009,0.8864,68.62,23.5
+text_bert_bilstm_attn_goemotions,goemotions,4968,0.7037,0.617,0.6688,0.6359,66.7,23.7
+text_bert_cnn_bilstm_emotion,emotion,2000,0.927,0.8828,0.8949,0.8884,69.13,19.21
+text_bert_cnn_bilstm_goemotions,goemotions,4968,0.6924,0.6256,0.6572,0.6343,65.96,18.19
+text_deberta_attn_emotion,emotion,2000,0.924,0.871,0.9076,0.887,161.7,33.92
+text_deberta_attn_goemotions,goemotions,4968,0.7079,0.6165,0.6735,0.6332,126.99,30.74
+text_distilbert_cnn_emotion,emotion,2000,0.9285,0.8782,0.8977,0.8868,33.5,10.53
+text_distilbert_cnn_goemotions,goemotions,4968,0.6812,0.6224,0.594,0.5988,36.49,6.27
+text_roberta_bilstm_attn_emotion,emotion,2000,0.9305,0.8871,0.8899,0.8865,71.54,24.58
+text_roberta_bilstm_attn_goemotions,goemotions,4968,0.7045,0.616,0.6869,0.643,69.55,23.56
+wesad_ae_mlp,"WESAD chest, 60 s windows, subject-independent split",1206,0.7056,0.6495,0.6731,0.6496,3.45,1.59
+wesad_cnn_bilstm,"WESAD chest, 60 s windows, subject-independent split",1206,0.694,0.6231,0.6458,0.6147,5.21,1.54
+wesad_cnn_gru,"WESAD chest, 60 s windows, subject-independent split",1206,0.8209,0.7932,0.7565,0.7689,12.23,1.35
+wesad_cnn_lstm,"WESAD chest, 60 s windows, subject-independent split",1206,0.7844,0.7249,0.7246,0.7187,3.45,1.34
+wesad_transformer_bilstm,"WESAD chest, 60 s windows, subject-independent split",1206,0.6327,0.604,0.6095,0.5878,7.54,2.51

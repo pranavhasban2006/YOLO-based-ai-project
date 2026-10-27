@@ -1,0 +1,111 @@
+{
+  "model": "roberta_bilstm_attn",
+  "encoder": "roberta-base",
+  "dataset": "emotion",
+  "epochs": 4,
+  "test_size": 2000,
+  "accuracy": 0.9305,
+  "macro_f1": 0.8865,
+  "per_class": {
+    "sadness": {
+      "precision": 0.9659,
+      "recall": 0.9759,
+      "f1": 0.9709,
+      "support": 581
+    },
+    "joy": {
+      "precision": 0.9372,
+      "recall": 0.9655,
+      "f1": 0.9511,
+      "support": 695
+    },
+    "love": {
+      "precision": 0.8699,
+      "recall": 0.7987,
+      "f1": 0.8328,
+      "support": 159
+    },
+    "anger": {
+      "precision": 0.9919,
+      "recall": 0.8909,
+      "f1": 0.9387,
+      "support": 275
+    },
+    "fear": {
+      "precision": 0.8789,
+      "recall": 0.875,
+      "f1": 0.877,
+      "support": 224
+    },
+    "surprise": {
+      "precision": 0.679,
+      "recall": 0.8333,
+      "f1": 0.7483,
+      "support": 66
+    }
+  },
+  "confusion_matrix": {
+    "labels": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "rows_true_cols_pred": [
+      [
+        567,
+        3,
+        0,
+        1,
+        10,
+        0
+      ],
+      [
+        2,
+        671,
+        19,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        32,
+        127,
+        0,
+        0,
+        0
+      ],
+      [
+        14,
+        1,
+        0,
+        245,
+        15,
+        0
+      ],
+      [
+        3,
+        0,
+        0,
+        0,
+        196,
+        25
+      ],
+      [
+        1,
+        9,
+        0,
+        0,
+        1,
+        55
+      ]
+    ]
+  },
+  "inference_time": {
+    "cpu_ms_per_text": 71.54,
+    "cuda_ms_per_text": 24.58
+  }
+}

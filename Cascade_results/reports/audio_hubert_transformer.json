@@ -1,0 +1,172 @@
+{
+  "modality": "speech",
+  "dataset": "RAVDESS+TESS+SAVEE",
+  "hybrid": "hubert_transformer",
+  "A1": "HuBERT",
+  "A2": "Transformer encoder",
+  "split": "70/15/15 stratified (train/val/test)",
+  "test_size": 1100,
+  "classes": [
+    "angry",
+    "disgust",
+    "fear",
+    "happy",
+    "neutral",
+    "sad",
+    "surprise"
+  ],
+  "stage1_A1_alone": {
+    "accuracy": 0.8809,
+    "macro_f1": 0.8802,
+    "correct": 969,
+    "wrong": 131,
+    "train_accuracy": 0.8984
+  },
+  "stage2_A1_then_A2": {
+    "accuracy": 0.9291,
+    "macro_f1": 0.9295,
+    "correct": 1022,
+    "wrong": 78
+  },
+  "A1_wrong_fixed_by_A2": 72,
+  "A1_right_broken_by_A2": 19,
+  "wrong_in_both": 59,
+  "net_gain_samples": 53,
+  "accuracy_gain_points": 4.82,
+  "confusion_A1": [
+    [
+      146,
+      4,
+      1,
+      3,
+      1,
+      2,
+      1
+    ],
+    [
+      1,
+      146,
+      2,
+      1,
+      4,
+      3,
+      1
+    ],
+    [
+      2,
+      2,
+      140,
+      2,
+      4,
+      6,
+      2
+    ],
+    [
+      9,
+      2,
+      7,
+      127,
+      3,
+      0,
+      10
+    ],
+    [
+      0,
+      0,
+      1,
+      1,
+      146,
+      3,
+      1
+    ],
+    [
+      1,
+      2,
+      6,
+      4,
+      14,
+      126,
+      5
+    ],
+    [
+      5,
+      3,
+      7,
+      3,
+      1,
+      1,
+      138
+    ]
+  ],
+  "confusion_A1_then_A2": [
+    [
+      147,
+      3,
+      1,
+      4,
+      1,
+      1,
+      1
+    ],
+    [
+      0,
+      146,
+      2,
+      1,
+      0,
+      6,
+      3
+    ],
+    [
+      0,
+      0,
+      148,
+      0,
+      0,
+      6,
+      4
+    ],
+    [
+      4,
+      0,
+      7,
+      138,
+      1,
+      1,
+      7
+    ],
+    [
+      1,
+      0,
+      0,
+      0,
+      145,
+      6,
+      0
+    ],
+    [
+      1,
+      1,
+      3,
+      1,
+      1,
+      149,
+      2
+    ],
+    [
+      2,
+      2,
+      4,
+      1,
+      0,
+      0,
+      149
+    ]
+  ],
+  "wrong_only_to_A2": {
+    "accuracy": 0.9464,
+    "macro_f1": null,
+    "fed_to_A2": 131,
+    "fixed_by_A2": 72
+  }
+}

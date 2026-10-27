@@ -1,0 +1,133 @@
+{
+  "model": "roberta_bilstm_attn",
+  "encoder": "roberta-base",
+  "dataset": "goemotions",
+  "epochs": 4,
+  "test_size": 4968,
+  "accuracy": 0.7045,
+  "macro_f1": 0.643,
+  "per_class": {
+    "angry": {
+      "precision": 0.5353,
+      "recall": 0.6364,
+      "f1": 0.5815,
+      "support": 572
+    },
+    "disgust": {
+      "precision": 0.4796,
+      "recall": 0.6184,
+      "f1": 0.5402,
+      "support": 76
+    },
+    "fear": {
+      "precision": 0.536,
+      "recall": 0.8375,
+      "f1": 0.6537,
+      "support": 80
+    },
+    "happy": {
+      "precision": 0.8273,
+      "recall": 0.8486,
+      "f1": 0.8378,
+      "support": 1863
+    },
+    "neutral": {
+      "precision": 0.7158,
+      "recall": 0.5834,
+      "f1": 0.6429,
+      "support": 1606
+    },
+    "sad": {
+      "precision": 0.6426,
+      "recall": 0.5972,
+      "f1": 0.619,
+      "support": 283
+    },
+    "surprise": {
+      "precision": 0.5756,
+      "recall": 0.6865,
+      "f1": 0.6262,
+      "support": 488
+    }
+  },
+  "confusion_matrix": {
+    "labels": [
+      "angry",
+      "disgust",
+      "fear",
+      "happy",
+      "neutral",
+      "sad",
+      "surprise"
+    ],
+    "rows_true_cols_pred": [
+      [
+        364,
+        17,
+        7,
+        40,
+        97,
+        25,
+        22
+      ],
+      [
+        13,
+        47,
+        3,
+        3,
+        4,
+        2,
+        4
+      ],
+      [
+        4,
+        0,
+        67,
+        1,
+        1,
+        6,
+        1
+      ],
+      [
+        36,
+        3,
+        14,
+        1581,
+        177,
+        12,
+        40
+      ],
+      [
+        198,
+        20,
+        20,
+        223,
+        937,
+        43,
+        165
+      ],
+      [
+        37,
+        4,
+        8,
+        19,
+        31,
+        169,
+        15
+      ],
+      [
+        28,
+        7,
+        6,
+        44,
+        62,
+        6,
+        335
+      ]
+    ]
+  },
+  "inference_time": {
+    "cpu_ms_per_text": 69.55,
+    "cuda_ms_per_text": 23.56
+  }
+}

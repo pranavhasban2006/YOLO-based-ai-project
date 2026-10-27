@@ -1,0 +1,111 @@
+{
+  "model": "deberta_attn",
+  "encoder": "microsoft/deberta-v3-base",
+  "dataset": "emotion",
+  "epochs": 4,
+  "test_size": 2000,
+  "accuracy": 0.924,
+  "macro_f1": 0.887,
+  "per_class": {
+    "sadness": {
+      "precision": 0.9684,
+      "recall": 0.9501,
+      "f1": 0.9592,
+      "support": 581
+    },
+    "joy": {
+      "precision": 0.9686,
+      "recall": 0.9309,
+      "f1": 0.9494,
+      "support": 695
+    },
+    "love": {
+      "precision": 0.8023,
+      "recall": 0.8931,
+      "f1": 0.8452,
+      "support": 159
+    },
+    "anger": {
+      "precision": 0.8982,
+      "recall": 0.9309,
+      "f1": 0.9143,
+      "support": 275
+    },
+    "fear": {
+      "precision": 0.8894,
+      "recall": 0.8616,
+      "f1": 0.8753,
+      "support": 224
+    },
+    "surprise": {
+      "precision": 0.6988,
+      "recall": 0.8788,
+      "f1": 0.7785,
+      "support": 66
+    }
+  },
+  "confusion_matrix": {
+    "labels": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "rows_true_cols_pred": [
+      [
+        552,
+        5,
+        0,
+        18,
+        6,
+        0
+      ],
+      [
+        2,
+        647,
+        35,
+        2,
+        2,
+        7
+      ],
+      [
+        2,
+        14,
+        142,
+        1,
+        0,
+        0
+      ],
+      [
+        7,
+        2,
+        0,
+        256,
+        10,
+        0
+      ],
+      [
+        5,
+        0,
+        0,
+        8,
+        193,
+        18
+      ],
+      [
+        2,
+        0,
+        0,
+        0,
+        6,
+        58
+      ]
+    ]
+  },
+  "inference_time": {
+    "cpu_ms_per_text": 161.7,
+    "cuda_ms_per_text": 33.92
+  }
+}

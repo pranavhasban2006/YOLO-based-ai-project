@@ -1,0 +1,133 @@
+{
+  "model": "bert_cnn_bilstm",
+  "encoder": "bert-base-uncased",
+  "dataset": "goemotions",
+  "epochs": 4,
+  "test_size": 4968,
+  "accuracy": 0.6924,
+  "macro_f1": 0.6343,
+  "per_class": {
+    "angry": {
+      "precision": 0.4951,
+      "recall": 0.6171,
+      "f1": 0.5494,
+      "support": 572
+    },
+    "disgust": {
+      "precision": 0.5606,
+      "recall": 0.4868,
+      "f1": 0.5211,
+      "support": 76
+    },
+    "fear": {
+      "precision": 0.5818,
+      "recall": 0.8,
+      "f1": 0.6737,
+      "support": 80
+    },
+    "happy": {
+      "precision": 0.8558,
+      "recall": 0.8062,
+      "f1": 0.8303,
+      "support": 1863
+    },
+    "neutral": {
+      "precision": 0.6855,
+      "recall": 0.6052,
+      "f1": 0.6429,
+      "support": 1606
+    },
+    "sad": {
+      "precision": 0.6737,
+      "recall": 0.5618,
+      "f1": 0.6127,
+      "support": 283
+    },
+    "surprise": {
+      "precision": 0.5269,
+      "recall": 0.7234,
+      "f1": 0.6097,
+      "support": 488
+    }
+  },
+  "confusion_matrix": {
+    "labels": [
+      "angry",
+      "disgust",
+      "fear",
+      "happy",
+      "neutral",
+      "sad",
+      "surprise"
+    ],
+    "rows_true_cols_pred": [
+      [
+        353,
+        11,
+        6,
+        35,
+        108,
+        22,
+        37
+      ],
+      [
+        24,
+        37,
+        3,
+        3,
+        5,
+        2,
+        2
+      ],
+      [
+        4,
+        2,
+        64,
+        2,
+        2,
+        4,
+        2
+      ],
+      [
+        60,
+        1,
+        11,
+        1502,
+        227,
+        9,
+        53
+      ],
+      [
+        209,
+        10,
+        10,
+        164,
+        972,
+        34,
+        207
+      ],
+      [
+        37,
+        1,
+        11,
+        17,
+        42,
+        159,
+        16
+      ],
+      [
+        26,
+        4,
+        5,
+        32,
+        62,
+        6,
+        353
+      ]
+    ]
+  },
+  "inference_time": {
+    "cpu_ms_per_text": 65.96,
+    "cuda_ms_per_text": 18.19
+  }
+}

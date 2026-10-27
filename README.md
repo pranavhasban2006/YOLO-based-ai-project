@@ -3,8 +3,11 @@
 > **Student research prototype. Not a medical or diagnostic tool.**
 
 A FastAPI backend and a React frontend for the multimodal emotion detection project.
-The facial-emotion model is real. Audio, text and EEG are stubs that return clearly
-labelled placeholder data (`"mock": true`) until their models are registered.
+Face (ResNet-18 / CNN on FER-2013), speech (HuBERT + Transformer) and text (RoBERTa + BiLSTM +
+Attention on GoEmotions) are real models. EEG is a stub that returns clearly labelled placeholder
+data (`"mock": true`); the physiological models were evaluated offline on WESAD (see
+`project/reports/final/`). Audio and text fall back to the mock automatically if their checkpoint
+in `models/` is missing.
 
 ## Run it
 

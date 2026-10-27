@@ -4,11 +4,11 @@ Replacing a mock with a real model is a one-line change here, e.g.
     from .audio import AudioPredictor
     register(AudioPredictor())
 """
-from .audio import MockAudioPredictor
+from .audio import AudioPredictor
 from .base import Predictor
 from .eeg import MockEEGPredictor
 from .face import FacePredictor
-from .text import MockTextPredictor
+from .text import TextPredictor
 
 _registry: dict[str, Predictor] = {}
 
@@ -32,6 +32,7 @@ def is_mock(modality: str) -> bool:
 
 def register_defaults() -> None:
     register(FacePredictor())
-    register(MockAudioPredictor())
-    register(MockTextPredictor())
+    # Audio and text fall back to mock behaviour (mock=True) if their checkpoint or dependencies are missing.
+    register(AudioPredictor())
+    register(TextPredictor())
     register(MockEEGPredictor())

@@ -1,0 +1,191 @@
+{
+  "modality": "text",
+  "dataset": "emotion",
+  "hybrid": "distilbert_cnn",
+  "A1": "DistilBERT",
+  "A2": "CNN",
+  "split": "official train/validation/test",
+  "test_size": 2000,
+  "classes": [
+    "sadness",
+    "joy",
+    "love",
+    "anger",
+    "fear",
+    "surprise"
+  ],
+  "stage1_A1_alone": {
+    "accuracy": 0.9335,
+    "macro_f1": 0.8886,
+    "correct": 1867,
+    "wrong": 133
+  },
+  "stage2_A1_then_A2": {
+    "accuracy": 0.9285,
+    "macro_f1": 0.8864,
+    "correct": 1857,
+    "wrong": 143
+  },
+  "A1_wrong_fixed_by_A2": 36,
+  "A1_right_broken_by_A2": 46,
+  "wrong_in_both": 97,
+  "net_gain_samples": -10,
+  "accuracy_gain_points": -0.5,
+  "confusion_A1": [
+    [
+      557,
+      5,
+      0,
+      14,
+      5,
+      0
+    ],
+    [
+      1,
+      681,
+      10,
+      2,
+      0,
+      1
+    ],
+    [
+      0,
+      35,
+      124,
+      0,
+      0,
+      0
+    ],
+    [
+      6,
+      3,
+      0,
+      263,
+      3,
+      0
+    ],
+    [
+      6,
+      0,
+      0,
+      9,
+      195,
+      14
+    ],
+    [
+      3,
+      8,
+      0,
+      0,
+      8,
+      47
+    ]
+  ],
+  "confusion_A1_then_A2": [
+    [
+      557,
+      6,
+      0,
+      10,
+      8,
+      0
+    ],
+    [
+      1,
+      659,
+      26,
+      2,
+      0,
+      7
+    ],
+    [
+      0,
+      22,
+      137,
+      0,
+      0,
+      0
+    ],
+    [
+      13,
+      4,
+      0,
+      252,
+      6,
+      0
+    ],
+    [
+      5,
+      0,
+      0,
+      7,
+      205,
+      7
+    ],
+    [
+      3,
+      0,
+      0,
+      0,
+      16,
+      47
+    ]
+  ],
+  "note": "rebuilt from the Colab _preds.npz (the Drive download did not include this JSON)",
+  "wrong_only_to_A2": {
+    "accuracy": 0.9515,
+    "macro_f1": 0.926,
+    "fed_to_A2": 133,
+    "fixed_by_A2": 36,
+    "confusion": [
+      [
+        561,
+        5,
+        0,
+        10,
+        5,
+        0
+      ],
+      [
+        1,
+        682,
+        9,
+        2,
+        0,
+        1
+      ],
+      [
+        0,
+        22,
+        137,
+        0,
+        0,
+        0
+      ],
+      [
+        6,
+        3,
+        0,
+        263,
+        3,
+        0
+      ],
+      [
+        5,
+        0,
+        0,
+        7,
+        205,
+        7
+      ],
+      [
+        3,
+        0,
+        0,
+        0,
+        8,
+        55
+      ]
+    ]
+  }
+}

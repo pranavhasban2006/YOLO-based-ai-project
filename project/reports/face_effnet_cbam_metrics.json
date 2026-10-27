@@ -1,0 +1,132 @@
+{
+  "model": "effnet_cbam",
+  "dataset": "FER-2013",
+  "epochs": 15,
+  "test_size": 7178,
+  "accuracy": 0.706,
+  "macro_f1": 0.6838,
+  "per_class": {
+    "angry": {
+      "precision": 0.6144,
+      "recall": 0.6336,
+      "f1": 0.6238,
+      "support": 958
+    },
+    "disgust": {
+      "precision": 0.5833,
+      "recall": 0.6937,
+      "f1": 0.6337,
+      "support": 111
+    },
+    "fear": {
+      "precision": 0.5886,
+      "recall": 0.5352,
+      "f1": 0.5606,
+      "support": 1024
+    },
+    "happy": {
+      "precision": 0.9095,
+      "recall": 0.8782,
+      "f1": 0.8936,
+      "support": 1774
+    },
+    "neutral": {
+      "precision": 0.6473,
+      "recall": 0.7056,
+      "f1": 0.6752,
+      "support": 1233
+    },
+    "sad": {
+      "precision": 0.5927,
+      "recall": 0.5613,
+      "f1": 0.5766,
+      "support": 1247
+    },
+    "surprise": {
+      "precision": 0.7964,
+      "recall": 0.852,
+      "f1": 0.8233,
+      "support": 831
+    }
+  },
+  "confusion_matrix": {
+    "labels": [
+      "angry",
+      "disgust",
+      "fear",
+      "happy",
+      "neutral",
+      "sad",
+      "surprise"
+    ],
+    "rows_true_cols_pred": [
+      [
+        607,
+        20,
+        105,
+        25,
+        75,
+        105,
+        21
+      ],
+      [
+        19,
+        77,
+        5,
+        3,
+        1,
+        5,
+        1
+      ],
+      [
+        113,
+        11,
+        548,
+        16,
+        96,
+        169,
+        71
+      ],
+      [
+        31,
+        4,
+        19,
+        1558,
+        85,
+        36,
+        41
+      ],
+      [
+        67,
+        6,
+        60,
+        55,
+        870,
+        155,
+        20
+      ],
+      [
+        127,
+        12,
+        146,
+        30,
+        205,
+        700,
+        27
+      ],
+      [
+        24,
+        2,
+        48,
+        26,
+        12,
+        11,
+        708
+      ]
+    ]
+  },
+  "inference_time": {
+    "cpu_ms_per_image": 40.7,
+    "cuda_ms_per_image": 17.97
+  }
+}

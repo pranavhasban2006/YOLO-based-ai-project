@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { api, ApiError, LIMITS } from "../api";
 import { EmotionTimeline } from "../components/Charts";
+import { CameraCapture } from "../components/MediaCapture";
 import { ErrorBox } from "../components/Notices";
 import ResultCard from "../components/ResultCard";
 
@@ -31,6 +32,7 @@ export default function UploadTab({ onResult }) {
   const [busy, setBusy] = useState(false);
   const [dragging, setDragging] = useState(false);
   const [time, setTime] = useState(0);
+  const [camera, setCamera] = useState(false);
   const videoRef = useRef(null);
   const inputRef = useRef(null);
 
@@ -78,6 +80,11 @@ export default function UploadTab({ onResult }) {
 
   return (
     <div className="space-y-4">
+      {camera ? (
+        <CameraCapture onCapture={(f) => { setCamera(false); handle(f); }} onClose={() => setCamera(false)} />
+      ) : (
+        <button className="btn-primary" onClick={() => setCamera(true)}>📷 Take a photo with the camera</button>
+      )}
       <div
         onDragOver={(e) => { e.preventDefault(); setDragging(true); }}
         onDragLeave={() => setDragging(false)}

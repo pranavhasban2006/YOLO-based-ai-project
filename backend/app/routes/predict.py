@@ -14,8 +14,8 @@ from .uploads import read_upload
 router = APIRouter(prefix="/predict", tags=["predict"])
 
 AUDIO_TYPES = {"audio/wav", "audio/x-wav", "audio/wave", "audio/webm", "audio/ogg",
-               "audio/mpeg", "audio/mp4", "audio/x-m4a"}
-AUDIO_EXTS = {".wav", ".webm", ".ogg", ".mp3", ".m4a"}
+               "audio/mpeg", "audio/mp4", "audio/x-m4a", "video/mp4"}   # .mp4: the audio track is used
+AUDIO_EXTS = {".wav", ".webm", ".ogg", ".mp3", ".m4a", ".mp4"}
 
 
 def _image_prediction(rgb) -> ImagePrediction:

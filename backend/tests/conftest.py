@@ -1,4 +1,10 @@
 import io
+import os
+
+# The API tests exercise the mock fallback for audio and text (fast, no large downloads); the real models are
+# covered separately in test_real_models.py. Must be set before the app modules are imported.
+os.environ.setdefault("AUDIO_CHECKPOINT", "__missing_for_tests__.pt")
+os.environ.setdefault("TEXT_CHECKPOINT", "__missing_for_tests__.pt")
 
 import numpy as np
 import pytest

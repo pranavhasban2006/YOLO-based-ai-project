@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { api, WS_URL } from "../api";
 import { EmotionTimeline } from "../components/Charts";
+import { AudioRecorder } from "../components/MediaCapture";
 import { ComingSoon, ErrorBox } from "../components/Notices";
 import ResultCard from "../components/ResultCard";
 
@@ -27,12 +28,24 @@ function useRequest(onResult) {
 export function AudioTab({ onResult, mocked }) {
   const { result, error, busy, run, setError } = useRequest(onResult);
   const [file, setFile] = useState(null);
+  const [recUrl, setRecUrl] = useState(null);
+  useEffect(() => () => recUrl && URL.revokeObjectURL(recUrl), [recUrl]);
+  function analyseRecording(f) {
+    setFile(f);
+    setRecUrl(URL.createObjectURL(f));
+    run(() => api.predictAudio(f));
+  }
   return (
     <div className="space-y-4">
       <ComingSoon modality="audio" mocked={mocked} />
       <div className="card space-y-3">
-        <label className="block text-sm font-medium">Speech clip (WAV, WebM, OGG, MP3, M4A)</label>
-        <input type="file" accept=".wav,.webm,.ogg,.mp3,.m4a,audio/*" onChange={(e) => setFile(e.target.files[0] ?? null)} className="text-sm" />
+        <label className="block text-sm font-medium">Record your voice</label>
+        <AudioRecorder onRecorded={analyseRecording} disabled={busy} />
+        {recUrl && <audio src={recUrl} controls className="w-full max-w-md" />}
+      </div>
+      <div className="card space-y-3">
+        <label className="block text-sm font-medium">Speech clip (WAV, WebM, OGG, MP3, M4A, MP4)</label>
+        <input type="file" accept=".wav,.webm,.ogg,.mp3,.m4a,.mp4,audio/*" onChange={(e) => setFile(e.target.files[0] ?? null)} className="text-sm" />
         <button className="btn-primary" disabled={!file || busy} onClick={() => run(() => api.predictAudio(file))}>
           {busy ? "Analysing…" : "Analyse audio"}
         </button>

@@ -33,3 +33,9 @@ project/*.zip
 *.npz
 *.exe
 .env
+# Training venv, Colab upload parts, trained cascade checkpoints and large feature CSVs (shared via Google Drive)
+project/.venv-train/
+project/features/
+CSV AND IMAGE/1_CSV_files/b_feature_csv/
+Cascade_results/models/
+colab result unzipped/

@@ -1,0 +1,111 @@
+{
+  "model": "distilbert_cnn",
+  "encoder": "distilbert-base-uncased",
+  "dataset": "emotion",
+  "epochs": 4,
+  "test_size": 2000,
+  "accuracy": 0.9285,
+  "macro_f1": 0.8868,
+  "per_class": {
+    "sadness": {
+      "precision": 0.9706,
+      "recall": 0.9673,
+      "f1": 0.969,
+      "support": 581
+    },
+    "joy": {
+      "precision": 0.9728,
+      "recall": 0.9252,
+      "f1": 0.9484,
+      "support": 695
+    },
+    "love": {
+      "precision": 0.7701,
+      "recall": 0.9057,
+      "f1": 0.8324,
+      "support": 159
+    },
+    "anger": {
+      "precision": 0.9088,
+      "recall": 0.9418,
+      "f1": 0.925,
+      "support": 275
+    },
+    "fear": {
+      "precision": 0.9005,
+      "recall": 0.8884,
+      "f1": 0.8944,
+      "support": 224
+    },
+    "surprise": {
+      "precision": 0.7463,
+      "recall": 0.7576,
+      "f1": 0.7519,
+      "support": 66
+    }
+  },
+  "confusion_matrix": {
+    "labels": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "rows_true_cols_pred": [
+      [
+        562,
+        3,
+        1,
+        10,
+        5,
+        0
+      ],
+      [
+        0,
+        643,
+        42,
+        5,
+        0,
+        5
+      ],
+      [
+        0,
+        12,
+        144,
+        3,
+        0,
+        0
+      ],
+      [
+        10,
+        1,
+        0,
+        259,
+        5,
+        0
+      ],
+      [
+        5,
+        0,
+        0,
+        8,
+        199,
+        12
+      ],
+      [
+        2,
+        2,
+        0,
+        0,
+        12,
+        50
+      ]
+    ]
+  },
+  "inference_time": {
+    "cpu_ms_per_text": 33.5,
+    "cuda_ms_per_text": 10.53
+  }
+}

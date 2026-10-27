@@ -1,0 +1,191 @@
+{
+  "modality": "text",
+  "dataset": "emotion",
+  "hybrid": "deberta_attn",
+  "A1": "DeBERTa",
+  "A2": "Attention classifier",
+  "split": "official train/validation/test",
+  "test_size": 2000,
+  "classes": [
+    "sadness",
+    "joy",
+    "love",
+    "anger",
+    "fear",
+    "surprise"
+  ],
+  "stage1_A1_alone": {
+    "accuracy": 0.9295,
+    "macro_f1": 0.8896,
+    "correct": 1859,
+    "wrong": 141,
+    "train_accuracy": 0.9655
+  },
+  "stage2_A1_then_A2": {
+    "accuracy": 0.9325,
+    "macro_f1": 0.8946,
+    "correct": 1865,
+    "wrong": 135
+  },
+  "A1_wrong_fixed_by_A2": 30,
+  "A1_right_broken_by_A2": 24,
+  "wrong_in_both": 111,
+  "net_gain_samples": 6,
+  "accuracy_gain_points": 0.3,
+  "confusion_A1": [
+    [
+      561,
+      2,
+      0,
+      11,
+      7,
+      0
+    ],
+    [
+      2,
+      650,
+      35,
+      1,
+      0,
+      7
+    ],
+    [
+      0,
+      13,
+      146,
+      0,
+      0,
+      0
+    ],
+    [
+      11,
+      1,
+      0,
+      253,
+      10,
+      0
+    ],
+    [
+      3,
+      0,
+      0,
+      8,
+      190,
+      23
+    ],
+    [
+      2,
+      0,
+      0,
+      0,
+      5,
+      59
+    ]
+  ],
+  "confusion_A1_then_A2": [
+    [
+      562,
+      2,
+      0,
+      13,
+      4,
+      0
+    ],
+    [
+      2,
+      642,
+      42,
+      2,
+      0,
+      7
+    ],
+    [
+      0,
+      8,
+      151,
+      0,
+      0,
+      0
+    ],
+    [
+      11,
+      1,
+      0,
+      253,
+      10,
+      0
+    ],
+    [
+      4,
+      0,
+      0,
+      6,
+      208,
+      6
+    ],
+    [
+      2,
+      0,
+      0,
+      0,
+      15,
+      49
+    ]
+  ],
+  "wrong_only_to_A2": {
+    "accuracy": 0.9445,
+    "macro_f1": 0.9202,
+    "fed_to_A2": 141,
+    "fixed_by_A2": 30,
+    "confusion": [
+      [
+        565,
+        2,
+        0,
+        10,
+        4,
+        0
+      ],
+      [
+        2,
+        650,
+        35,
+        1,
+        0,
+        7
+      ],
+      [
+        0,
+        7,
+        152,
+        0,
+        0,
+        0
+      ],
+      [
+        11,
+        1,
+        0,
+        254,
+        9,
+        0
+      ],
+      [
+        3,
+        0,
+        0,
+        6,
+        209,
+        6
+      ],
+      [
+        2,
+        0,
+        0,
+        0,
+        5,
+        59
+      ]
+    ]
+  }
+}

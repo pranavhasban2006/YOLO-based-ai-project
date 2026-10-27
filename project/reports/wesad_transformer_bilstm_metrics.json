@@ -1,0 +1,67 @@
+{
+  "model": "transformer_bilstm",
+  "dataset": "WESAD chest, 60 s windows, subject-independent split",
+  "split": {
+    "test": [
+      "S2",
+      "S9",
+      "S16"
+    ],
+    "val": [
+      "S5",
+      "S13"
+    ]
+  },
+  "epochs": 30,
+  "test_size": 1206,
+  "accuracy": 0.6327,
+  "macro_f1": 0.5878,
+  "per_class": {
+    "baseline": {
+      "precision": 0.9868,
+      "recall": 0.6747,
+      "f1": 0.8014,
+      "support": 667
+    },
+    "stress": {
+      "precision": 0.4289,
+      "recall": 0.5892,
+      "f1": 0.4964,
+      "support": 353
+    },
+    "amusement": {
+      "precision": 0.3962,
+      "recall": 0.5645,
+      "f1": 0.4656,
+      "support": 186
+    }
+  },
+  "confusion_matrix": {
+    "labels": [
+      "baseline",
+      "stress",
+      "amusement"
+    ],
+    "rows_true_cols_pred": [
+      [
+        450,
+        196,
+        21
+      ],
+      [
+        6,
+        208,
+        139
+      ],
+      [
+        0,
+        81,
+        105
+      ]
+    ]
+  },
+  "inference_time": {
+    "cpu_ms_per_window": 7.54,
+    "cuda_ms_per_window": 2.51
+  }
+}

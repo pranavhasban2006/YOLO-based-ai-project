@@ -1,0 +1,191 @@
+{
+  "modality": "text",
+  "dataset": "emotion",
+  "hybrid": "roberta_bilstm_attn",
+  "A1": "RoBERTa",
+  "A2": "BiLSTM + Attention",
+  "split": "official train/validation/test",
+  "test_size": 2000,
+  "classes": [
+    "sadness",
+    "joy",
+    "love",
+    "anger",
+    "fear",
+    "surprise"
+  ],
+  "stage1_A1_alone": {
+    "accuracy": 0.9275,
+    "macro_f1": 0.8858,
+    "correct": 1855,
+    "wrong": 145
+  },
+  "stage2_A1_then_A2": {
+    "accuracy": 0.9255,
+    "macro_f1": 0.8818,
+    "correct": 1851,
+    "wrong": 149
+  },
+  "A1_wrong_fixed_by_A2": 7,
+  "A1_right_broken_by_A2": 11,
+  "wrong_in_both": 138,
+  "net_gain_samples": -4,
+  "accuracy_gain_points": -0.2,
+  "confusion_A1": [
+    [
+      562,
+      4,
+      0,
+      9,
+      6,
+      0
+    ],
+    [
+      3,
+      647,
+      38,
+      1,
+      1,
+      5
+    ],
+    [
+      0,
+      9,
+      150,
+      0,
+      0,
+      0
+    ],
+    [
+      13,
+      3,
+      0,
+      248,
+      11,
+      0
+    ],
+    [
+      5,
+      0,
+      0,
+      8,
+      200,
+      11
+    ],
+    [
+      3,
+      3,
+      0,
+      0,
+      12,
+      48
+    ]
+  ],
+  "confusion_A1_then_A2": [
+    [
+      559,
+      4,
+      0,
+      11,
+      7,
+      0
+    ],
+    [
+      3,
+      647,
+      38,
+      1,
+      1,
+      5
+    ],
+    [
+      0,
+      8,
+      151,
+      0,
+      0,
+      0
+    ],
+    [
+      11,
+      3,
+      0,
+      251,
+      10,
+      0
+    ],
+    [
+      5,
+      0,
+      0,
+      8,
+      192,
+      19
+    ],
+    [
+      3,
+      3,
+      0,
+      0,
+      9,
+      51
+    ]
+  ],
+  "note": "rebuilt from the Colab _preds.npz (the Drive download did not include this JSON)",
+  "wrong_only_to_A2": {
+    "accuracy": 0.931,
+    "macro_f1": 0.8938,
+    "fed_to_A2": 145,
+    "fixed_by_A2": 7,
+    "confusion": [
+      [
+        562,
+        4,
+        0,
+        9,
+        6,
+        0
+      ],
+      [
+        3,
+        647,
+        38,
+        1,
+        1,
+        5
+      ],
+      [
+        0,
+        8,
+        151,
+        0,
+        0,
+        0
+      ],
+      [
+        11,
+        3,
+        0,
+        251,
+        10,
+        0
+      ],
+      [
+        5,
+        0,
+        0,
+        8,
+        200,
+        11
+      ],
+      [
+        3,
+        3,
+        0,
+        0,
+        9,
+        51
+      ]
+    ]
+  }
+}

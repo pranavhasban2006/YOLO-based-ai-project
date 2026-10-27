@@ -1,0 +1,132 @@
+{
+  "model": "densenet_se",
+  "dataset": "FER-2013",
+  "epochs": 15,
+  "test_size": 7178,
+  "accuracy": 0.7076,
+  "macro_f1": 0.6915,
+  "per_class": {
+    "angry": {
+      "precision": 0.6307,
+      "recall": 0.6472,
+      "f1": 0.6388,
+      "support": 958
+    },
+    "disgust": {
+      "precision": 0.64,
+      "recall": 0.7207,
+      "f1": 0.678,
+      "support": 111
+    },
+    "fear": {
+      "precision": 0.6167,
+      "recall": 0.5264,
+      "f1": 0.568,
+      "support": 1024
+    },
+    "happy": {
+      "precision": 0.9088,
+      "recall": 0.8647,
+      "f1": 0.8862,
+      "support": 1774
+    },
+    "neutral": {
+      "precision": 0.628,
+      "recall": 0.7161,
+      "f1": 0.6692,
+      "support": 1233
+    },
+    "sad": {
+      "precision": 0.5964,
+      "recall": 0.563,
+      "f1": 0.5792,
+      "support": 1247
+    },
+    "surprise": {
+      "precision": 0.7795,
+      "recall": 0.8676,
+      "f1": 0.8212,
+      "support": 831
+    }
+  },
+  "confusion_matrix": {
+    "labels": [
+      "angry",
+      "disgust",
+      "fear",
+      "happy",
+      "neutral",
+      "sad",
+      "surprise"
+    ],
+    "rows_true_cols_pred": [
+      [
+        620,
+        19,
+        88,
+        20,
+        79,
+        108,
+        24
+      ],
+      [
+        16,
+        80,
+        2,
+        3,
+        1,
+        8,
+        1
+      ],
+      [
+        103,
+        8,
+        539,
+        17,
+        104,
+        168,
+        85
+      ],
+      [
+        25,
+        3,
+        23,
+        1534,
+        98,
+        38,
+        53
+      ],
+      [
+        68,
+        4,
+        56,
+        56,
+        883,
+        147,
+        19
+      ],
+      [
+        135,
+        10,
+        115,
+        36,
+        227,
+        702,
+        22
+      ],
+      [
+        16,
+        1,
+        51,
+        22,
+        14,
+        6,
+        721
+      ]
+    ]
+  },
+  "inference_time": {
+    "cpu_ms_per_image": 54.5,
+    "cuda_ms_per_image": 21.94
+  }
+}

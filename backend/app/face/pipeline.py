@@ -39,6 +39,12 @@ def decode_image(data: bytes, allowed_formats=("JPEG", "PNG", "WEBP")) -> np.nda
     return np.asarray(img)
 
 
+# One MediaPipe detector per (model, threshold) for the whole process. Creating a second detector while an
+# old one is being garbage-collected deadlocks MediaPipe's serial dispatcher (seen when the app is created more
+# than once, e.g. in tests), so detectors are created once and never released.
+_SHARED: dict = {}
+
+
 class FaceDetector:
     """Thin wrapper over the MediaPipe Tasks face detector."""
 
@@ -49,14 +55,17 @@ class FaceDetector:
         from mediapipe.tasks.python import vision
 
         self._mp = mp
-        options = vision.FaceDetectorOptions(
-            # Pass the bytes rather than the path: avoids Windows path issues.
-            base_options=mp_python.BaseOptions(model_asset_buffer=Path(model_path).read_bytes()),
-            running_mode=vision.RunningMode.IMAGE,
-            min_detection_confidence=min_confidence,
-        )
-        self._detector = vision.FaceDetector.create_from_options(options)
-        self._lock = threading.Lock()  # the detector is not safe for concurrent calls
+        key = (str(Path(model_path).resolve()), float(min_confidence))
+        if key not in _SHARED:
+            options = vision.FaceDetectorOptions(
+                # Pass the bytes rather than the path: avoids Windows path issues.
+                base_options=mp_python.BaseOptions(model_asset_buffer=Path(model_path).read_bytes()),
+                running_mode=vision.RunningMode.IMAGE,
+                min_detection_confidence=min_confidence,
+            )
+            # the detector is not safe for concurrent calls, so it shares one lock with every wrapper
+            _SHARED[key] = (vision.FaceDetector.create_from_options(options), threading.Lock())
+        self._detector, self._lock = _SHARED[key]
 
     def detect(self, rgb: np.ndarray) -> list[tuple[int, int, int, int]]:
         """Return face boxes as (x, y, w, h) in pixels, largest first."""
