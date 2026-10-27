@@ -68,6 +68,14 @@ class VideoPrediction(Prediction):
     session_id: Optional[int] = None
 
 
+class CascadePrediction(Prediction):
+    """A1 -> A2 cascade: the top-level fields are the final (A1 + A2) answer, `a1` is A1 alone."""
+    a1: Prediction
+    changed: bool  # A2 changed A1's label
+    model: str
+    session_id: Optional[int] = None
+
+
 class TextRequest(BaseModel):
     text: str = Field(min_length=1, max_length=10_000)
 

@@ -6,7 +6,9 @@ from ..errors import no_face
 from ..face.pipeline import decode_image
 from ..fusion import fuse
 from ..modalities import registry
-from ..schemas import (FusedPrediction, FusedRequest, ImagePrediction, Prediction,
+from ..errors import AppError
+from ..modalities.audio_cascade import cascade as audio_cascade
+from ..schemas import (CascadePrediction, FusedPrediction, FusedRequest, ImagePrediction, Prediction,
                        TextRequest, VideoPrediction)
 from ..video import predict_video
 from .uploads import read_upload
@@ -53,6 +55,20 @@ async def predict_audio(request: Request, file: UploadFile = File(...)):
     data = await read_upload(file, "audio", AUDIO_TYPES, AUDIO_EXTS, config.MAX_AUDIO_BYTES)
     pred = await run_in_threadpool(registry.get("audio").predict, data)
     request.app.state.store.record("audio", pred, {"file": file.filename})
+    return pred
+
+
+@router.post("/audio/cascade", response_model=CascadePrediction)
+async def predict_audio_cascade(request: Request, file: UploadFile = File(...)):
+    """Speech CNN (A1) -> GRU (A2): returns A1's answer and the final answer after A2."""
+    if not audio_cascade.available:
+        raise AppError(503, "model_unavailable", "The CNN -> GRU checkpoints are not in models/cascade_live/models.")
+    data = await read_upload(file, "audio", AUDIO_TYPES, AUDIO_EXTS, config.MAX_AUDIO_BYTES)
+    out = await run_in_threadpool(audio_cascade.predict, data)
+    a1, final = out["a1"], out["final"]
+    pred = CascadePrediction(**final.model_dump(), a1=a1, changed=a1.label != final.label,
+                             model=audio_cascade.model_name)
+    pred.session_id = request.app.state.store.record("audio", pred, {"file": file.filename, "model": pred.model})
     return pred
 
 

@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from "react";
 import { api } from "./api";
 import FusedCard from "./components/FusedCard";
 import { BackendBanner, Disclaimer } from "./components/Notices";
+import CascadeTab from "./tabs/CascadeTab";
 import HistoryPage from "./tabs/HistoryPage";
 import LiveTab from "./tabs/LiveTab";
 import { AudioTab, EegTab, TextTab } from "./tabs/StubTabs";
@@ -14,6 +15,7 @@ const TABS = [
   { id: "text", label: "Text", modality: "text" },
   { id: "eeg", label: "EEG", modality: "eeg" },
   { id: "history", label: "History" },
+  { id: "cascade", label: "A1 → A2 Results" },
 ];
 
 function useHealth() {
@@ -77,6 +79,7 @@ export default function App() {
           {tab === "text" && <TextTab onResult={onResult} mocked={isMocked("text")} />}
           {tab === "eeg" && <EegTab onResult={onResult} mocked={isMocked("eeg")} backendOnline={online} />}
           {tab === "history" && <HistoryPage />}
+          {tab === "cascade" && <CascadeTab />}
         </div>
         <aside className="space-y-4">
           <FusedCard latest={latest} />

@@ -204,6 +204,83 @@ def modality_section(doc, mod, title, entries, unit, intro, extra=None):
     return entries[best_i]
 
 
+def cascade_section(doc):
+    """Section 5: every hybrid A1 + A2 as a two-stage cascade (Cascade_results/reports, written by cascade.py)."""
+    rs = [load(f) for f in sorted((ROOT / "Cascade_results" / "reports").glob("*.json"))]
+    if not rs:
+        return
+    order = {"speech": 0, "face": 1, "text": 2}
+    rs.sort(key=lambda r: (order[r["modality"]], r["dataset"], r["A1"], r["A2"]))
+    name = lambda r: f"{r['A1']} + {r['A2']}" + (f" ({r['dataset']})" if r["modality"] == "text" else "")
+
+    doc.h("5. Two-Stage Hybrids: A1 Alone, then A1's Output → A2", 1)
+    doc.p("Each hybrid model is written A1 + A2 (for example CNN + GRU). In this experiment every hybrid is run as a "
+          "two-stage cascade, so that the contribution of each stage is visible:")
+    doc.bullets([
+        ("Stage 1 – A1 alone: ", "A1's network with a plain linear classifier is trained and tested by itself "
+         "(for example, the CNN gets 84 of 100 test clips right)."),
+        ("Stage 2 – A1's output → A2: ", "A1 is frozen; for every sample its output (feature map / frame or token "
+         "sequence and its class scores) is the input of A2, which is trained to correct A1 (final scores = A1 "
+         "scores + A2(A1 output); A2's last layer starts at zero, so A2 learns only the corrections)."),
+        ("Evaluation (faculty protocol): ", "only the test samples that A1 got wrong are passed to A2; A1's correct "
+         "answers are kept. Final accuracy = (A1 correct + A2 fixed) / test samples. Selecting A1's wrong samples "
+         "uses the true labels, as the protocol specifies."),
+        ("Splits: ", "unchanged from Section 2 – FER-2013 90/10 train/validation + official test set; speech "
+         "70/15/15; text official train/validation/test. Early stopping on validation macro-F1, AdamW (L2)."),
+    ])
+    rows = [(name(r), f"{r['test_size']:,}", f"{r['stage1_A1_alone']['accuracy']:.4f}",
+             f"{r['wrong_only_to_A2']['fed_to_A2']:,}", f"{r['wrong_only_to_A2']['fixed_by_A2']:,}",
+             f"{r['wrong_only_to_A2']['accuracy']:.4f}",
+             f"{100 * (r['wrong_only_to_A2']['accuracy'] - r['stage1_A1_alone']['accuracy']):+.2f}")
+            for r in rs]
+    doc.table(["Hybrid (A1 + A2)", "Test", "A1 alone acc.", "A1 wrong → A2", "Fixed by A2", "A1 + A2 acc.",
+               "Gain (pts)"], rows, "A1 alone vs A1 + A2 (A1's wrong samples fed to A2), all 20 hybrids", font=8)
+
+    fig, ax = plt.subplots(figsize=(10, 6.2))
+    y = np.arange(len(rs))[::-1]
+    ax.barh(y + 0.2, [r["stage1_A1_alone"]["accuracy"] for r in rs], 0.4, label="Stage 1: A1 alone", color=GREY)
+    b = ax.barh(y - 0.2, [r["wrong_only_to_A2"]["accuracy"] for r in rs], 0.4,
+                label="A1 + A2 (A1's wrong ones → A2)", color=BLUE)
+    ax.bar_label(b, fmt="%.3f", fontsize=7, padding=2)
+    ax.set_yticks(y, [name(r) for r in rs], fontsize=8)
+    ax.set_xlim(0.6, 1.0)
+    ax.set_xlabel("Test accuracy")
+    ax.legend(fontsize=8, loc="lower right")
+    ax.set_title("A1 alone vs A1 + A2 on the same test samples", fontweight="bold")
+    ax.spines[["top", "right"]].set_visible(False)
+    doc.img(save(fig, "cascade_a1_vs_a2"), "Test accuracy of A1 alone and of the two-stage A1 + A2 cascade")
+
+    ex = next((r for r in rs if r["hybrid"] == "cnn_gru"), None)
+    if ex and ex["wrong_only_to_A2"].get("confusion"):
+        w, s1 = ex["wrong_only_to_A2"], ex["stage1_A1_alone"]
+        doc.p(f"Worked example – CNN + GRU (speech): the CNN alone classifies {s1['correct']:,} of "
+              f"{ex['test_size']:,} test clips correctly ({s1['accuracy']:.1%}). Its {w['fed_to_A2']} wrong clips are "
+              f"passed, as the CNN's output, to the GRU, which corrects {w['fixed_by_A2']} of them, giving "
+              f"{s1['correct'] + w['fixed_by_A2']:,} correct clips ({w['accuracy']:.1%}).")
+        for key, m, title in [("a1", ex["confusion_A1"], "CNN alone (stage 1)"),
+                              ("a2", w["confusion"], "CNN → GRU (stage 2)")]:
+            doc.img(cm_figure(f"cascade_cm_cnn_gru_{key}", f"Confusion matrix – {title}",
+                              {"confusion_matrix": {"labels": ex["classes"], "rows_true_cols_pred": m}}),
+                    f"Speech CNN + GRU: {title}, test set", width=4.2)
+
+    gains = {mod: [100 * (r["wrong_only_to_A2"]["accuracy"] - r["stage1_A1_alone"]["accuracy"])
+                   for r in rs if r["modality"] == mod] for mod in order}
+    doc.h("5.1 Observations", 2)
+    doc.bullets([
+        ("Every hybrid improves: ", f"all {len(rs)} cascades are more accurate than A1 alone "
+         f"(speech +{min(gains['speech']):.1f} to +{max(gains['speech']):.1f} points, face "
+         f"+{min(gains['face']):.1f} to +{max(gains['face']):.1f}, text +{min(gains['text']):.1f} to "
+         f"+{max(gains['text']):.1f})."),
+        ("A2 helps most where A1 is weakest: ", "the frozen wav2vec 2.0 encoder alone is the weakest speech A1, and "
+         "the BiLSTM + Attention stage fixes about two thirds of its mistakes. On dair-ai Emotion the fine-tuned "
+         "transformers already reach about 93%, so few errors are left to correct."),
+        ("Without labels (live use): ", "in the web application A2 cannot know which answers are wrong, so it "
+         "re-checks every input. In that setting the gain is smaller and A2 also changes some correct answers "
+         "(both counts are stored for every hybrid in Cascade_results/reports). The application shows the speech "
+         "CNN → GRU cascade live: the CNN's answer and the answer after the GRU."),
+    ])
+
+
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     doc = mr.Doc()
@@ -367,7 +444,9 @@ def main():
         "Protocol results on deep features measure the separability of each model's learned representation; the "
         "held-out test results measure the complete trained model. Both are reported for transparency."])
 
-    doc.h("5. Conclusion", 1)
+    cascade_section(doc)
+
+    doc.h("6. Conclusion", 1)
     doc.p("All twenty hybrid architectures specified for the project were implemented, trained and compared on "
           "the same data splits with the same metrics, and evaluated with the prescribed protocol (80:20 / 70:30 "
           "hold-out and 10-fold cross-validation, each with and without SMOTE, with early stopping and L1/L2 "

@@ -25,6 +25,61 @@ function useRequest(onResult) {
   return { result, error, busy, run, setError };
 }
 
+function Verdict({ title, p, accent }) {
+  return (
+    <div className={`rounded-lg border px-3 py-2 ${accent ? "border-blue-500" : "border-black/10 dark:border-white/10"}`}>
+      <div className="text-xs uppercase tracking-wide text-stone-500">{title}</div>
+      <div className="text-lg font-semibold capitalize">{p.label} <span className="text-sm font-normal tabular text-stone-500">{(p.confidence * 100).toFixed(0)}%</span></div>
+    </div>
+  );
+}
+
+/** Speech CNN (A1) -> GRU (A2): A1's answer, then the answer after A2 re-reads A1's output. */
+function AudioCascadeCard({ onResult }) {
+  const { result, error, busy, run, setError } = useRequest(onResult);
+  const [url, setUrl] = useState(null);
+  useEffect(() => () => url && URL.revokeObjectURL(url), [url]);
+  function analyse(f) {
+    if (!f) return;
+    setUrl(URL.createObjectURL(f));
+    run(() => api.predictAudioCascade(f));
+  }
+  return (
+    <div className="card space-y-3">
+      <div>
+        <h3 className="font-semibold">Two-stage model: CNN (A1) → GRU (A2)</h3>
+        <p className="text-xs text-stone-500">
+          Stage 1: the CNN alone reads the spectrogram and answers. Stage 2: the CNN's output is fed to the GRU, which
+          keeps or corrects that answer. Test-set numbers for every hybrid are in the "A1 → A2 Results" tab.
+        </p>
+      </div>
+      <div className="flex flex-wrap items-center gap-3">
+        <AudioRecorder onRecorded={analyse} disabled={busy} />
+        <label className="btn-ghost cursor-pointer text-sm">
+          or choose a file
+          <input type="file" className="hidden" accept=".wav,.webm,.ogg,.mp3,.m4a,.mp4,audio/*"
+            onChange={(e) => { analyse(e.target.files[0]); e.target.value = ""; }} />
+        </label>
+      </div>
+      {url && <audio src={url} controls className="w-full max-w-md" />}
+      {busy && <p className="text-sm text-stone-500" role="status">Running CNN → GRU…</p>}
+      <ErrorBox error={error} onDismiss={() => setError(null)} />
+      {result && (
+        <div className="grid items-center gap-2 sm:grid-cols-[1fr_auto_1fr]">
+          <Verdict title="Stage 1 · CNN alone (A1)" p={result.a1} />
+          <span className="text-center text-stone-400">→</span>
+          <Verdict title="Stage 2 · after GRU (A2)" p={result} accent />
+          <p className="text-sm sm:col-span-3">
+            {result.changed
+              ? <>The GRU <b>changed</b> the CNN's answer from <b>{result.a1.label}</b> to <b>{result.label}</b>.</>
+              : <>The GRU <b>confirmed</b> the CNN's answer ({result.label}).</>}
+          </p>
+        </div>
+      )}
+    </div>
+  );
+}
+
 export function AudioTab({ onResult, mocked }) {
   const { result, error, busy, run, setError } = useRequest(onResult);
   const [file, setFile] = useState(null);
@@ -52,6 +107,7 @@ export function AudioTab({ onResult, mocked }) {
       </div>
       <ErrorBox error={error} onDismiss={() => setError(null)} />
       <ResultCard title="Audio result" result={result} />
+      <AudioCascadeCard onResult={onResult} />
     </div>
   );
 }

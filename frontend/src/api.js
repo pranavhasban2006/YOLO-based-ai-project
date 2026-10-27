@@ -45,6 +45,7 @@ export const api = {
   predictImage: (file) => upload("/predict/image", file),
   predictVideo: (file) => upload("/predict/video", file),
   predictAudio: (file) => upload("/predict/audio", file),
+  predictAudioCascade: (file) => upload("/predict/audio/cascade", file),
   predictText: (text) => request("/predict/text", json({ text })),
   fuse: (predictions) => request("/predict/fused", json({ predictions })),
   sessions: () => request("/sessions"),
